@@ -1,0 +1,6 @@
+$ ./build/test_partial_forward
+
+Running generated partial pure C forward...
+Partial output count: 393216
+Mean abs error vs ONNX Runtime: 0.0000008362
+Max abs error vs ONNX Runtime: 0.0000950694

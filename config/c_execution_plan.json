@@ -1,0 +1,7829 @@
+[
+  {
+    "index": 0,
+    "op_type": "Conv",
+    "name": "/encoder/features.0/features.0.0/Conv",
+    "inputs": [
+      "input",
+      "onnx::Conv_715",
+      "onnx::Conv_716"
+    ],
+    "outputs": [
+      "/encoder/features.0/features.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        13,
+        512,
+        512
+      ],
+      [
+        32,
+        13,
+        3,
+        3
+      ],
+      [
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        2,
+        2
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 1,
+    "op_type": "Constant",
+    "name": "/encoder/features.0/features.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.0/features.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 2,
+    "op_type": "Constant",
+    "name": "/encoder/features.0/features.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.0/features.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 3,
+    "op_type": "Clip",
+    "name": "/encoder/features.0/features.0.2/Clip",
+    "inputs": [
+      "/encoder/features.0/features.0.0/Conv_output_0",
+      "/encoder/features.0/features.0.2/Constant_output_0",
+      "/encoder/features.0/features.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.0/features.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 4,
+    "op_type": "Conv",
+    "name": "/encoder/features.1/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.0/features.0.2/Clip_output_0",
+      "onnx::Conv_718",
+      "onnx::Conv_719"
+    ],
+    "outputs": [
+      "/encoder/features.1/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ],
+      [
+        32,
+        1,
+        3,
+        3
+      ],
+      [
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 32,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 5,
+    "op_type": "Constant",
+    "name": "/encoder/features.1/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.1/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 6,
+    "op_type": "Constant",
+    "name": "/encoder/features.1/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.1/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 7,
+    "op_type": "Clip",
+    "name": "/encoder/features.1/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.1/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.1/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.1/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.1/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 8,
+    "op_type": "Conv",
+    "name": "/encoder/features.1/conv/conv.1/Conv",
+    "inputs": [
+      "/encoder/features.1/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_721",
+      "onnx::Conv_722"
+    ],
+    "outputs": [
+      "/encoder/features.1/conv/conv.1/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ],
+      [
+        16,
+        32,
+        1,
+        1
+      ],
+      [
+        16
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        16,
+        256,
+        256
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 9,
+    "op_type": "Conv",
+    "name": "/encoder/features.2/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.1/conv/conv.1/Conv_output_0",
+      "onnx::Conv_724",
+      "onnx::Conv_725"
+    ],
+    "outputs": [
+      "/encoder/features.2/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        16,
+        256,
+        256
+      ],
+      [
+        96,
+        16,
+        1,
+        1
+      ],
+      [
+        96
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        96,
+        256,
+        256
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 10,
+    "op_type": "Constant",
+    "name": "/encoder/features.2/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.2/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 11,
+    "op_type": "Constant",
+    "name": "/encoder/features.2/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.2/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 12,
+    "op_type": "Clip",
+    "name": "/encoder/features.2/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.2/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.2/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.2/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.2/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        96,
+        256,
+        256
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        96,
+        256,
+        256
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 13,
+    "op_type": "Conv",
+    "name": "/encoder/features.2/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.2/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_727",
+      "onnx::Conv_728"
+    ],
+    "outputs": [
+      "/encoder/features.2/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        96,
+        256,
+        256
+      ],
+      [
+        96,
+        1,
+        3,
+        3
+      ],
+      [
+        96
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        96,
+        128,
+        128
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 96,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        2,
+        2
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 14,
+    "op_type": "Constant",
+    "name": "/encoder/features.2/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.2/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 15,
+    "op_type": "Constant",
+    "name": "/encoder/features.2/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.2/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 16,
+    "op_type": "Clip",
+    "name": "/encoder/features.2/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.2/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.2/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.2/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.2/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        96,
+        128,
+        128
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        96,
+        128,
+        128
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 17,
+    "op_type": "Conv",
+    "name": "/encoder/features.2/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.2/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_730",
+      "onnx::Conv_731"
+    ],
+    "outputs": [
+      "/encoder/features.2/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        96,
+        128,
+        128
+      ],
+      [
+        24,
+        96,
+        1,
+        1
+      ],
+      [
+        24
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        24,
+        128,
+        128
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 18,
+    "op_type": "Conv",
+    "name": "/encoder/features.3/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.2/conv/conv.2/Conv_output_0",
+      "onnx::Conv_733",
+      "onnx::Conv_734"
+    ],
+    "outputs": [
+      "/encoder/features.3/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        24,
+        128,
+        128
+      ],
+      [
+        144,
+        24,
+        1,
+        1
+      ],
+      [
+        144
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 19,
+    "op_type": "Constant",
+    "name": "/encoder/features.3/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.3/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 20,
+    "op_type": "Constant",
+    "name": "/encoder/features.3/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.3/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 21,
+    "op_type": "Clip",
+    "name": "/encoder/features.3/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.3/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.3/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.3/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.3/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 22,
+    "op_type": "Conv",
+    "name": "/encoder/features.3/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.3/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_736",
+      "onnx::Conv_737"
+    ],
+    "outputs": [
+      "/encoder/features.3/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ],
+      [
+        144,
+        1,
+        3,
+        3
+      ],
+      [
+        144
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 144,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 23,
+    "op_type": "Constant",
+    "name": "/encoder/features.3/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.3/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 24,
+    "op_type": "Constant",
+    "name": "/encoder/features.3/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.3/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 25,
+    "op_type": "Clip",
+    "name": "/encoder/features.3/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.3/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.3/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.3/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.3/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 26,
+    "op_type": "Conv",
+    "name": "/encoder/features.3/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.3/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_739",
+      "onnx::Conv_740"
+    ],
+    "outputs": [
+      "/encoder/features.3/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ],
+      [
+        24,
+        144,
+        1,
+        1
+      ],
+      [
+        24
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        24,
+        128,
+        128
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 27,
+    "op_type": "Add",
+    "name": "/encoder/features.3/Add",
+    "inputs": [
+      "/encoder/features.2/conv/conv.2/Conv_output_0",
+      "/encoder/features.3/conv/conv.2/Conv_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.3/Add_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        24,
+        128,
+        128
+      ],
+      [
+        1,
+        24,
+        128,
+        128
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        24,
+        128,
+        128
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 28,
+    "op_type": "Conv",
+    "name": "/encoder/features.4/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.3/Add_output_0",
+      "onnx::Conv_742",
+      "onnx::Conv_743"
+    ],
+    "outputs": [
+      "/encoder/features.4/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        24,
+        128,
+        128
+      ],
+      [
+        144,
+        24,
+        1,
+        1
+      ],
+      [
+        144
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 29,
+    "op_type": "Constant",
+    "name": "/encoder/features.4/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.4/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 30,
+    "op_type": "Constant",
+    "name": "/encoder/features.4/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.4/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 31,
+    "op_type": "Clip",
+    "name": "/encoder/features.4/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.4/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.4/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.4/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.4/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 32,
+    "op_type": "Conv",
+    "name": "/encoder/features.4/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.4/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_745",
+      "onnx::Conv_746"
+    ],
+    "outputs": [
+      "/encoder/features.4/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        144,
+        128,
+        128
+      ],
+      [
+        144,
+        1,
+        3,
+        3
+      ],
+      [
+        144
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        144,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 144,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        2,
+        2
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 33,
+    "op_type": "Constant",
+    "name": "/encoder/features.4/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.4/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 34,
+    "op_type": "Constant",
+    "name": "/encoder/features.4/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.4/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 35,
+    "op_type": "Clip",
+    "name": "/encoder/features.4/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.4/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.4/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.4/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.4/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        144,
+        64,
+        64
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        144,
+        64,
+        64
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 36,
+    "op_type": "Conv",
+    "name": "/encoder/features.4/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.4/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_748",
+      "onnx::Conv_749"
+    ],
+    "outputs": [
+      "/encoder/features.4/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        144,
+        64,
+        64
+      ],
+      [
+        32,
+        144,
+        1,
+        1
+      ],
+      [
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 37,
+    "op_type": "Conv",
+    "name": "/encoder/features.5/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.4/conv/conv.2/Conv_output_0",
+      "onnx::Conv_751",
+      "onnx::Conv_752"
+    ],
+    "outputs": [
+      "/encoder/features.5/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        64,
+        64
+      ],
+      [
+        192,
+        32,
+        1,
+        1
+      ],
+      [
+        192
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 38,
+    "op_type": "Constant",
+    "name": "/encoder/features.5/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.5/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 39,
+    "op_type": "Constant",
+    "name": "/encoder/features.5/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.5/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 40,
+    "op_type": "Clip",
+    "name": "/encoder/features.5/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.5/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.5/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.5/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.5/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 41,
+    "op_type": "Conv",
+    "name": "/encoder/features.5/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.5/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_754",
+      "onnx::Conv_755"
+    ],
+    "outputs": [
+      "/encoder/features.5/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ],
+      [
+        192,
+        1,
+        3,
+        3
+      ],
+      [
+        192
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 192,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 42,
+    "op_type": "Constant",
+    "name": "/encoder/features.5/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.5/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 43,
+    "op_type": "Constant",
+    "name": "/encoder/features.5/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.5/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 44,
+    "op_type": "Clip",
+    "name": "/encoder/features.5/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.5/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.5/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.5/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.5/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 45,
+    "op_type": "Conv",
+    "name": "/encoder/features.5/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.5/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_757",
+      "onnx::Conv_758"
+    ],
+    "outputs": [
+      "/encoder/features.5/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ],
+      [
+        32,
+        192,
+        1,
+        1
+      ],
+      [
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 46,
+    "op_type": "Add",
+    "name": "/encoder/features.5/Add",
+    "inputs": [
+      "/encoder/features.4/conv/conv.2/Conv_output_0",
+      "/encoder/features.5/conv/conv.2/Conv_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.5/Add_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        64,
+        64
+      ],
+      [
+        1,
+        32,
+        64,
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        64,
+        64
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 47,
+    "op_type": "Conv",
+    "name": "/encoder/features.6/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.5/Add_output_0",
+      "onnx::Conv_760",
+      "onnx::Conv_761"
+    ],
+    "outputs": [
+      "/encoder/features.6/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        64,
+        64
+      ],
+      [
+        192,
+        32,
+        1,
+        1
+      ],
+      [
+        192
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 48,
+    "op_type": "Constant",
+    "name": "/encoder/features.6/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.6/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 49,
+    "op_type": "Constant",
+    "name": "/encoder/features.6/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.6/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 50,
+    "op_type": "Clip",
+    "name": "/encoder/features.6/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.6/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.6/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.6/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.6/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 51,
+    "op_type": "Conv",
+    "name": "/encoder/features.6/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.6/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_763",
+      "onnx::Conv_764"
+    ],
+    "outputs": [
+      "/encoder/features.6/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ],
+      [
+        192,
+        1,
+        3,
+        3
+      ],
+      [
+        192
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 192,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 52,
+    "op_type": "Constant",
+    "name": "/encoder/features.6/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.6/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 53,
+    "op_type": "Constant",
+    "name": "/encoder/features.6/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.6/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 54,
+    "op_type": "Clip",
+    "name": "/encoder/features.6/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.6/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.6/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.6/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.6/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 55,
+    "op_type": "Conv",
+    "name": "/encoder/features.6/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.6/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_766",
+      "onnx::Conv_767"
+    ],
+    "outputs": [
+      "/encoder/features.6/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ],
+      [
+        32,
+        192,
+        1,
+        1
+      ],
+      [
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 56,
+    "op_type": "Add",
+    "name": "/encoder/features.6/Add",
+    "inputs": [
+      "/encoder/features.5/Add_output_0",
+      "/encoder/features.6/conv/conv.2/Conv_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.6/Add_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        64,
+        64
+      ],
+      [
+        1,
+        32,
+        64,
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        64,
+        64
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 57,
+    "op_type": "Conv",
+    "name": "/encoder/features.7/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.6/Add_output_0",
+      "onnx::Conv_769",
+      "onnx::Conv_770"
+    ],
+    "outputs": [
+      "/encoder/features.7/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        64,
+        64
+      ],
+      [
+        192,
+        32,
+        1,
+        1
+      ],
+      [
+        192
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 58,
+    "op_type": "Constant",
+    "name": "/encoder/features.7/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.7/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 59,
+    "op_type": "Constant",
+    "name": "/encoder/features.7/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.7/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 60,
+    "op_type": "Clip",
+    "name": "/encoder/features.7/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.7/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.7/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.7/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.7/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 61,
+    "op_type": "Conv",
+    "name": "/encoder/features.7/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.7/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_772",
+      "onnx::Conv_773"
+    ],
+    "outputs": [
+      "/encoder/features.7/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        64,
+        64
+      ],
+      [
+        192,
+        1,
+        3,
+        3
+      ],
+      [
+        192
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 192,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        2,
+        2
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 62,
+    "op_type": "Constant",
+    "name": "/encoder/features.7/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.7/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 63,
+    "op_type": "Constant",
+    "name": "/encoder/features.7/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.7/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 64,
+    "op_type": "Clip",
+    "name": "/encoder/features.7/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.7/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.7/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.7/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.7/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        192,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 65,
+    "op_type": "Conv",
+    "name": "/encoder/features.7/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.7/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_775",
+      "onnx::Conv_776"
+    ],
+    "outputs": [
+      "/encoder/features.7/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        192,
+        32,
+        32
+      ],
+      [
+        64,
+        192,
+        1,
+        1
+      ],
+      [
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 66,
+    "op_type": "Conv",
+    "name": "/encoder/features.8/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.7/conv/conv.2/Conv_output_0",
+      "onnx::Conv_778",
+      "onnx::Conv_779"
+    ],
+    "outputs": [
+      "/encoder/features.8/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        384,
+        64,
+        1,
+        1
+      ],
+      [
+        384
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 67,
+    "op_type": "Constant",
+    "name": "/encoder/features.8/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.8/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 68,
+    "op_type": "Constant",
+    "name": "/encoder/features.8/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.8/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 69,
+    "op_type": "Clip",
+    "name": "/encoder/features.8/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.8/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.8/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.8/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.8/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 70,
+    "op_type": "Conv",
+    "name": "/encoder/features.8/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.8/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_781",
+      "onnx::Conv_782"
+    ],
+    "outputs": [
+      "/encoder/features.8/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      [
+        384,
+        1,
+        3,
+        3
+      ],
+      [
+        384
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 384,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 71,
+    "op_type": "Constant",
+    "name": "/encoder/features.8/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.8/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 72,
+    "op_type": "Constant",
+    "name": "/encoder/features.8/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.8/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 73,
+    "op_type": "Clip",
+    "name": "/encoder/features.8/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.8/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.8/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.8/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.8/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 74,
+    "op_type": "Conv",
+    "name": "/encoder/features.8/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.8/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_784",
+      "onnx::Conv_785"
+    ],
+    "outputs": [
+      "/encoder/features.8/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      [
+        64,
+        384,
+        1,
+        1
+      ],
+      [
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 75,
+    "op_type": "Add",
+    "name": "/encoder/features.8/Add",
+    "inputs": [
+      "/encoder/features.7/conv/conv.2/Conv_output_0",
+      "/encoder/features.8/conv/conv.2/Conv_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.8/Add_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 76,
+    "op_type": "Conv",
+    "name": "/encoder/features.9/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.8/Add_output_0",
+      "onnx::Conv_787",
+      "onnx::Conv_788"
+    ],
+    "outputs": [
+      "/encoder/features.9/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        384,
+        64,
+        1,
+        1
+      ],
+      [
+        384
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 77,
+    "op_type": "Constant",
+    "name": "/encoder/features.9/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.9/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 78,
+    "op_type": "Constant",
+    "name": "/encoder/features.9/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.9/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 79,
+    "op_type": "Clip",
+    "name": "/encoder/features.9/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.9/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.9/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.9/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.9/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 80,
+    "op_type": "Conv",
+    "name": "/encoder/features.9/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.9/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_790",
+      "onnx::Conv_791"
+    ],
+    "outputs": [
+      "/encoder/features.9/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      [
+        384,
+        1,
+        3,
+        3
+      ],
+      [
+        384
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 384,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 81,
+    "op_type": "Constant",
+    "name": "/encoder/features.9/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.9/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 82,
+    "op_type": "Constant",
+    "name": "/encoder/features.9/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.9/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 83,
+    "op_type": "Clip",
+    "name": "/encoder/features.9/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.9/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.9/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.9/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.9/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 84,
+    "op_type": "Conv",
+    "name": "/encoder/features.9/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.9/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_793",
+      "onnx::Conv_794"
+    ],
+    "outputs": [
+      "/encoder/features.9/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      [
+        64,
+        384,
+        1,
+        1
+      ],
+      [
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 85,
+    "op_type": "Add",
+    "name": "/encoder/features.9/Add",
+    "inputs": [
+      "/encoder/features.8/Add_output_0",
+      "/encoder/features.9/conv/conv.2/Conv_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.9/Add_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 86,
+    "op_type": "Conv",
+    "name": "/encoder/features.10/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.9/Add_output_0",
+      "onnx::Conv_796",
+      "onnx::Conv_797"
+    ],
+    "outputs": [
+      "/encoder/features.10/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        384,
+        64,
+        1,
+        1
+      ],
+      [
+        384
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 87,
+    "op_type": "Constant",
+    "name": "/encoder/features.10/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.10/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 88,
+    "op_type": "Constant",
+    "name": "/encoder/features.10/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.10/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 89,
+    "op_type": "Clip",
+    "name": "/encoder/features.10/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.10/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.10/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.10/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.10/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 90,
+    "op_type": "Conv",
+    "name": "/encoder/features.10/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.10/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_799",
+      "onnx::Conv_800"
+    ],
+    "outputs": [
+      "/encoder/features.10/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      [
+        384,
+        1,
+        3,
+        3
+      ],
+      [
+        384
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 384,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 91,
+    "op_type": "Constant",
+    "name": "/encoder/features.10/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.10/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 92,
+    "op_type": "Constant",
+    "name": "/encoder/features.10/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.10/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 93,
+    "op_type": "Clip",
+    "name": "/encoder/features.10/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.10/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.10/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.10/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.10/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 94,
+    "op_type": "Conv",
+    "name": "/encoder/features.10/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.10/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_802",
+      "onnx::Conv_803"
+    ],
+    "outputs": [
+      "/encoder/features.10/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      [
+        64,
+        384,
+        1,
+        1
+      ],
+      [
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 95,
+    "op_type": "Add",
+    "name": "/encoder/features.10/Add",
+    "inputs": [
+      "/encoder/features.9/Add_output_0",
+      "/encoder/features.10/conv/conv.2/Conv_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.10/Add_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 96,
+    "op_type": "Conv",
+    "name": "/encoder/features.11/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.10/Add_output_0",
+      "onnx::Conv_805",
+      "onnx::Conv_806"
+    ],
+    "outputs": [
+      "/encoder/features.11/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        32,
+        32
+      ],
+      [
+        384,
+        64,
+        1,
+        1
+      ],
+      [
+        384
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 97,
+    "op_type": "Constant",
+    "name": "/encoder/features.11/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.11/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 98,
+    "op_type": "Constant",
+    "name": "/encoder/features.11/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.11/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 99,
+    "op_type": "Clip",
+    "name": "/encoder/features.11/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.11/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.11/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.11/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.11/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 100,
+    "op_type": "Conv",
+    "name": "/encoder/features.11/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.11/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_808",
+      "onnx::Conv_809"
+    ],
+    "outputs": [
+      "/encoder/features.11/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      [
+        384,
+        1,
+        3,
+        3
+      ],
+      [
+        384
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 384,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 101,
+    "op_type": "Constant",
+    "name": "/encoder/features.11/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.11/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 102,
+    "op_type": "Constant",
+    "name": "/encoder/features.11/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.11/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 103,
+    "op_type": "Clip",
+    "name": "/encoder/features.11/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.11/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.11/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.11/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.11/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 104,
+    "op_type": "Conv",
+    "name": "/encoder/features.11/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.11/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_811",
+      "onnx::Conv_812"
+    ],
+    "outputs": [
+      "/encoder/features.11/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        384,
+        32,
+        32
+      ],
+      [
+        96,
+        384,
+        1,
+        1
+      ],
+      [
+        96
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        96,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 105,
+    "op_type": "Conv",
+    "name": "/encoder/features.12/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.11/conv/conv.2/Conv_output_0",
+      "onnx::Conv_814",
+      "onnx::Conv_815"
+    ],
+    "outputs": [
+      "/encoder/features.12/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        96,
+        32,
+        32
+      ],
+      [
+        576,
+        96,
+        1,
+        1
+      ],
+      [
+        576
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 106,
+    "op_type": "Constant",
+    "name": "/encoder/features.12/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.12/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 107,
+    "op_type": "Constant",
+    "name": "/encoder/features.12/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.12/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 108,
+    "op_type": "Clip",
+    "name": "/encoder/features.12/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.12/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.12/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.12/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.12/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 109,
+    "op_type": "Conv",
+    "name": "/encoder/features.12/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.12/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_817",
+      "onnx::Conv_818"
+    ],
+    "outputs": [
+      "/encoder/features.12/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ],
+      [
+        576,
+        1,
+        3,
+        3
+      ],
+      [
+        576
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 576,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 110,
+    "op_type": "Constant",
+    "name": "/encoder/features.12/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.12/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 111,
+    "op_type": "Constant",
+    "name": "/encoder/features.12/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.12/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 112,
+    "op_type": "Clip",
+    "name": "/encoder/features.12/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.12/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.12/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.12/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.12/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 113,
+    "op_type": "Conv",
+    "name": "/encoder/features.12/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.12/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_820",
+      "onnx::Conv_821"
+    ],
+    "outputs": [
+      "/encoder/features.12/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ],
+      [
+        96,
+        576,
+        1,
+        1
+      ],
+      [
+        96
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        96,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 114,
+    "op_type": "Add",
+    "name": "/encoder/features.12/Add",
+    "inputs": [
+      "/encoder/features.11/conv/conv.2/Conv_output_0",
+      "/encoder/features.12/conv/conv.2/Conv_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.12/Add_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        96,
+        32,
+        32
+      ],
+      [
+        1,
+        96,
+        32,
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        96,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 115,
+    "op_type": "Conv",
+    "name": "/encoder/features.13/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.12/Add_output_0",
+      "onnx::Conv_823",
+      "onnx::Conv_824"
+    ],
+    "outputs": [
+      "/encoder/features.13/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        96,
+        32,
+        32
+      ],
+      [
+        576,
+        96,
+        1,
+        1
+      ],
+      [
+        576
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 116,
+    "op_type": "Constant",
+    "name": "/encoder/features.13/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.13/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 117,
+    "op_type": "Constant",
+    "name": "/encoder/features.13/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.13/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 118,
+    "op_type": "Clip",
+    "name": "/encoder/features.13/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.13/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.13/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.13/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.13/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 119,
+    "op_type": "Conv",
+    "name": "/encoder/features.13/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.13/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_826",
+      "onnx::Conv_827"
+    ],
+    "outputs": [
+      "/encoder/features.13/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ],
+      [
+        576,
+        1,
+        3,
+        3
+      ],
+      [
+        576
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 576,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 120,
+    "op_type": "Constant",
+    "name": "/encoder/features.13/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.13/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 121,
+    "op_type": "Constant",
+    "name": "/encoder/features.13/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.13/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 122,
+    "op_type": "Clip",
+    "name": "/encoder/features.13/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.13/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.13/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.13/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.13/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 123,
+    "op_type": "Conv",
+    "name": "/encoder/features.13/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.13/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_829",
+      "onnx::Conv_830"
+    ],
+    "outputs": [
+      "/encoder/features.13/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ],
+      [
+        96,
+        576,
+        1,
+        1
+      ],
+      [
+        96
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        96,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 124,
+    "op_type": "Add",
+    "name": "/encoder/features.13/Add",
+    "inputs": [
+      "/encoder/features.12/Add_output_0",
+      "/encoder/features.13/conv/conv.2/Conv_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.13/Add_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        96,
+        32,
+        32
+      ],
+      [
+        1,
+        96,
+        32,
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        96,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 125,
+    "op_type": "Conv",
+    "name": "/encoder/features.14/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.13/Add_output_0",
+      "onnx::Conv_832",
+      "onnx::Conv_833"
+    ],
+    "outputs": [
+      "/encoder/features.14/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        96,
+        32,
+        32
+      ],
+      [
+        576,
+        96,
+        1,
+        1
+      ],
+      [
+        576
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 126,
+    "op_type": "Constant",
+    "name": "/encoder/features.14/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.14/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 127,
+    "op_type": "Constant",
+    "name": "/encoder/features.14/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.14/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 128,
+    "op_type": "Clip",
+    "name": "/encoder/features.14/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.14/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.14/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.14/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.14/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 129,
+    "op_type": "Conv",
+    "name": "/encoder/features.14/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.14/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_835",
+      "onnx::Conv_836"
+    ],
+    "outputs": [
+      "/encoder/features.14/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        32,
+        32
+      ],
+      [
+        576,
+        1,
+        3,
+        3
+      ],
+      [
+        576
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 576,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        2,
+        2
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 130,
+    "op_type": "Constant",
+    "name": "/encoder/features.14/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.14/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 131,
+    "op_type": "Constant",
+    "name": "/encoder/features.14/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.14/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 132,
+    "op_type": "Clip",
+    "name": "/encoder/features.14/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.14/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.14/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.14/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.14/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        16,
+        16
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        576,
+        16,
+        16
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 133,
+    "op_type": "Conv",
+    "name": "/encoder/features.14/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.14/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_838",
+      "onnx::Conv_839"
+    ],
+    "outputs": [
+      "/encoder/features.14/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        576,
+        16,
+        16
+      ],
+      [
+        160,
+        576,
+        1,
+        1
+      ],
+      [
+        160
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        160,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 134,
+    "op_type": "Conv",
+    "name": "/encoder/features.15/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.14/conv/conv.2/Conv_output_0",
+      "onnx::Conv_841",
+      "onnx::Conv_842"
+    ],
+    "outputs": [
+      "/encoder/features.15/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        160,
+        16,
+        16
+      ],
+      [
+        960,
+        160,
+        1,
+        1
+      ],
+      [
+        960
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 135,
+    "op_type": "Constant",
+    "name": "/encoder/features.15/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.15/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 136,
+    "op_type": "Constant",
+    "name": "/encoder/features.15/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.15/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 137,
+    "op_type": "Clip",
+    "name": "/encoder/features.15/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.15/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.15/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.15/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.15/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 138,
+    "op_type": "Conv",
+    "name": "/encoder/features.15/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.15/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_844",
+      "onnx::Conv_845"
+    ],
+    "outputs": [
+      "/encoder/features.15/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      [
+        960,
+        1,
+        3,
+        3
+      ],
+      [
+        960
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 960,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 139,
+    "op_type": "Constant",
+    "name": "/encoder/features.15/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.15/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 140,
+    "op_type": "Constant",
+    "name": "/encoder/features.15/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.15/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 141,
+    "op_type": "Clip",
+    "name": "/encoder/features.15/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.15/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.15/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.15/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.15/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 142,
+    "op_type": "Conv",
+    "name": "/encoder/features.15/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.15/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_847",
+      "onnx::Conv_848"
+    ],
+    "outputs": [
+      "/encoder/features.15/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      [
+        160,
+        960,
+        1,
+        1
+      ],
+      [
+        160
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        160,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 143,
+    "op_type": "Add",
+    "name": "/encoder/features.15/Add",
+    "inputs": [
+      "/encoder/features.14/conv/conv.2/Conv_output_0",
+      "/encoder/features.15/conv/conv.2/Conv_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.15/Add_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        160,
+        16,
+        16
+      ],
+      [
+        1,
+        160,
+        16,
+        16
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        160,
+        16,
+        16
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 144,
+    "op_type": "Conv",
+    "name": "/encoder/features.16/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.15/Add_output_0",
+      "onnx::Conv_850",
+      "onnx::Conv_851"
+    ],
+    "outputs": [
+      "/encoder/features.16/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        160,
+        16,
+        16
+      ],
+      [
+        960,
+        160,
+        1,
+        1
+      ],
+      [
+        960
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 145,
+    "op_type": "Constant",
+    "name": "/encoder/features.16/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.16/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 146,
+    "op_type": "Constant",
+    "name": "/encoder/features.16/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.16/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 147,
+    "op_type": "Clip",
+    "name": "/encoder/features.16/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.16/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.16/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.16/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.16/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 148,
+    "op_type": "Conv",
+    "name": "/encoder/features.16/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.16/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_853",
+      "onnx::Conv_854"
+    ],
+    "outputs": [
+      "/encoder/features.16/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      [
+        960,
+        1,
+        3,
+        3
+      ],
+      [
+        960
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 960,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 149,
+    "op_type": "Constant",
+    "name": "/encoder/features.16/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.16/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 150,
+    "op_type": "Constant",
+    "name": "/encoder/features.16/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.16/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 151,
+    "op_type": "Clip",
+    "name": "/encoder/features.16/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.16/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.16/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.16/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.16/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 152,
+    "op_type": "Conv",
+    "name": "/encoder/features.16/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.16/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_856",
+      "onnx::Conv_857"
+    ],
+    "outputs": [
+      "/encoder/features.16/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      [
+        160,
+        960,
+        1,
+        1
+      ],
+      [
+        160
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        160,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 153,
+    "op_type": "Add",
+    "name": "/encoder/features.16/Add",
+    "inputs": [
+      "/encoder/features.15/Add_output_0",
+      "/encoder/features.16/conv/conv.2/Conv_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.16/Add_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        160,
+        16,
+        16
+      ],
+      [
+        1,
+        160,
+        16,
+        16
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        160,
+        16,
+        16
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 154,
+    "op_type": "Conv",
+    "name": "/encoder/features.17/conv/conv.0/conv.0.0/Conv",
+    "inputs": [
+      "/encoder/features.16/Add_output_0",
+      "onnx::Conv_859",
+      "onnx::Conv_860"
+    ],
+    "outputs": [
+      "/encoder/features.17/conv/conv.0/conv.0.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        160,
+        16,
+        16
+      ],
+      [
+        960,
+        160,
+        1,
+        1
+      ],
+      [
+        960
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 155,
+    "op_type": "Constant",
+    "name": "/encoder/features.17/conv/conv.0/conv.0.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.17/conv/conv.0/conv.0.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 156,
+    "op_type": "Constant",
+    "name": "/encoder/features.17/conv/conv.0/conv.0.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.17/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 157,
+    "op_type": "Clip",
+    "name": "/encoder/features.17/conv/conv.0/conv.0.2/Clip",
+    "inputs": [
+      "/encoder/features.17/conv/conv.0/conv.0.0/Conv_output_0",
+      "/encoder/features.17/conv/conv.0/conv.0.2/Constant_output_0",
+      "/encoder/features.17/conv/conv.0/conv.0.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.17/conv/conv.0/conv.0.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 158,
+    "op_type": "Conv",
+    "name": "/encoder/features.17/conv/conv.1/conv.1.0/Conv",
+    "inputs": [
+      "/encoder/features.17/conv/conv.0/conv.0.2/Clip_output_0",
+      "onnx::Conv_862",
+      "onnx::Conv_863"
+    ],
+    "outputs": [
+      "/encoder/features.17/conv/conv.1/conv.1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      [
+        960,
+        1,
+        3,
+        3
+      ],
+      [
+        960
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 960,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 159,
+    "op_type": "Constant",
+    "name": "/encoder/features.17/conv/conv.1/conv.1.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.17/conv/conv.1/conv.1.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 160,
+    "op_type": "Constant",
+    "name": "/encoder/features.17/conv/conv.1/conv.1.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.17/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 161,
+    "op_type": "Clip",
+    "name": "/encoder/features.17/conv/conv.1/conv.1.2/Clip",
+    "inputs": [
+      "/encoder/features.17/conv/conv.1/conv.1.0/Conv_output_0",
+      "/encoder/features.17/conv/conv.1/conv.1.2/Constant_output_0",
+      "/encoder/features.17/conv/conv.1/conv.1.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.17/conv/conv.1/conv.1.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 162,
+    "op_type": "Conv",
+    "name": "/encoder/features.17/conv/conv.2/Conv",
+    "inputs": [
+      "/encoder/features.17/conv/conv.1/conv.1.2/Clip_output_0",
+      "onnx::Conv_865",
+      "onnx::Conv_866"
+    ],
+    "outputs": [
+      "/encoder/features.17/conv/conv.2/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        960,
+        16,
+        16
+      ],
+      [
+        320,
+        960,
+        1,
+        1
+      ],
+      [
+        320
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        320,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 163,
+    "op_type": "Conv",
+    "name": "/encoder/features.18/features.18.0/Conv",
+    "inputs": [
+      "/encoder/features.17/conv/conv.2/Conv_output_0",
+      "onnx::Conv_868",
+      "onnx::Conv_869"
+    ],
+    "outputs": [
+      "/encoder/features.18/features.18.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        320,
+        16,
+        16
+      ],
+      [
+        1280,
+        320,
+        1,
+        1
+      ],
+      [
+        1280
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        1280,
+        16,
+        16
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        1,
+        1
+      ],
+      "pads": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 164,
+    "op_type": "Constant",
+    "name": "/encoder/features.18/features.18.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.18/features.18.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 165,
+    "op_type": "Constant",
+    "name": "/encoder/features.18/features.18.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/encoder/features.18/features.18.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 166,
+    "op_type": "Clip",
+    "name": "/encoder/features.18/features.18.2/Clip",
+    "inputs": [
+      "/encoder/features.18/features.18.0/Conv_output_0",
+      "/encoder/features.18/features.18.2/Constant_output_0",
+      "/encoder/features.18/features.18.2/Constant_1_output_0"
+    ],
+    "outputs": [
+      "/encoder/features.18/features.18.2/Clip_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        1280,
+        16,
+        16
+      ],
+      null,
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        1280,
+        16,
+        16
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 167,
+    "op_type": "Shape",
+    "name": "/decoder/blocks.0/Shape",
+    "inputs": [
+      "/encoder/features.18/features.18.2/Clip_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.0/Shape_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        1280,
+        16,
+        16
+      ]
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {},
+    "status": "ignored"
+  },
+  {
+    "index": 168,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.0/Constant",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.0/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 169,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.0/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.0/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 170,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.0/Constant_2",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.0/Constant_2_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 171,
+    "op_type": "Slice",
+    "name": "/decoder/blocks.0/Slice",
+    "inputs": [
+      "/decoder/blocks.0/Shape_output_0",
+      "/decoder/blocks.0/Constant_1_output_0",
+      "/decoder/blocks.0/Constant_2_output_0",
+      "/decoder/blocks.0/Constant_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.0/Slice_output_0"
+    ],
+    "input_shapes": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {},
+    "status": "ignored"
+  },
+  {
+    "index": 172,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.0/Constant_3",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.0/Constant_3_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 173,
+    "op_type": "Concat",
+    "name": "/decoder/blocks.0/Concat",
+    "inputs": [
+      "/decoder/blocks.0/Slice_output_0",
+      "/decoder/blocks.0/Constant_3_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.0/Concat_output_0"
+    ],
+    "input_shapes": [
+      null,
+      null
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "axis": 0
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 174,
+    "op_type": "Resize",
+    "name": "/decoder/blocks.0/Resize",
+    "inputs": [
+      "/encoder/features.18/features.18.2/Clip_output_0",
+      "",
+      "",
+      "/decoder/blocks.0/Concat_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.0/Resize_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        1280,
+        16,
+        16
+      ],
+      [],
+      [],
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        1280,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "coordinate_transformation_mode": "asymmetric",
+      "cubic_coeff_a": -0.75,
+      "mode": "nearest",
+      "nearest_mode": "floor"
+    },
+    "status": "supported"
+  },
+  {
+    "index": 175,
+    "op_type": "Concat",
+    "name": "/decoder/blocks.0/Concat_1",
+    "inputs": [
+      "/decoder/blocks.0/Resize_output_0",
+      "/encoder/features.13/Add_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.0/Concat_1_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        1280,
+        32,
+        32
+      ],
+      [
+        1,
+        96,
+        32,
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        1376,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "axis": 1
+    },
+    "status": "supported"
+  },
+  {
+    "index": 176,
+    "op_type": "Conv",
+    "name": "/decoder/blocks.0/conv1/conv1.0/Conv",
+    "inputs": [
+      "/decoder/blocks.0/Concat_1_output_0",
+      "onnx::Conv_871",
+      "onnx::Conv_872"
+    ],
+    "outputs": [
+      "/decoder/blocks.0/conv1/conv1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        1376,
+        32,
+        32
+      ],
+      [
+        256,
+        1376,
+        3,
+        3
+      ],
+      [
+        256
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        256,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 177,
+    "op_type": "Relu",
+    "name": "/decoder/blocks.0/conv1/conv1.2/Relu",
+    "inputs": [
+      "/decoder/blocks.0/conv1/conv1.0/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.0/conv1/conv1.2/Relu_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        256,
+        32,
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        256,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 178,
+    "op_type": "Conv",
+    "name": "/decoder/blocks.0/conv2/conv2.0/Conv",
+    "inputs": [
+      "/decoder/blocks.0/conv1/conv1.2/Relu_output_0",
+      "onnx::Conv_874",
+      "onnx::Conv_875"
+    ],
+    "outputs": [
+      "/decoder/blocks.0/conv2/conv2.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        256,
+        32,
+        32
+      ],
+      [
+        256,
+        256,
+        3,
+        3
+      ],
+      [
+        256
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        256,
+        32,
+        32
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 179,
+    "op_type": "Relu",
+    "name": "/decoder/blocks.0/conv2/conv2.2/Relu",
+    "inputs": [
+      "/decoder/blocks.0/conv2/conv2.0/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.0/conv2/conv2.2/Relu_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        256,
+        32,
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        256,
+        32,
+        32
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 180,
+    "op_type": "Shape",
+    "name": "/decoder/blocks.1/Shape",
+    "inputs": [
+      "/decoder/blocks.0/conv2/conv2.2/Relu_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.1/Shape_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        256,
+        32,
+        32
+      ]
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {},
+    "status": "ignored"
+  },
+  {
+    "index": 181,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.1/Constant",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.1/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 182,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.1/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.1/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 183,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.1/Constant_2",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.1/Constant_2_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 184,
+    "op_type": "Slice",
+    "name": "/decoder/blocks.1/Slice",
+    "inputs": [
+      "/decoder/blocks.1/Shape_output_0",
+      "/decoder/blocks.1/Constant_1_output_0",
+      "/decoder/blocks.1/Constant_2_output_0",
+      "/decoder/blocks.1/Constant_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.1/Slice_output_0"
+    ],
+    "input_shapes": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {},
+    "status": "ignored"
+  },
+  {
+    "index": 185,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.1/Constant_3",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.1/Constant_3_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 186,
+    "op_type": "Concat",
+    "name": "/decoder/blocks.1/Concat",
+    "inputs": [
+      "/decoder/blocks.1/Slice_output_0",
+      "/decoder/blocks.1/Constant_3_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.1/Concat_output_0"
+    ],
+    "input_shapes": [
+      null,
+      null
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "axis": 0
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 187,
+    "op_type": "Resize",
+    "name": "/decoder/blocks.1/Resize",
+    "inputs": [
+      "/decoder/blocks.0/conv2/conv2.2/Relu_output_0",
+      "",
+      "",
+      "/decoder/blocks.1/Concat_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.1/Resize_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        256,
+        32,
+        32
+      ],
+      [],
+      [],
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        256,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "coordinate_transformation_mode": "asymmetric",
+      "cubic_coeff_a": -0.75,
+      "mode": "nearest",
+      "nearest_mode": "floor"
+    },
+    "status": "supported"
+  },
+  {
+    "index": 188,
+    "op_type": "Concat",
+    "name": "/decoder/blocks.1/Concat_1",
+    "inputs": [
+      "/decoder/blocks.1/Resize_output_0",
+      "/encoder/features.6/Add_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.1/Concat_1_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        256,
+        64,
+        64
+      ],
+      [
+        1,
+        32,
+        64,
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        288,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "axis": 1
+    },
+    "status": "supported"
+  },
+  {
+    "index": 189,
+    "op_type": "Conv",
+    "name": "/decoder/blocks.1/conv1/conv1.0/Conv",
+    "inputs": [
+      "/decoder/blocks.1/Concat_1_output_0",
+      "onnx::Conv_877",
+      "onnx::Conv_878"
+    ],
+    "outputs": [
+      "/decoder/blocks.1/conv1/conv1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        288,
+        64,
+        64
+      ],
+      [
+        128,
+        288,
+        3,
+        3
+      ],
+      [
+        128
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        128,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 190,
+    "op_type": "Relu",
+    "name": "/decoder/blocks.1/conv1/conv1.2/Relu",
+    "inputs": [
+      "/decoder/blocks.1/conv1/conv1.0/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.1/conv1/conv1.2/Relu_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        128,
+        64,
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        128,
+        64,
+        64
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 191,
+    "op_type": "Conv",
+    "name": "/decoder/blocks.1/conv2/conv2.0/Conv",
+    "inputs": [
+      "/decoder/blocks.1/conv1/conv1.2/Relu_output_0",
+      "onnx::Conv_880",
+      "onnx::Conv_881"
+    ],
+    "outputs": [
+      "/decoder/blocks.1/conv2/conv2.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        128,
+        64,
+        64
+      ],
+      [
+        128,
+        128,
+        3,
+        3
+      ],
+      [
+        128
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        128,
+        64,
+        64
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 192,
+    "op_type": "Relu",
+    "name": "/decoder/blocks.1/conv2/conv2.2/Relu",
+    "inputs": [
+      "/decoder/blocks.1/conv2/conv2.0/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.1/conv2/conv2.2/Relu_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        128,
+        64,
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        128,
+        64,
+        64
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 193,
+    "op_type": "Shape",
+    "name": "/decoder/blocks.2/Shape",
+    "inputs": [
+      "/decoder/blocks.1/conv2/conv2.2/Relu_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.2/Shape_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        128,
+        64,
+        64
+      ]
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {},
+    "status": "ignored"
+  },
+  {
+    "index": 194,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.2/Constant",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.2/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 195,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.2/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.2/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 196,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.2/Constant_2",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.2/Constant_2_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 197,
+    "op_type": "Slice",
+    "name": "/decoder/blocks.2/Slice",
+    "inputs": [
+      "/decoder/blocks.2/Shape_output_0",
+      "/decoder/blocks.2/Constant_1_output_0",
+      "/decoder/blocks.2/Constant_2_output_0",
+      "/decoder/blocks.2/Constant_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.2/Slice_output_0"
+    ],
+    "input_shapes": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {},
+    "status": "ignored"
+  },
+  {
+    "index": 198,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.2/Constant_3",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.2/Constant_3_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 199,
+    "op_type": "Concat",
+    "name": "/decoder/blocks.2/Concat",
+    "inputs": [
+      "/decoder/blocks.2/Slice_output_0",
+      "/decoder/blocks.2/Constant_3_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.2/Concat_output_0"
+    ],
+    "input_shapes": [
+      null,
+      null
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "axis": 0
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 200,
+    "op_type": "Resize",
+    "name": "/decoder/blocks.2/Resize",
+    "inputs": [
+      "/decoder/blocks.1/conv2/conv2.2/Relu_output_0",
+      "",
+      "",
+      "/decoder/blocks.2/Concat_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.2/Resize_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        128,
+        64,
+        64
+      ],
+      [],
+      [],
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        128,
+        128,
+        128
+      ]
+    ],
+    "attrs": {
+      "coordinate_transformation_mode": "asymmetric",
+      "cubic_coeff_a": -0.75,
+      "mode": "nearest",
+      "nearest_mode": "floor"
+    },
+    "status": "supported"
+  },
+  {
+    "index": 201,
+    "op_type": "Concat",
+    "name": "/decoder/blocks.2/Concat_1",
+    "inputs": [
+      "/decoder/blocks.2/Resize_output_0",
+      "/encoder/features.3/Add_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.2/Concat_1_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        128,
+        128,
+        128
+      ],
+      [
+        1,
+        24,
+        128,
+        128
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        152,
+        128,
+        128
+      ]
+    ],
+    "attrs": {
+      "axis": 1
+    },
+    "status": "supported"
+  },
+  {
+    "index": 202,
+    "op_type": "Conv",
+    "name": "/decoder/blocks.2/conv1/conv1.0/Conv",
+    "inputs": [
+      "/decoder/blocks.2/Concat_1_output_0",
+      "onnx::Conv_883",
+      "onnx::Conv_884"
+    ],
+    "outputs": [
+      "/decoder/blocks.2/conv1/conv1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        152,
+        128,
+        128
+      ],
+      [
+        64,
+        152,
+        3,
+        3
+      ],
+      [
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        128,
+        128
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 203,
+    "op_type": "Relu",
+    "name": "/decoder/blocks.2/conv1/conv1.2/Relu",
+    "inputs": [
+      "/decoder/blocks.2/conv1/conv1.0/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.2/conv1/conv1.2/Relu_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        128,
+        128
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        128,
+        128
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 204,
+    "op_type": "Conv",
+    "name": "/decoder/blocks.2/conv2/conv2.0/Conv",
+    "inputs": [
+      "/decoder/blocks.2/conv1/conv1.2/Relu_output_0",
+      "onnx::Conv_886",
+      "onnx::Conv_887"
+    ],
+    "outputs": [
+      "/decoder/blocks.2/conv2/conv2.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        128,
+        128
+      ],
+      [
+        64,
+        64,
+        3,
+        3
+      ],
+      [
+        64
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        128,
+        128
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 205,
+    "op_type": "Relu",
+    "name": "/decoder/blocks.2/conv2/conv2.2/Relu",
+    "inputs": [
+      "/decoder/blocks.2/conv2/conv2.0/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.2/conv2/conv2.2/Relu_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        128,
+        128
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        128,
+        128
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 206,
+    "op_type": "Shape",
+    "name": "/decoder/blocks.3/Shape",
+    "inputs": [
+      "/decoder/blocks.2/conv2/conv2.2/Relu_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.3/Shape_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        128,
+        128
+      ]
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {},
+    "status": "ignored"
+  },
+  {
+    "index": 207,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.3/Constant",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.3/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 208,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.3/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.3/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 209,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.3/Constant_2",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.3/Constant_2_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 210,
+    "op_type": "Slice",
+    "name": "/decoder/blocks.3/Slice",
+    "inputs": [
+      "/decoder/blocks.3/Shape_output_0",
+      "/decoder/blocks.3/Constant_1_output_0",
+      "/decoder/blocks.3/Constant_2_output_0",
+      "/decoder/blocks.3/Constant_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.3/Slice_output_0"
+    ],
+    "input_shapes": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {},
+    "status": "ignored"
+  },
+  {
+    "index": 211,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.3/Constant_3",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.3/Constant_3_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 212,
+    "op_type": "Concat",
+    "name": "/decoder/blocks.3/Concat",
+    "inputs": [
+      "/decoder/blocks.3/Slice_output_0",
+      "/decoder/blocks.3/Constant_3_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.3/Concat_output_0"
+    ],
+    "input_shapes": [
+      null,
+      null
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "axis": 0
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 213,
+    "op_type": "Resize",
+    "name": "/decoder/blocks.3/Resize",
+    "inputs": [
+      "/decoder/blocks.2/conv2/conv2.2/Relu_output_0",
+      "",
+      "",
+      "/decoder/blocks.3/Concat_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.3/Resize_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        128,
+        128
+      ],
+      [],
+      [],
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        64,
+        256,
+        256
+      ]
+    ],
+    "attrs": {
+      "coordinate_transformation_mode": "asymmetric",
+      "cubic_coeff_a": -0.75,
+      "mode": "nearest",
+      "nearest_mode": "floor"
+    },
+    "status": "supported"
+  },
+  {
+    "index": 214,
+    "op_type": "Concat",
+    "name": "/decoder/blocks.3/Concat_1",
+    "inputs": [
+      "/decoder/blocks.3/Resize_output_0",
+      "/encoder/features.1/conv/conv.1/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.3/Concat_1_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        64,
+        256,
+        256
+      ],
+      [
+        1,
+        16,
+        256,
+        256
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        80,
+        256,
+        256
+      ]
+    ],
+    "attrs": {
+      "axis": 1
+    },
+    "status": "supported"
+  },
+  {
+    "index": 215,
+    "op_type": "Conv",
+    "name": "/decoder/blocks.3/conv1/conv1.0/Conv",
+    "inputs": [
+      "/decoder/blocks.3/Concat_1_output_0",
+      "onnx::Conv_889",
+      "onnx::Conv_890"
+    ],
+    "outputs": [
+      "/decoder/blocks.3/conv1/conv1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        80,
+        256,
+        256
+      ],
+      [
+        32,
+        80,
+        3,
+        3
+      ],
+      [
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 216,
+    "op_type": "Relu",
+    "name": "/decoder/blocks.3/conv1/conv1.2/Relu",
+    "inputs": [
+      "/decoder/blocks.3/conv1/conv1.0/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.3/conv1/conv1.2/Relu_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 217,
+    "op_type": "Conv",
+    "name": "/decoder/blocks.3/conv2/conv2.0/Conv",
+    "inputs": [
+      "/decoder/blocks.3/conv1/conv1.2/Relu_output_0",
+      "onnx::Conv_892",
+      "onnx::Conv_893"
+    ],
+    "outputs": [
+      "/decoder/blocks.3/conv2/conv2.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ],
+      [
+        32,
+        32,
+        3,
+        3
+      ],
+      [
+        32
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 218,
+    "op_type": "Relu",
+    "name": "/decoder/blocks.3/conv2/conv2.2/Relu",
+    "inputs": [
+      "/decoder/blocks.3/conv2/conv2.0/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.3/conv2/conv2.2/Relu_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 219,
+    "op_type": "Shape",
+    "name": "/decoder/blocks.4/Shape",
+    "inputs": [
+      "/decoder/blocks.3/conv2/conv2.2/Relu_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.4/Shape_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ]
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {},
+    "status": "ignored"
+  },
+  {
+    "index": 220,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.4/Constant",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.4/Constant_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 221,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.4/Constant_1",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.4/Constant_1_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 222,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.4/Constant_2",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.4/Constant_2_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 223,
+    "op_type": "Slice",
+    "name": "/decoder/blocks.4/Slice",
+    "inputs": [
+      "/decoder/blocks.4/Shape_output_0",
+      "/decoder/blocks.4/Constant_1_output_0",
+      "/decoder/blocks.4/Constant_2_output_0",
+      "/decoder/blocks.4/Constant_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.4/Slice_output_0"
+    ],
+    "input_shapes": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {},
+    "status": "ignored"
+  },
+  {
+    "index": 224,
+    "op_type": "Constant",
+    "name": "/decoder/blocks.4/Constant_3",
+    "inputs": [],
+    "outputs": [
+      "/decoder/blocks.4/Constant_3_output_0"
+    ],
+    "input_shapes": [],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "value": "UNSUPPORTED_ATTR_TYPE"
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 225,
+    "op_type": "Concat",
+    "name": "/decoder/blocks.4/Concat",
+    "inputs": [
+      "/decoder/blocks.4/Slice_output_0",
+      "/decoder/blocks.4/Constant_3_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.4/Concat_output_0"
+    ],
+    "input_shapes": [
+      null,
+      null
+    ],
+    "output_shapes": [
+      null
+    ],
+    "attrs": {
+      "axis": 0
+    },
+    "status": "ignored"
+  },
+  {
+    "index": 226,
+    "op_type": "Resize",
+    "name": "/decoder/blocks.4/Resize",
+    "inputs": [
+      "/decoder/blocks.3/conv2/conv2.2/Relu_output_0",
+      "",
+      "",
+      "/decoder/blocks.4/Concat_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.4/Resize_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        256,
+        256
+      ],
+      [],
+      [],
+      null
+    ],
+    "output_shapes": [
+      [
+        1,
+        32,
+        512,
+        512
+      ]
+    ],
+    "attrs": {
+      "coordinate_transformation_mode": "asymmetric",
+      "cubic_coeff_a": -0.75,
+      "mode": "nearest",
+      "nearest_mode": "floor"
+    },
+    "status": "supported"
+  },
+  {
+    "index": 227,
+    "op_type": "Conv",
+    "name": "/decoder/blocks.4/conv1/conv1.0/Conv",
+    "inputs": [
+      "/decoder/blocks.4/Resize_output_0",
+      "onnx::Conv_895",
+      "onnx::Conv_896"
+    ],
+    "outputs": [
+      "/decoder/blocks.4/conv1/conv1.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        32,
+        512,
+        512
+      ],
+      [
+        16,
+        32,
+        3,
+        3
+      ],
+      [
+        16
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        16,
+        512,
+        512
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 228,
+    "op_type": "Relu",
+    "name": "/decoder/blocks.4/conv1/conv1.2/Relu",
+    "inputs": [
+      "/decoder/blocks.4/conv1/conv1.0/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.4/conv1/conv1.2/Relu_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        16,
+        512,
+        512
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        16,
+        512,
+        512
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 229,
+    "op_type": "Conv",
+    "name": "/decoder/blocks.4/conv2/conv2.0/Conv",
+    "inputs": [
+      "/decoder/blocks.4/conv1/conv1.2/Relu_output_0",
+      "onnx::Conv_898",
+      "onnx::Conv_899"
+    ],
+    "outputs": [
+      "/decoder/blocks.4/conv2/conv2.0/Conv_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        16,
+        512,
+        512
+      ],
+      [
+        16,
+        16,
+        3,
+        3
+      ],
+      [
+        16
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        16,
+        512,
+        512
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  },
+  {
+    "index": 230,
+    "op_type": "Relu",
+    "name": "/decoder/blocks.4/conv2/conv2.2/Relu",
+    "inputs": [
+      "/decoder/blocks.4/conv2/conv2.0/Conv_output_0"
+    ],
+    "outputs": [
+      "/decoder/blocks.4/conv2/conv2.2/Relu_output_0"
+    ],
+    "input_shapes": [
+      [
+        1,
+        16,
+        512,
+        512
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        16,
+        512,
+        512
+      ]
+    ],
+    "attrs": {},
+    "status": "supported"
+  },
+  {
+    "index": 231,
+    "op_type": "Conv",
+    "name": "/segmentation_head/segmentation_head.0/Conv",
+    "inputs": [
+      "/decoder/blocks.4/conv2/conv2.2/Relu_output_0",
+      "segmentation_head.0.weight",
+      "segmentation_head.0.bias"
+    ],
+    "outputs": [
+      "logits"
+    ],
+    "input_shapes": [
+      [
+        1,
+        16,
+        512,
+        512
+      ],
+      [
+        4,
+        16,
+        3,
+        3
+      ],
+      [
+        4
+      ]
+    ],
+    "output_shapes": [
+      [
+        1,
+        4,
+        512,
+        512
+      ]
+    ],
+    "attrs": {
+      "dilations": [
+        1,
+        1
+      ],
+      "group": 1,
+      "kernel_shape": [
+        3,
+        3
+      ],
+      "pads": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strides": [
+        1,
+        1
+      ]
+    },
+    "status": "supported"
+  }
+]

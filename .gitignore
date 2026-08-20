@@ -1,0 +1,57 @@
+# Compiled output
+build/*
+!build/.gitkeep
+*.o
+*.a
+*.so
+*.out
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+*:Zone.Identifier
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Benchmark-generated inputs and outputs
+benchmark/data/*
+!benchmark/data/.gitkeep
+benchmark/results/*
+!benchmark/results/.gitkeep
+benchmark/logs/*
+!benchmark/logs/.gitkeep
+
+# Generated output files
+outputs/predictions/*
+!outputs/predictions/.gitkeep
+outputs/reports/*
+!outputs/reports/.gitkeep
+
+# Large generated experiment data
+experiments/**/*.bin
+experiments/**/*.onnx
+experiments/**/*.pgm
+
+# Temporary model variants
+models/runtime_shapes_*.onnx
+
+# Large model assets: use Git LFS or GitHub Releases
+models/*.onnx
+weights/*.bin
+weights/*.pt
+weights/*.pth
+
+# Input tensors and reference masks: regenerate or publish separately
+inputs/*.bin

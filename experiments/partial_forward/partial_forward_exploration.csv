@@ -1,0 +1,11 @@
+timestamp,target_supported_ops,generate_status,compile_status,run_status,partial_output_count,mean_abs_error,max_abs_error,last_selected_node,last_tensor,last_shape,notes
+2026-08-19T13:04:12,20,OK,OK,OK,589824,0.0000018123,0.0001002848,35 Clip /encoder/features.4/conv/conv.1/conv.1.2/Clip,/encoder/features.4/conv/conv.1/conv.1.2/Clip_output_0,"[1, 144, 64, 64]",
+2026-08-19T13:04:16,40,OK,OK,OK,393216,0.0000008362,0.0000950694,69 Clip /encoder/features.8/conv/conv.0/conv.0.2/Clip,/encoder/features.8/conv/conv.0/conv.0.2/Clip_output_0,"[1, 384, 32, 32]",
+2026-08-19T13:04:21,60,OK,OK,OK,393216,0.0000011499,0.0001034737,103 Clip /encoder/features.11/conv/conv.1/conv.1.2/Clip,/encoder/features.11/conv/conv.1/conv.1.2/Clip_output_0,"[1, 384, 32, 32]",
+2026-08-19T13:04:27,80,OK,OK,OK,245760,0.0000006405,0.0000407696,137 Clip /encoder/features.15/conv/conv.0/conv.0.2/Clip,/encoder/features.15/conv/conv.0/conv.0.2/Clip_output_0,"[1, 960, 16, 16]",
+2026-08-19T13:04:34,100,FAIL(1),,,,,,178 Conv /decoder/blocks.0/conv2/conv2.0/Conv,/decoder/blocks.0/conv2/conv2.0/Conv_output_0,"[1, 256, 32, 32]","generation failed, see /home/kioannou/cloudsen12_pure_c/partial_forward_logs/target_0100_generate.log"
+2026-08-19T13:04:34,120,FAIL(1),,,,,,231 Conv /segmentation_head/segmentation_head.0/Conv,logits,"[1, 4, 512, 512]","generation failed, see /home/kioannou/cloudsen12_pure_c/partial_forward_logs/target_0120_generate.log"
+2026-08-19T13:04:35,140,FAIL(1),,,,,,231 Conv /segmentation_head/segmentation_head.0/Conv,logits,"[1, 4, 512, 512]","generation failed, see /home/kioannou/cloudsen12_pure_c/partial_forward_logs/target_0140_generate.log"
+2026-08-19T13:04:36,160,FAIL(1),,,,,,231 Conv /segmentation_head/segmentation_head.0/Conv,logits,"[1, 4, 512, 512]","generation failed, see /home/kioannou/cloudsen12_pure_c/partial_forward_logs/target_0160_generate.log"
+2026-08-19T13:04:37,180,FAIL(1),,,,,,231 Conv /segmentation_head/segmentation_head.0/Conv,logits,"[1, 4, 512, 512]","generation failed, see /home/kioannou/cloudsen12_pure_c/partial_forward_logs/target_0180_generate.log"
+2026-08-19T13:04:37,200,FAIL(1),,,,,,231 Conv /segmentation_head/segmentation_head.0/Conv,logits,"[1, 4, 512, 512]","generation failed, see /home/kioannou/cloudsen12_pure_c/partial_forward_logs/target_0200_generate.log"

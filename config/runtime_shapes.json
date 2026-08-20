@@ -1,0 +1,1282 @@
+{
+  "logits": {
+    "shape": [
+      1,
+      4,
+      512,
+      512
+    ],
+    "dtype": "float32",
+    "numel": 1048576
+  },
+  "/encoder/features.0/features.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      32,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 2097152
+  },
+  "/encoder/features.0/features.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      32,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 2097152
+  },
+  "/encoder/features.1/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      32,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 2097152
+  },
+  "/encoder/features.1/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      32,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 2097152
+  },
+  "/encoder/features.1/conv/conv.1/Conv_output_0": {
+    "shape": [
+      1,
+      16,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 1048576
+  },
+  "/encoder/features.2/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      96,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 6291456
+  },
+  "/encoder/features.2/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      96,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 6291456
+  },
+  "/encoder/features.2/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      96,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 1572864
+  },
+  "/encoder/features.2/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      96,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 1572864
+  },
+  "/encoder/features.2/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      24,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.3/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      144,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 2359296
+  },
+  "/encoder/features.3/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      144,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 2359296
+  },
+  "/encoder/features.3/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      144,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 2359296
+  },
+  "/encoder/features.3/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      144,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 2359296
+  },
+  "/encoder/features.3/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      24,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.3/Add_output_0": {
+    "shape": [
+      1,
+      24,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.4/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      144,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 2359296
+  },
+  "/encoder/features.4/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      144,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 2359296
+  },
+  "/encoder/features.4/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      144,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.4/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      144,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.4/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      32,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 131072
+  },
+  "/encoder/features.5/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      192,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 786432
+  },
+  "/encoder/features.5/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      192,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 786432
+  },
+  "/encoder/features.5/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      192,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 786432
+  },
+  "/encoder/features.5/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      192,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 786432
+  },
+  "/encoder/features.5/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      32,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 131072
+  },
+  "/encoder/features.5/Add_output_0": {
+    "shape": [
+      1,
+      32,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 131072
+  },
+  "/encoder/features.6/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      192,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 786432
+  },
+  "/encoder/features.6/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      192,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 786432
+  },
+  "/encoder/features.6/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      192,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 786432
+  },
+  "/encoder/features.6/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      192,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 786432
+  },
+  "/encoder/features.6/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      32,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 131072
+  },
+  "/encoder/features.6/Add_output_0": {
+    "shape": [
+      1,
+      32,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 131072
+  },
+  "/encoder/features.7/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      192,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 786432
+  },
+  "/encoder/features.7/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      192,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 786432
+  },
+  "/encoder/features.7/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      192,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 196608
+  },
+  "/encoder/features.7/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      192,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 196608
+  },
+  "/encoder/features.7/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      64,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 65536
+  },
+  "/encoder/features.8/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.8/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.8/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.8/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.8/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      64,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 65536
+  },
+  "/encoder/features.8/Add_output_0": {
+    "shape": [
+      1,
+      64,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 65536
+  },
+  "/encoder/features.9/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.9/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.9/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.9/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.9/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      64,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 65536
+  },
+  "/encoder/features.9/Add_output_0": {
+    "shape": [
+      1,
+      64,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 65536
+  },
+  "/encoder/features.10/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.10/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.10/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.10/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.10/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      64,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 65536
+  },
+  "/encoder/features.10/Add_output_0": {
+    "shape": [
+      1,
+      64,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 65536
+  },
+  "/encoder/features.11/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.11/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.11/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.11/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      384,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 393216
+  },
+  "/encoder/features.11/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      96,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 98304
+  },
+  "/encoder/features.12/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      576,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.12/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      576,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.12/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      576,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.12/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      576,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.12/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      96,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 98304
+  },
+  "/encoder/features.12/Add_output_0": {
+    "shape": [
+      1,
+      96,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 98304
+  },
+  "/encoder/features.13/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      576,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.13/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      576,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.13/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      576,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.13/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      576,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.13/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      96,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 98304
+  },
+  "/encoder/features.13/Add_output_0": {
+    "shape": [
+      1,
+      96,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 98304
+  },
+  "/encoder/features.14/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      576,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.14/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      576,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 589824
+  },
+  "/encoder/features.14/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      576,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 147456
+  },
+  "/encoder/features.14/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      576,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 147456
+  },
+  "/encoder/features.14/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      160,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 40960
+  },
+  "/encoder/features.15/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.15/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.15/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.15/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.15/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      160,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 40960
+  },
+  "/encoder/features.15/Add_output_0": {
+    "shape": [
+      1,
+      160,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 40960
+  },
+  "/encoder/features.16/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.16/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.16/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.16/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.16/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      160,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 40960
+  },
+  "/encoder/features.16/Add_output_0": {
+    "shape": [
+      1,
+      160,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 40960
+  },
+  "/encoder/features.17/conv/conv.0/conv.0.0/Conv_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.17/conv/conv.0/conv.0.2/Clip_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.17/conv/conv.1/conv.1.0/Conv_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.17/conv/conv.1/conv.1.2/Clip_output_0": {
+    "shape": [
+      1,
+      960,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 245760
+  },
+  "/encoder/features.17/conv/conv.2/Conv_output_0": {
+    "shape": [
+      1,
+      320,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 81920
+  },
+  "/encoder/features.18/features.18.0/Conv_output_0": {
+    "shape": [
+      1,
+      1280,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 327680
+  },
+  "/encoder/features.18/features.18.2/Clip_output_0": {
+    "shape": [
+      1,
+      1280,
+      16,
+      16
+    ],
+    "dtype": "float32",
+    "numel": 327680
+  },
+  "/decoder/blocks.0/Resize_output_0": {
+    "shape": [
+      1,
+      1280,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 1310720
+  },
+  "/decoder/blocks.0/Concat_1_output_0": {
+    "shape": [
+      1,
+      1376,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 1409024
+  },
+  "/decoder/blocks.0/conv1/conv1.0/Conv_output_0": {
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 262144
+  },
+  "/decoder/blocks.0/conv1/conv1.2/Relu_output_0": {
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 262144
+  },
+  "/decoder/blocks.0/conv2/conv2.0/Conv_output_0": {
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 262144
+  },
+  "/decoder/blocks.0/conv2/conv2.2/Relu_output_0": {
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "dtype": "float32",
+    "numel": 262144
+  },
+  "/decoder/blocks.1/Resize_output_0": {
+    "shape": [
+      1,
+      256,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 1048576
+  },
+  "/decoder/blocks.1/Concat_1_output_0": {
+    "shape": [
+      1,
+      288,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 1179648
+  },
+  "/decoder/blocks.1/conv1/conv1.0/Conv_output_0": {
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 524288
+  },
+  "/decoder/blocks.1/conv1/conv1.2/Relu_output_0": {
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 524288
+  },
+  "/decoder/blocks.1/conv2/conv2.0/Conv_output_0": {
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 524288
+  },
+  "/decoder/blocks.1/conv2/conv2.2/Relu_output_0": {
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "dtype": "float32",
+    "numel": 524288
+  },
+  "/decoder/blocks.2/Resize_output_0": {
+    "shape": [
+      1,
+      128,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 2097152
+  },
+  "/decoder/blocks.2/Concat_1_output_0": {
+    "shape": [
+      1,
+      152,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 2490368
+  },
+  "/decoder/blocks.2/conv1/conv1.0/Conv_output_0": {
+    "shape": [
+      1,
+      64,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 1048576
+  },
+  "/decoder/blocks.2/conv1/conv1.2/Relu_output_0": {
+    "shape": [
+      1,
+      64,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 1048576
+  },
+  "/decoder/blocks.2/conv2/conv2.0/Conv_output_0": {
+    "shape": [
+      1,
+      64,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 1048576
+  },
+  "/decoder/blocks.2/conv2/conv2.2/Relu_output_0": {
+    "shape": [
+      1,
+      64,
+      128,
+      128
+    ],
+    "dtype": "float32",
+    "numel": 1048576
+  },
+  "/decoder/blocks.3/Resize_output_0": {
+    "shape": [
+      1,
+      64,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 4194304
+  },
+  "/decoder/blocks.3/Concat_1_output_0": {
+    "shape": [
+      1,
+      80,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 5242880
+  },
+  "/decoder/blocks.3/conv1/conv1.0/Conv_output_0": {
+    "shape": [
+      1,
+      32,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 2097152
+  },
+  "/decoder/blocks.3/conv1/conv1.2/Relu_output_0": {
+    "shape": [
+      1,
+      32,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 2097152
+  },
+  "/decoder/blocks.3/conv2/conv2.0/Conv_output_0": {
+    "shape": [
+      1,
+      32,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 2097152
+  },
+  "/decoder/blocks.3/conv2/conv2.2/Relu_output_0": {
+    "shape": [
+      1,
+      32,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "numel": 2097152
+  },
+  "/decoder/blocks.4/Resize_output_0": {
+    "shape": [
+      1,
+      32,
+      512,
+      512
+    ],
+    "dtype": "float32",
+    "numel": 8388608
+  },
+  "/decoder/blocks.4/conv1/conv1.0/Conv_output_0": {
+    "shape": [
+      1,
+      16,
+      512,
+      512
+    ],
+    "dtype": "float32",
+    "numel": 4194304
+  },
+  "/decoder/blocks.4/conv1/conv1.2/Relu_output_0": {
+    "shape": [
+      1,
+      16,
+      512,
+      512
+    ],
+    "dtype": "float32",
+    "numel": 4194304
+  },
+  "/decoder/blocks.4/conv2/conv2.0/Conv_output_0": {
+    "shape": [
+      1,
+      16,
+      512,
+      512
+    ],
+    "dtype": "float32",
+    "numel": 4194304
+  },
+  "/decoder/blocks.4/conv2/conv2.2/Relu_output_0": {
+    "shape": [
+      1,
+      16,
+      512,
+      512
+    ],
+    "dtype": "float32",
+    "numel": 4194304
+  },
+  "input": {
+    "shape": [
+      1,
+      13,
+      512,
+      512
+    ],
+    "dtype": "float32",
+    "numel": 3407872
+  }
+}
