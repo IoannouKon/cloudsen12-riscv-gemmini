@@ -32,6 +32,16 @@ Optional FPGA prototyping
 
 ## Current Status
 
+## Quick Start
+
+### 1. Clone and enter the repository
+
+```bash
+git clone https://github.com/IoannouKon/cloudsen12-riscv-gemmini.git
+
+cd cloudsen12-riscv-gemmini
+
+
 ### Completed
 
 - Real 13-band Sentinel-2 CloudSEN12 samples loaded locally
