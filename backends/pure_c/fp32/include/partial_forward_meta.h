@@ -1,0 +1,5 @@
+#ifndef PARTIAL_FORWARD_META_H
+#define PARTIAL_FORWARD_META_H
+
+#define PF_LAST_COUNT 245760
+#endif

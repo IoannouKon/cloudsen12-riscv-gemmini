@@ -8,7 +8,7 @@ echo 'image,seconds,max_rss_kb,mismatched_pixels,total_pixels' > "$O/pure_c_fp32
 backup_i=$(mktemp); backup_r=$(mktemp); cp inputs/input_1x13x512x512_float32.bin "$backup_i"; cp inputs/pytorch_pred_512x512_uint8.bin "$backup_r"
 trap 'cp "$backup_i" inputs/input_1x13x512x512_float32.bin; cp "$backup_r" inputs/pytorch_pred_512x512_uint8.bin; rm -f "$backup_i" "$backup_r"' EXIT
 n=0
-for input in $(find benchmark/data -maxdepth 1 -name '*.bin' | sort | head -2); do
+for input in $(find benchmark/data -maxdepth 1 -name '*.bin' | sort | head -255); do
  n=$((n+1)); stem=$(basename "$input" .bin); py="$O/${stem}_pytorch.bin"; cpp="$O/${stem}_cpp.bin"
  /usr/bin/time -f '%e,%M' -o "$O/t.time" backends/cpp_onnx/run_onnx_opencv_cli models/cloudsen12_unetmobv2_v2.onnx "$input" "$cpp"
  v=$(cat "$O/t.time"); sec=${v%,*}; mem=${v#*,}; mm=$(python3 - "$py" "$cpp" <<'PY'
@@ -31,7 +31,7 @@ PY
 import sys,numpy as np
 a=np.fromfile(sys.argv[1],np.uint8);b=np.fromfile(sys.argv[2],np.uint8);print(np.count_nonzero(a!=b))
 PY
-); echo "$stem,$sec,$mem,$mm,262144" >> "$O/pure_c_fp32.csv"; echo "[WSL FP32] $n/2"
+); echo "$stem,$sec,$mem,$mm,262144" >> "$O/pure_c_fp32.csv"; echo "[WSL FP32] $n/25"
 done
 # Approved mixed INT8 C on 256x256 patches, compared with PyTorch FP32 and target.
 echo 'image,seconds,max_rss_kb,mismatched_vs_pytorch,correct_vs_pytorch,target_correct,total_pixels' > "$O/pure_c_mixed_int8.csv"
@@ -41,7 +41,7 @@ for n in $(seq 0 1); do i=$(printf '%05d' "$n"); inp="pure_c_int8/results/q31_25
 import sys,numpy as np
 a=np.fromfile(sys.argv[1],np.uint8);p=np.fromfile(sys.argv[2],np.uint8);t=np.fromfile(sys.argv[3],np.uint8);m=np.count_nonzero(a!=p);print(f'{m},{a.size-m},{np.count_nonzero(a==t)}')
 PY
-); echo "patch_${i},$sec,$mem,$vals,65536" >> "$O/pure_c_mixed_int8.csv"; echo "[WSL INT8] $((n+1))/2"
+); echo "patch_${i},$sec,$mem,$vals,65536" >> "$O/pure_c_mixed_int8.csv"; echo "[WSL INT8] $((n+1))/25"
 done
 python3 - <<'PY'
 import csv,json,statistics
