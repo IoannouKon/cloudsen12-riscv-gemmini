@@ -102,7 +102,7 @@ N, C_IN, H_IN, W_IN = x.shape
 C_OUT, C_PER_GROUP, KH, KW = w.shape
 _, _, H_OUT, W_OUT = ref.shape
 
-with open("include/first_conv_meta.h", "w") as f:
+with open("backends/pure_c_fp32/include/first_conv_meta.h", "w") as f:
     f.write("#ifndef FIRST_CONV_META_H\n")
     f.write("#define FIRST_CONV_META_H\n\n")
 

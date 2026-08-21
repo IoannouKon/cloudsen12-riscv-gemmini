@@ -35,7 +35,7 @@ PY
 done
 # Approved mixed INT8 C on 256x256 patches, compared with PyTorch FP32 and target.
 echo 'image,seconds,max_rss_kb,mismatched_vs_pytorch,correct_vs_pytorch,target_correct,total_pixels' > "$O/pure_c_mixed_int8.csv"
-for n in $(seq 0 1); do i=$(printf '%05d' "$n"); inp="pure_c_int8/results/q31_25patch/inputs/patch_${i}_int8.bin"; out="$O/patch_${i}_int8.bin"; py="$O/patch_${i}_pytorch_256.bin"; tg="$O/patch_${i}_target_256.bin"
+for n in $(seq 0 1); do i=$(printf '%05d' "$n"); inp="backends/pure_c_mixed_int8/runtime/results/q31_25patch/inputs/patch_${i}_int8.bin"; out="$O/patch_${i}_int8.bin"; py="$O/patch_${i}_pytorch_256.bin"; tg="$O/patch_${i}_target_256.bin"
  /usr/bin/time -f '%e,%M' -o "$O/t.time" build/cloudsen12_v9_int8_approved "$inp" qat/deployment/v9/approved_pure_c "$out"; v=$(cat "$O/t.time"); sec=${v%,*}; mem=${v#*,}
  vals=$(python3 - "$out" "$py" "$tg" <<'PY'
 import sys,numpy as np

@@ -97,25 +97,25 @@ def main() -> None:
 
     # Build pure-C FP32 backend.
     run([
-        "gcc", "-O3", "-march=native", "-std=c11", "-Iinclude",
-        "src/cloudsen12_full_c.c", "src/conv2d.c", "src/clip.c",
-        "src/relu.c", "src/add.c", "src/concat.c", "src/resize.c",
-        "src/argmax.c", "-lm", "-o", "build/cloudsen12_full_c",
+        "gcc", "-O3", "-march=native", "-std=c11", "-Ibackends/pure_c_fp32/include",
+        "backends/pure_c_fp32/src/cloudsen12_full_c.c", "backends/pure_c_fp32/src/conv2d.c", "backends/pure_c_fp32/src/clip.c",
+        "backends/pure_c_fp32/src/relu.c", "backends/pure_c_fp32/src/add.c", "backends/pure_c_fp32/src/concat.c", "backends/pure_c_fp32/src/resize.c",
+        "backends/pure_c_fp32/src/argmax.c", "-lm", "-o", "build/cloudsen12_full_c",
     ], root)
 
     # Build approved mixed-INT8 backend if sources are available.
     int8_bin = root / "build/cloudsen12_v9_int8_approved"
     int8_sources = [
-        root / "pure_c_int8/src/main.c",
-        root / "pure_c_int8/src/v9_runtime.c",
-        root / "pure_c_int8/generated/v9_plan.c",
+        root / "backends/pure_c_mixed_int8/runtime/src/main.c",
+        root / "backends/pure_c_mixed_int8/runtime/src/v9_runtime.c",
+        root / "backends/pure_c_mixed_int8/runtime/generated/v9_plan.c",
     ]
     if all(p.exists() for p in int8_sources):
         run([
             "gcc", "-O3", "-march=native", "-fopenmp", "-std=c11",
-            "-Ipure_c_int8/include", "-Ipure_c_int8/generated",
-            "pure_c_int8/src/main.c", "pure_c_int8/src/v9_runtime.c",
-            "pure_c_int8/generated/v9_plan.c", "-lm",
+            "-Ibackends/pure_c_mixed_int8/runtime/include", "-Ibackends/pure_c_mixed_int8/runtime/generated",
+            "backends/pure_c_mixed_int8/runtime/src/main.c", "backends/pure_c_mixed_int8/runtime/src/v9_runtime.c",
+            "backends/pure_c_mixed_int8/runtime/generated/v9_plan.c", "-lm",
             "-o", str(int8_bin.relative_to(root)),
         ], root)
     require(int8_bin, "Approved mixed-INT8 executable could not be built or found")
