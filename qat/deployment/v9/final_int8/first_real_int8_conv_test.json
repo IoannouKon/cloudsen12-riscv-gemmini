@@ -1,0 +1,22 @@
+{
+  "layer": "encoder.features.0.0",
+  "input_file": "qat\\data\\test\\patch_00000.npz",
+  "output_shape": [
+    1,
+    32,
+    128,
+    128
+  ],
+  "total_values": 524288,
+  "mismatched_int8_values": 152363,
+  "int8_mismatch_rate": 0.29060935974121094,
+  "dequantized_rmse_vs_fp32": 0.022450847551226616,
+  "integer_arithmetic": {
+    "input": "int8",
+    "weight": "int8",
+    "bias": "int32",
+    "accumulator": "int32",
+    "requantization": "Q31 multiplier and shift",
+    "output": "int8"
+  }
+}

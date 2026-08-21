@@ -1,0 +1,14 @@
+{
+  "patches_tested": 25,
+  "total_pixels": 1638400,
+  "weighted_pixel_accuracy": 0.65284301757812,
+  "mean_patch_accuracy": 0.65284301757812,
+  "median_patch_accuracy": 0.646545410156,
+  "minimum_patch_accuracy": 0.009170532227,
+  "maximum_patch_accuracy": 0.974029541016,
+  "mean_seconds": 1.8968,
+  "median_seconds": 1.89,
+  "maximum_peak_rss_mib": 34.4375,
+  "accuracy_gate_80_percent": false,
+  "original_python_int8_accuracy": 0.8604864501953124
+}

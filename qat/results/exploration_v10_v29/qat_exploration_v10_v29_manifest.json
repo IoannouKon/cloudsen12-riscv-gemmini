@@ -1,0 +1,202 @@
+[
+  {
+    "version": "v10",
+    "soft_teacher": 0.6,
+    "hard_teacher": 0.35,
+    "ground_truth": 0.05,
+    "learning_rate": "5e-9",
+    "epochs": 10,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v11",
+    "soft_teacher": 0.65,
+    "hard_teacher": 0.3,
+    "ground_truth": 0.05,
+    "learning_rate": "5e-9",
+    "epochs": 10,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v12",
+    "soft_teacher": 0.7,
+    "hard_teacher": 0.25,
+    "ground_truth": 0.05,
+    "learning_rate": "5e-9",
+    "epochs": 10,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v13",
+    "soft_teacher": 0.6,
+    "hard_teacher": 0.35,
+    "ground_truth": 0.05,
+    "learning_rate": "1e-8",
+    "epochs": 10,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v14",
+    "soft_teacher": 0.7,
+    "hard_teacher": 0.25,
+    "ground_truth": 0.05,
+    "learning_rate": "1e-8",
+    "epochs": 10,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v15",
+    "soft_teacher": 0.75,
+    "hard_teacher": 0.2,
+    "ground_truth": 0.05,
+    "learning_rate": "1e-8",
+    "epochs": 10,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v16",
+    "soft_teacher": 0.55,
+    "hard_teacher": 0.4,
+    "ground_truth": 0.05,
+    "learning_rate": "2e-8",
+    "epochs": 8,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v17",
+    "soft_teacher": 0.6,
+    "hard_teacher": 0.35,
+    "ground_truth": 0.05,
+    "learning_rate": "2e-8",
+    "epochs": 8,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v18",
+    "soft_teacher": 0.65,
+    "hard_teacher": 0.3,
+    "ground_truth": 0.05,
+    "learning_rate": "2e-8",
+    "epochs": 8,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v19",
+    "soft_teacher": 0.7,
+    "hard_teacher": 0.25,
+    "ground_truth": 0.05,
+    "learning_rate": "2e-8",
+    "epochs": 8,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v20",
+    "soft_teacher": 0.75,
+    "hard_teacher": 0.2,
+    "ground_truth": 0.05,
+    "learning_rate": "2e-8",
+    "epochs": 8,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v21",
+    "soft_teacher": 0.55,
+    "hard_teacher": 0.4,
+    "ground_truth": 0.05,
+    "learning_rate": "3e-8",
+    "epochs": 8,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v22",
+    "soft_teacher": 0.6,
+    "hard_teacher": 0.35,
+    "ground_truth": 0.05,
+    "learning_rate": "3e-8",
+    "epochs": 8,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v23",
+    "soft_teacher": 0.65,
+    "hard_teacher": 0.3,
+    "ground_truth": 0.05,
+    "learning_rate": "3e-8",
+    "epochs": 8,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v24",
+    "soft_teacher": 0.7,
+    "hard_teacher": 0.25,
+    "ground_truth": 0.05,
+    "learning_rate": "3e-8",
+    "epochs": 8,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v25",
+    "soft_teacher": 0.75,
+    "hard_teacher": 0.2,
+    "ground_truth": 0.05,
+    "learning_rate": "3e-8",
+    "epochs": 8,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v26",
+    "soft_teacher": 0.55,
+    "hard_teacher": 0.4,
+    "ground_truth": 0.05,
+    "learning_rate": "5e-8",
+    "epochs": 6,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v27",
+    "soft_teacher": 0.6,
+    "hard_teacher": 0.35,
+    "ground_truth": 0.05,
+    "learning_rate": "5e-8",
+    "epochs": 6,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v28",
+    "soft_teacher": 0.65,
+    "hard_teacher": 0.3,
+    "ground_truth": 0.05,
+    "learning_rate": "5e-8",
+    "epochs": 6,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  },
+  {
+    "version": "v29",
+    "soft_teacher": 0.7,
+    "hard_teacher": 0.25,
+    "ground_truth": 0.05,
+    "learning_rate": "5e-8",
+    "epochs": 6,
+    "start_checkpoint": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\checkpoints\\qat_int8_v9_best.pth",
+    "all_conv_layers_fake_int8": true
+  }
+]

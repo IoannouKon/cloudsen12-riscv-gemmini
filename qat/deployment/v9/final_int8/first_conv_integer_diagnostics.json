@@ -1,0 +1,44 @@
+{
+  "layer": "encoder.features.0.0",
+  "input_file": "qat\\data\\test\\patch_00000.npz",
+  "output_shape": [
+    1,
+    32,
+    128,
+    128
+  ],
+  "input_scale": 0.01062677131863091,
+  "output_scale": 0.04183691505372055,
+  "input_saturation_rate": 0.0,
+  "output_saturation_rate": 0.0,
+  "dequantized_rmse_vs_fp32": 0.02244701236486435,
+  "comparisons": [
+    {
+      "comparison": "Q31 fixed-point vs ideal real multiplier",
+      "total_values": 524288,
+      "exact_match_rate": 0.9994182586669922,
+      "within_1_rate": 1.0,
+      "within_2_rate": 1.0,
+      "mean_absolute_int8_error": 0.0005817413330078125,
+      "maximum_int8_error": 1
+    },
+    {
+      "comparison": "Ideal integer Conv vs folded FP32 Conv-BN",
+      "total_values": 524288,
+      "exact_match_rate": 0.7094783782958984,
+      "within_1_rate": 0.9818782806396484,
+      "within_2_rate": 0.9980106353759766,
+      "mean_absolute_int8_error": 0.3106575012207031,
+      "maximum_int8_error": 4
+    },
+    {
+      "comparison": "Q31 real INT8 vs folded FP32 Conv-BN",
+      "total_values": 524288,
+      "exact_match_rate": 0.7094440460205078,
+      "within_1_rate": 0.98187255859375,
+      "within_2_rate": 0.9980068206787109,
+      "mean_absolute_int8_error": 0.3107013702392578,
+      "maximum_int8_error": 4
+    }
+  ]
+}

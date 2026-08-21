@@ -1,0 +1,51 @@
+{
+  "pytorch_fp32_512x512": {
+    "images": 25,
+    "reference": true,
+    "correct_vs_pytorch": 6553600,
+    "wrong_vs_pytorch": 0,
+    "agreement_vs_pytorch": 1.0,
+    "mean_seconds": 0.15362942799925805,
+    "median_seconds": 0.15357689978554845
+  },
+  "opencv_onnx_cpp_fp32_512x512": {
+    "images": 25,
+    "correct_vs_pytorch": 6553592,
+    "wrong_vs_pytorch": 8,
+    "agreement_vs_pytorch": 0.999998779296875,
+    "mean_seconds": 0.5831999999999999,
+    "median_seconds": 0.58,
+    "maximum_peak_rss_mib": 385.83203125
+  },
+  "pure_c_fp32_512x512": {
+    "images": 25,
+    "correct_vs_pytorch": 6553583,
+    "wrong_vs_pytorch": 17,
+    "agreement_vs_pytorch": 0.9999974060058594,
+    "mean_seconds": 16.9816,
+    "median_seconds": 16.98,
+    "maximum_peak_rss_mib": 536.6484375
+  },
+  "pure_c_mixed_int8_256x256": {
+    "images": 25,
+    "correct_vs_pytorch": 1434406,
+    "wrong_vs_pytorch": 203994,
+    "agreement_vs_pytorch": 0.875491943359375,
+    "target_correct_pixels": 1409821,
+    "target_wrong_pixels": 228579,
+    "target_pixel_accuracy": 0.8604864501953124,
+    "mean_seconds": 2.4112,
+    "median_seconds": 2.4,
+    "maximum_peak_rss_mib": 34.6796875
+  },
+  "pytorch_fp32_256x256_timing": {
+    "images": 25,
+    "mean_seconds": 0.03897842401638627,
+    "median_seconds": 0.0380274998024106
+  },
+  "notes": [
+    "512x512 FP32 backends are directly comparable.",
+    "256x256 mixed INT8 is reported separately because dimensions differ.",
+    "PyTorch memory is not included because it runs in Windows Python/CUDA while Linux RSS measures WSL processes."
+  ]
+}

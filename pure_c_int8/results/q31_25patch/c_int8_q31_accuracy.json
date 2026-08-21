@@ -1,0 +1,172 @@
+{
+  "patches_tested": 25,
+  "total_pixels": 1638400,
+  "weighted_pixel_accuracy": 0.781705322265625,
+  "mean_patch_accuracy": 0.781705322265625,
+  "median_patch_accuracy": 0.77508544921875,
+  "minimum_patch_accuracy": 0.3476409912109375,
+  "maximum_patch_accuracy": 1.0,
+  "runtime": "pure_c_int8_q31",
+  "input_shape": [
+    1,
+    13,
+    256,
+    256
+  ],
+  "output_shape": [
+    256,
+    256
+  ],
+  "patch_results": [
+    {
+      "patch": "qat/data/test/patch_00000.npz",
+      "pixel_accuracy": 0.9044952392578125,
+      "correct_pixels": 59277,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00001.npz",
+      "pixel_accuracy": 0.777435302734375,
+      "correct_pixels": 50950,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00002.npz",
+      "pixel_accuracy": 0.675384521484375,
+      "correct_pixels": 44262,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00003.npz",
+      "pixel_accuracy": 0.440765380859375,
+      "correct_pixels": 28886,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00004.npz",
+      "pixel_accuracy": 1.0,
+      "correct_pixels": 65536,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00005.npz",
+      "pixel_accuracy": 0.5369415283203125,
+      "correct_pixels": 35189,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00006.npz",
+      "pixel_accuracy": 0.9803009033203125,
+      "correct_pixels": 64245,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00007.npz",
+      "pixel_accuracy": 0.3476409912109375,
+      "correct_pixels": 22783,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00008.npz",
+      "pixel_accuracy": 0.51605224609375,
+      "correct_pixels": 33820,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00009.npz",
+      "pixel_accuracy": 0.7396697998046875,
+      "correct_pixels": 48475,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00010.npz",
+      "pixel_accuracy": 0.77508544921875,
+      "correct_pixels": 50796,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00011.npz",
+      "pixel_accuracy": 0.7413482666015625,
+      "correct_pixels": 48585,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00012.npz",
+      "pixel_accuracy": 0.531402587890625,
+      "correct_pixels": 34826,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00013.npz",
+      "pixel_accuracy": 1.0,
+      "correct_pixels": 65536,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00014.npz",
+      "pixel_accuracy": 0.999908447265625,
+      "correct_pixels": 65530,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00015.npz",
+      "pixel_accuracy": 1.0,
+      "correct_pixels": 65536,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00016.npz",
+      "pixel_accuracy": 0.7710113525390625,
+      "correct_pixels": 50529,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00017.npz",
+      "pixel_accuracy": 0.9999237060546875,
+      "correct_pixels": 65531,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00018.npz",
+      "pixel_accuracy": 0.6729736328125,
+      "correct_pixels": 44104,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00019.npz",
+      "pixel_accuracy": 0.995758056640625,
+      "correct_pixels": 65258,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00020.npz",
+      "pixel_accuracy": 0.787261962890625,
+      "correct_pixels": 51594,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00021.npz",
+      "pixel_accuracy": 0.6469573974609375,
+      "correct_pixels": 42399,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00022.npz",
+      "pixel_accuracy": 0.9638214111328125,
+      "correct_pixels": 63165,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00023.npz",
+      "pixel_accuracy": 0.7402801513671875,
+      "correct_pixels": 48515,
+      "total_pixels": 65536
+    },
+    {
+      "patch": "qat/data/test/patch_00024.npz",
+      "pixel_accuracy": 0.9982147216796875,
+      "correct_pixels": 65419,
+      "total_pixels": 65536
+    }
+  ]
+}

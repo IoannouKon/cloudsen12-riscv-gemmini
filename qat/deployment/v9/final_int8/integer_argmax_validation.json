@@ -1,0 +1,14 @@
+{
+  "test_images": 25,
+  "total_pixels": 1638400,
+  "mismatched_pixels": 28941,
+  "argmax_mismatch_rate": 0.0176641845703125,
+  "argmax_agreement_rate": 0.9823358154296875,
+  "tie_pixels_after_int8": 77272,
+  "tie_rate_after_int8": 0.0471630859375,
+  "final_logit_scale": 0.4502814886138195,
+  "final_logit_zero_point": 0,
+  "input_type": "int8 logits",
+  "output_type": "uint8 class mask",
+  "runtime_floating_point_required": false
+}

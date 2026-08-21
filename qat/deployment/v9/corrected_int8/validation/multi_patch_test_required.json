@@ -1,0 +1,9 @@
+﻿{
+  "status": "provisional_conversion",
+  "single_patch_agreement": 0.946746826171875,
+  "acceptance_threshold": 0.95,
+  "shortfall": 0.003253173828125,
+  "pure_c_export_approved": false,
+  "reason": "The corrected conversion is close to the threshold, but approval requires evaluation across multiple unseen patches.",
+  "next_step": "Run corrected real INT8 versus deployment-QAT comparison on at least 25 unseen patches."
+}

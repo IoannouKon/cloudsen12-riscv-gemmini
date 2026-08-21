@@ -1,0 +1,772 @@
+{
+  "patch": "qat/data/test/patch_00000.npz",
+  "conv_layers_executed": 63,
+  "output_shape": [
+    256,
+    256
+  ],
+  "final_logits_dtype": "torch.int32",
+  "final_common_scale": 0.44630801583838275,
+  "pixel_accuracy_vs_target": 0.9008331298828125,
+  "runtime_seconds": 5.039338500238955,
+  "mask_file": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\deployment\\v9\\integer_reference\\full_run\\real_int8_mask_patch_00000.bin",
+  "runtime_note": "Reference uses integer tensors and Q31 arithmetic. torch.unfold receives float64 only to arrange integer-valued patches; all MAC values are converted to int64 before multiplication.",
+  "diagnostics": [
+    {
+      "node": "conv2d",
+      "kind": "conv",
+      "layer": 0,
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "seconds": 0.06298559997230768
+    },
+    {
+      "node": "conv2d_1",
+      "kind": "conv",
+      "layer": 1,
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "seconds": 0.03326470032334328
+    },
+    {
+      "node": "conv2d_2",
+      "kind": "conv",
+      "layer": 2,
+      "shape": [
+        1,
+        16,
+        128,
+        128
+      ],
+      "seconds": 0.02205319982022047
+    },
+    {
+      "node": "conv2d_3",
+      "kind": "conv",
+      "layer": 3,
+      "shape": [
+        1,
+        96,
+        128,
+        128
+      ],
+      "seconds": 0.050747300032526255
+    },
+    {
+      "node": "conv2d_4",
+      "kind": "conv",
+      "layer": 4,
+      "shape": [
+        1,
+        96,
+        64,
+        64
+      ],
+      "seconds": 0.03635020041838288
+    },
+    {
+      "node": "conv2d_5",
+      "kind": "conv",
+      "layer": 5,
+      "shape": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "seconds": 0.02112250030040741
+    },
+    {
+      "node": "conv2d_6",
+      "kind": "conv",
+      "layer": 6,
+      "shape": [
+        1,
+        144,
+        64,
+        64
+      ],
+      "seconds": 0.03340050019323826
+    },
+    {
+      "node": "conv2d_7",
+      "kind": "conv",
+      "layer": 7,
+      "shape": [
+        1,
+        144,
+        64,
+        64
+      ],
+      "seconds": 0.03741580015048385
+    },
+    {
+      "node": "conv2d_8",
+      "kind": "conv",
+      "layer": 8,
+      "shape": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "seconds": 0.020835999865084887
+    },
+    {
+      "node": "conv2d_9",
+      "kind": "conv",
+      "layer": 9,
+      "shape": [
+        1,
+        144,
+        64,
+        64
+      ],
+      "seconds": 0.03277920000255108
+    },
+    {
+      "node": "conv2d_10",
+      "kind": "conv",
+      "layer": 10,
+      "shape": [
+        1,
+        144,
+        32,
+        32
+      ],
+      "seconds": 0.029781899880617857
+    },
+    {
+      "node": "conv2d_11",
+      "kind": "conv",
+      "layer": 11,
+      "shape": [
+        1,
+        32,
+        32,
+        32
+      ],
+      "seconds": 0.015826799906790257
+    },
+    {
+      "node": "conv2d_12",
+      "kind": "conv",
+      "layer": 12,
+      "shape": [
+        1,
+        192,
+        32,
+        32
+      ],
+      "seconds": 0.02957750018686056
+    },
+    {
+      "node": "conv2d_13",
+      "kind": "conv",
+      "layer": 13,
+      "shape": [
+        1,
+        192,
+        32,
+        32
+      ],
+      "seconds": 0.03630340006202459
+    },
+    {
+      "node": "conv2d_14",
+      "kind": "conv",
+      "layer": 14,
+      "shape": [
+        1,
+        32,
+        32,
+        32
+      ],
+      "seconds": 0.02118440018966794
+    },
+    {
+      "node": "conv2d_15",
+      "kind": "conv",
+      "layer": 15,
+      "shape": [
+        1,
+        192,
+        32,
+        32
+      ],
+      "seconds": 0.046197999734431505
+    },
+    {
+      "node": "conv2d_16",
+      "kind": "conv",
+      "layer": 16,
+      "shape": [
+        1,
+        192,
+        32,
+        32
+      ],
+      "seconds": 0.0476417001336813
+    },
+    {
+      "node": "conv2d_17",
+      "kind": "conv",
+      "layer": 17,
+      "shape": [
+        1,
+        32,
+        32,
+        32
+      ],
+      "seconds": 0.020671299658715725
+    },
+    {
+      "node": "conv2d_18",
+      "kind": "conv",
+      "layer": 18,
+      "shape": [
+        1,
+        192,
+        32,
+        32
+      ],
+      "seconds": 0.026117800269275904
+    },
+    {
+      "node": "conv2d_19",
+      "kind": "conv",
+      "layer": 19,
+      "shape": [
+        1,
+        192,
+        16,
+        16
+      ],
+      "seconds": 0.05152139998972416
+    },
+    {
+      "node": "conv2d_20",
+      "kind": "conv",
+      "layer": 20,
+      "shape": [
+        1,
+        64,
+        16,
+        16
+      ],
+      "seconds": 0.02244749991223216
+    },
+    {
+      "node": "conv2d_21",
+      "kind": "conv",
+      "layer": 21,
+      "shape": [
+        1,
+        384,
+        16,
+        16
+      ],
+      "seconds": 0.07279249979183078
+    },
+    {
+      "node": "conv2d_22",
+      "kind": "conv",
+      "layer": 22,
+      "shape": [
+        1,
+        384,
+        16,
+        16
+      ],
+      "seconds": 0.09030559984967113
+    },
+    {
+      "node": "conv2d_23",
+      "kind": "conv",
+      "layer": 23,
+      "shape": [
+        1,
+        64,
+        16,
+        16
+      ],
+      "seconds": 0.02654940029606223
+    },
+    {
+      "node": "conv2d_24",
+      "kind": "conv",
+      "layer": 24,
+      "shape": [
+        1,
+        384,
+        16,
+        16
+      ],
+      "seconds": 0.06716050021350384
+    },
+    {
+      "node": "conv2d_25",
+      "kind": "conv",
+      "layer": 25,
+      "shape": [
+        1,
+        384,
+        16,
+        16
+      ],
+      "seconds": 0.09040819993242621
+    },
+    {
+      "node": "conv2d_26",
+      "kind": "conv",
+      "layer": 26,
+      "shape": [
+        1,
+        64,
+        16,
+        16
+      ],
+      "seconds": 0.02193799987435341
+    },
+    {
+      "node": "conv2d_27",
+      "kind": "conv",
+      "layer": 27,
+      "shape": [
+        1,
+        384,
+        16,
+        16
+      ],
+      "seconds": 0.06648059980943799
+    },
+    {
+      "node": "conv2d_28",
+      "kind": "conv",
+      "layer": 28,
+      "shape": [
+        1,
+        384,
+        16,
+        16
+      ],
+      "seconds": 0.07228640001267195
+    },
+    {
+      "node": "conv2d_29",
+      "kind": "conv",
+      "layer": 29,
+      "shape": [
+        1,
+        64,
+        16,
+        16
+      ],
+      "seconds": 0.021603400353342295
+    },
+    {
+      "node": "conv2d_30",
+      "kind": "conv",
+      "layer": 30,
+      "shape": [
+        1,
+        384,
+        16,
+        16
+      ],
+      "seconds": 0.06619479972869158
+    },
+    {
+      "node": "conv2d_31",
+      "kind": "conv",
+      "layer": 31,
+      "shape": [
+        1,
+        384,
+        16,
+        16
+      ],
+      "seconds": 0.07151779998093843
+    },
+    {
+      "node": "conv2d_32",
+      "kind": "conv",
+      "layer": 32,
+      "shape": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "seconds": 0.02987070009112358
+    },
+    {
+      "node": "conv2d_33",
+      "kind": "conv",
+      "layer": 33,
+      "shape": [
+        1,
+        576,
+        16,
+        16
+      ],
+      "seconds": 0.09371250029653311
+    },
+    {
+      "node": "conv2d_34",
+      "kind": "conv",
+      "layer": 34,
+      "shape": [
+        1,
+        576,
+        16,
+        16
+      ],
+      "seconds": 0.07724549993872643
+    },
+    {
+      "node": "conv2d_35",
+      "kind": "conv",
+      "layer": 35,
+      "shape": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "seconds": 0.029305600095540285
+    },
+    {
+      "node": "conv2d_36",
+      "kind": "conv",
+      "layer": 36,
+      "shape": [
+        1,
+        576,
+        16,
+        16
+      ],
+      "seconds": 0.04315159982070327
+    },
+    {
+      "node": "conv2d_37",
+      "kind": "conv",
+      "layer": 37,
+      "shape": [
+        1,
+        576,
+        16,
+        16
+      ],
+      "seconds": 0.06695290002971888
+    },
+    {
+      "node": "conv2d_38",
+      "kind": "conv",
+      "layer": 38,
+      "shape": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "seconds": 0.03107629995793104
+    },
+    {
+      "node": "conv2d_39",
+      "kind": "conv",
+      "layer": 39,
+      "shape": [
+        1,
+        576,
+        16,
+        16
+      ],
+      "seconds": 0.06071210000663996
+    },
+    {
+      "node": "conv2d_40",
+      "kind": "conv",
+      "layer": 40,
+      "shape": [
+        1,
+        576,
+        8,
+        8
+      ],
+      "seconds": 0.12070850003510714
+    },
+    {
+      "node": "conv2d_41",
+      "kind": "conv",
+      "layer": 41,
+      "shape": [
+        1,
+        160,
+        8,
+        8
+      ],
+      "seconds": 0.03567579993978143
+    },
+    {
+      "node": "conv2d_42",
+      "kind": "conv",
+      "layer": 42,
+      "shape": [
+        1,
+        960,
+        8,
+        8
+      ],
+      "seconds": 0.0884727998636663
+    },
+    {
+      "node": "conv2d_43",
+      "kind": "conv",
+      "layer": 43,
+      "shape": [
+        1,
+        960,
+        8,
+        8
+      ],
+      "seconds": 0.17454800009727478
+    },
+    {
+      "node": "conv2d_44",
+      "kind": "conv",
+      "layer": 44,
+      "shape": [
+        1,
+        160,
+        8,
+        8
+      ],
+      "seconds": 0.04090340016409755
+    },
+    {
+      "node": "conv2d_45",
+      "kind": "conv",
+      "layer": 45,
+      "shape": [
+        1,
+        960,
+        8,
+        8
+      ],
+      "seconds": 0.14109980035573244
+    },
+    {
+      "node": "conv2d_46",
+      "kind": "conv",
+      "layer": 46,
+      "shape": [
+        1,
+        960,
+        8,
+        8
+      ],
+      "seconds": 0.10853230021893978
+    },
+    {
+      "node": "conv2d_47",
+      "kind": "conv",
+      "layer": 47,
+      "shape": [
+        1,
+        160,
+        8,
+        8
+      ],
+      "seconds": 0.039015700109303
+    },
+    {
+      "node": "conv2d_48",
+      "kind": "conv",
+      "layer": 48,
+      "shape": [
+        1,
+        960,
+        8,
+        8
+      ],
+      "seconds": 0.06461630016565323
+    },
+    {
+      "node": "conv2d_49",
+      "kind": "conv",
+      "layer": 49,
+      "shape": [
+        1,
+        960,
+        8,
+        8
+      ],
+      "seconds": 0.14996280008926988
+    },
+    {
+      "node": "conv2d_50",
+      "kind": "conv",
+      "layer": 50,
+      "shape": [
+        1,
+        320,
+        8,
+        8
+      ],
+      "seconds": 0.0649053999222815
+    },
+    {
+      "node": "conv2d_51",
+      "kind": "conv",
+      "layer": 51,
+      "shape": [
+        1,
+        1280,
+        8,
+        8
+      ],
+      "seconds": 0.1207129000686109
+    },
+    {
+      "node": "conv2d_52",
+      "kind": "conv",
+      "layer": 52,
+      "shape": [
+        1,
+        256,
+        16,
+        16
+      ],
+      "seconds": 0.3442563000135124
+    },
+    {
+      "node": "conv2d_53",
+      "kind": "conv",
+      "layer": 53,
+      "shape": [
+        1,
+        256,
+        16,
+        16
+      ],
+      "seconds": 0.11049900017678738
+    },
+    {
+      "node": "conv2d_54",
+      "kind": "conv",
+      "layer": 54,
+      "shape": [
+        1,
+        128,
+        32,
+        32
+      ],
+      "seconds": 0.15896219993010163
+    },
+    {
+      "node": "conv2d_55",
+      "kind": "conv",
+      "layer": 55,
+      "shape": [
+        1,
+        128,
+        32,
+        32
+      ],
+      "seconds": 0.09000530000776052
+    },
+    {
+      "node": "conv2d_56",
+      "kind": "conv",
+      "layer": 56,
+      "shape": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "seconds": 0.27243120037019253
+    },
+    {
+      "node": "conv2d_57",
+      "kind": "conv",
+      "layer": 57,
+      "shape": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "seconds": 0.1347094001248479
+    },
+    {
+      "node": "conv2d_58",
+      "kind": "conv",
+      "layer": 58,
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "seconds": 0.26150589995086193
+    },
+    {
+      "node": "conv2d_59",
+      "kind": "conv",
+      "layer": 59,
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "seconds": 0.15448189992457628
+    },
+    {
+      "node": "conv2d_60",
+      "kind": "conv",
+      "layer": 60,
+      "shape": [
+        1,
+        16,
+        256,
+        256
+      ],
+      "seconds": 0.31095860013738275
+    },
+    {
+      "node": "conv2d_61",
+      "kind": "conv",
+      "layer": 61,
+      "shape": [
+        1,
+        16,
+        256,
+        256
+      ],
+      "seconds": 0.15223870007321239
+    },
+    {
+      "node": "conv2d_62",
+      "kind": "conv",
+      "layer": 62,
+      "shape": [
+        1,
+        4,
+        256,
+        256
+      ],
+      "seconds": 0.05288900015875697
+    }
+  ]
+}

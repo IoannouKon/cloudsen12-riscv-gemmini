@@ -1,0 +1,15 @@
+﻿{
+  "weights": "int8",
+  "convolution_inputs": "int8",
+  "intermediate_activations": "int8",
+  "biases": "int32",
+  "accumulators": "int32",
+  "final_logits": "int32 common-scale",
+  "argmax_input": "int32",
+  "output_mask": "uint8",
+  "floating_point_runtime": false,
+  "reason": "Avoid final INT8 logit ties and the measured 1.7664% Argmax mismatch",
+  "int8_argmax_test_agreement": 0.9823358154296875,
+  "int8_argmax_test_mismatch": 0.0176641845703125,
+  "int8_logit_tie_rate": 0.0471630859375
+}

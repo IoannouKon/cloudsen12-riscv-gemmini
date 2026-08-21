@@ -1,0 +1,567 @@
+graph():
+    %encoder_features_0_0_weight : [num_users=1] = get_attr[target=encoder.features.0.0.weight]
+    %encoder_features_0_1_weight : [num_users=1] = get_attr[target=encoder.features.0.1.weight]
+    %encoder_features_0_1_bias : [num_users=1] = get_attr[target=encoder.features.0.1.bias]
+    %encoder_features_1_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.1.conv.0.0.weight]
+    %encoder_features_1_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.1.conv.0.1.weight]
+    %encoder_features_1_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.1.conv.0.1.bias]
+    %encoder_features_1_conv_1_weight : [num_users=1] = get_attr[target=encoder.features.1.conv.1.weight]
+    %encoder_features_1_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.1.conv.2.weight]
+    %encoder_features_1_conv_2_bias : [num_users=1] = get_attr[target=encoder.features.1.conv.2.bias]
+    %encoder_features_2_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.2.conv.0.0.weight]
+    %encoder_features_2_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.2.conv.0.1.weight]
+    %encoder_features_2_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.2.conv.0.1.bias]
+    %encoder_features_2_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.2.conv.1.0.weight]
+    %encoder_features_2_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.2.conv.1.1.weight]
+    %encoder_features_2_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.2.conv.1.1.bias]
+    %encoder_features_2_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.2.conv.2.weight]
+    %encoder_features_2_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.2.conv.3.weight]
+    %encoder_features_2_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.2.conv.3.bias]
+    %encoder_features_3_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.3.conv.0.0.weight]
+    %encoder_features_3_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.3.conv.0.1.weight]
+    %encoder_features_3_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.3.conv.0.1.bias]
+    %encoder_features_3_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.3.conv.1.0.weight]
+    %encoder_features_3_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.3.conv.1.1.weight]
+    %encoder_features_3_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.3.conv.1.1.bias]
+    %encoder_features_3_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.3.conv.2.weight]
+    %encoder_features_3_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.3.conv.3.weight]
+    %encoder_features_3_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.3.conv.3.bias]
+    %encoder_features_4_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.4.conv.0.0.weight]
+    %encoder_features_4_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.4.conv.0.1.weight]
+    %encoder_features_4_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.4.conv.0.1.bias]
+    %encoder_features_4_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.4.conv.1.0.weight]
+    %encoder_features_4_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.4.conv.1.1.weight]
+    %encoder_features_4_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.4.conv.1.1.bias]
+    %encoder_features_4_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.4.conv.2.weight]
+    %encoder_features_4_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.4.conv.3.weight]
+    %encoder_features_4_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.4.conv.3.bias]
+    %encoder_features_5_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.5.conv.0.0.weight]
+    %encoder_features_5_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.5.conv.0.1.weight]
+    %encoder_features_5_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.5.conv.0.1.bias]
+    %encoder_features_5_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.5.conv.1.0.weight]
+    %encoder_features_5_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.5.conv.1.1.weight]
+    %encoder_features_5_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.5.conv.1.1.bias]
+    %encoder_features_5_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.5.conv.2.weight]
+    %encoder_features_5_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.5.conv.3.weight]
+    %encoder_features_5_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.5.conv.3.bias]
+    %encoder_features_6_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.6.conv.0.0.weight]
+    %encoder_features_6_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.6.conv.0.1.weight]
+    %encoder_features_6_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.6.conv.0.1.bias]
+    %encoder_features_6_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.6.conv.1.0.weight]
+    %encoder_features_6_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.6.conv.1.1.weight]
+    %encoder_features_6_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.6.conv.1.1.bias]
+    %encoder_features_6_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.6.conv.2.weight]
+    %encoder_features_6_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.6.conv.3.weight]
+    %encoder_features_6_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.6.conv.3.bias]
+    %encoder_features_7_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.7.conv.0.0.weight]
+    %encoder_features_7_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.7.conv.0.1.weight]
+    %encoder_features_7_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.7.conv.0.1.bias]
+    %encoder_features_7_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.7.conv.1.0.weight]
+    %encoder_features_7_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.7.conv.1.1.weight]
+    %encoder_features_7_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.7.conv.1.1.bias]
+    %encoder_features_7_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.7.conv.2.weight]
+    %encoder_features_7_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.7.conv.3.weight]
+    %encoder_features_7_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.7.conv.3.bias]
+    %encoder_features_8_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.8.conv.0.0.weight]
+    %encoder_features_8_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.8.conv.0.1.weight]
+    %encoder_features_8_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.8.conv.0.1.bias]
+    %encoder_features_8_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.8.conv.1.0.weight]
+    %encoder_features_8_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.8.conv.1.1.weight]
+    %encoder_features_8_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.8.conv.1.1.bias]
+    %encoder_features_8_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.8.conv.2.weight]
+    %encoder_features_8_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.8.conv.3.weight]
+    %encoder_features_8_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.8.conv.3.bias]
+    %encoder_features_9_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.9.conv.0.0.weight]
+    %encoder_features_9_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.9.conv.0.1.weight]
+    %encoder_features_9_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.9.conv.0.1.bias]
+    %encoder_features_9_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.9.conv.1.0.weight]
+    %encoder_features_9_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.9.conv.1.1.weight]
+    %encoder_features_9_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.9.conv.1.1.bias]
+    %encoder_features_9_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.9.conv.2.weight]
+    %encoder_features_9_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.9.conv.3.weight]
+    %encoder_features_9_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.9.conv.3.bias]
+    %encoder_features_10_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.10.conv.0.0.weight]
+    %encoder_features_10_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.10.conv.0.1.weight]
+    %encoder_features_10_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.10.conv.0.1.bias]
+    %encoder_features_10_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.10.conv.1.0.weight]
+    %encoder_features_10_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.10.conv.1.1.weight]
+    %encoder_features_10_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.10.conv.1.1.bias]
+    %encoder_features_10_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.10.conv.2.weight]
+    %encoder_features_10_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.10.conv.3.weight]
+    %encoder_features_10_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.10.conv.3.bias]
+    %encoder_features_11_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.11.conv.0.0.weight]
+    %encoder_features_11_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.11.conv.0.1.weight]
+    %encoder_features_11_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.11.conv.0.1.bias]
+    %encoder_features_11_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.11.conv.1.0.weight]
+    %encoder_features_11_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.11.conv.1.1.weight]
+    %encoder_features_11_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.11.conv.1.1.bias]
+    %encoder_features_11_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.11.conv.2.weight]
+    %encoder_features_11_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.11.conv.3.weight]
+    %encoder_features_11_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.11.conv.3.bias]
+    %encoder_features_12_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.12.conv.0.0.weight]
+    %encoder_features_12_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.12.conv.0.1.weight]
+    %encoder_features_12_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.12.conv.0.1.bias]
+    %encoder_features_12_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.12.conv.1.0.weight]
+    %encoder_features_12_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.12.conv.1.1.weight]
+    %encoder_features_12_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.12.conv.1.1.bias]
+    %encoder_features_12_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.12.conv.2.weight]
+    %encoder_features_12_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.12.conv.3.weight]
+    %encoder_features_12_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.12.conv.3.bias]
+    %encoder_features_13_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.13.conv.0.0.weight]
+    %encoder_features_13_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.13.conv.0.1.weight]
+    %encoder_features_13_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.13.conv.0.1.bias]
+    %encoder_features_13_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.13.conv.1.0.weight]
+    %encoder_features_13_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.13.conv.1.1.weight]
+    %encoder_features_13_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.13.conv.1.1.bias]
+    %encoder_features_13_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.13.conv.2.weight]
+    %encoder_features_13_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.13.conv.3.weight]
+    %encoder_features_13_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.13.conv.3.bias]
+    %encoder_features_14_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.14.conv.0.0.weight]
+    %encoder_features_14_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.14.conv.0.1.weight]
+    %encoder_features_14_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.14.conv.0.1.bias]
+    %encoder_features_14_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.14.conv.1.0.weight]
+    %encoder_features_14_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.14.conv.1.1.weight]
+    %encoder_features_14_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.14.conv.1.1.bias]
+    %encoder_features_14_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.14.conv.2.weight]
+    %encoder_features_14_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.14.conv.3.weight]
+    %encoder_features_14_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.14.conv.3.bias]
+    %encoder_features_15_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.15.conv.0.0.weight]
+    %encoder_features_15_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.15.conv.0.1.weight]
+    %encoder_features_15_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.15.conv.0.1.bias]
+    %encoder_features_15_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.15.conv.1.0.weight]
+    %encoder_features_15_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.15.conv.1.1.weight]
+    %encoder_features_15_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.15.conv.1.1.bias]
+    %encoder_features_15_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.15.conv.2.weight]
+    %encoder_features_15_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.15.conv.3.weight]
+    %encoder_features_15_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.15.conv.3.bias]
+    %encoder_features_16_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.16.conv.0.0.weight]
+    %encoder_features_16_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.16.conv.0.1.weight]
+    %encoder_features_16_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.16.conv.0.1.bias]
+    %encoder_features_16_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.16.conv.1.0.weight]
+    %encoder_features_16_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.16.conv.1.1.weight]
+    %encoder_features_16_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.16.conv.1.1.bias]
+    %encoder_features_16_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.16.conv.2.weight]
+    %encoder_features_16_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.16.conv.3.weight]
+    %encoder_features_16_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.16.conv.3.bias]
+    %encoder_features_17_conv_0_0_weight : [num_users=1] = get_attr[target=encoder.features.17.conv.0.0.weight]
+    %encoder_features_17_conv_0_1_weight : [num_users=1] = get_attr[target=encoder.features.17.conv.0.1.weight]
+    %encoder_features_17_conv_0_1_bias : [num_users=1] = get_attr[target=encoder.features.17.conv.0.1.bias]
+    %encoder_features_17_conv_1_0_weight : [num_users=1] = get_attr[target=encoder.features.17.conv.1.0.weight]
+    %encoder_features_17_conv_1_1_weight : [num_users=1] = get_attr[target=encoder.features.17.conv.1.1.weight]
+    %encoder_features_17_conv_1_1_bias : [num_users=1] = get_attr[target=encoder.features.17.conv.1.1.bias]
+    %encoder_features_17_conv_2_weight : [num_users=1] = get_attr[target=encoder.features.17.conv.2.weight]
+    %encoder_features_17_conv_3_weight : [num_users=1] = get_attr[target=encoder.features.17.conv.3.weight]
+    %encoder_features_17_conv_3_bias : [num_users=1] = get_attr[target=encoder.features.17.conv.3.bias]
+    %encoder_features_18_0_weight : [num_users=1] = get_attr[target=encoder.features.18.0.weight]
+    %encoder_features_18_1_weight : [num_users=1] = get_attr[target=encoder.features.18.1.weight]
+    %encoder_features_18_1_bias : [num_users=1] = get_attr[target=encoder.features.18.1.bias]
+    %decoder_blocks_0_conv1_0_weight : [num_users=1] = get_attr[target=decoder.blocks.0.conv1.0.weight]
+    %decoder_blocks_0_conv1_1_weight : [num_users=1] = get_attr[target=decoder.blocks.0.conv1.1.weight]
+    %decoder_blocks_0_conv1_1_bias : [num_users=1] = get_attr[target=decoder.blocks.0.conv1.1.bias]
+    %decoder_blocks_0_conv2_0_weight : [num_users=1] = get_attr[target=decoder.blocks.0.conv2.0.weight]
+    %decoder_blocks_0_conv2_1_weight : [num_users=1] = get_attr[target=decoder.blocks.0.conv2.1.weight]
+    %decoder_blocks_0_conv2_1_bias : [num_users=1] = get_attr[target=decoder.blocks.0.conv2.1.bias]
+    %decoder_blocks_1_conv1_0_weight : [num_users=1] = get_attr[target=decoder.blocks.1.conv1.0.weight]
+    %decoder_blocks_1_conv1_1_weight : [num_users=1] = get_attr[target=decoder.blocks.1.conv1.1.weight]
+    %decoder_blocks_1_conv1_1_bias : [num_users=1] = get_attr[target=decoder.blocks.1.conv1.1.bias]
+    %decoder_blocks_1_conv2_0_weight : [num_users=1] = get_attr[target=decoder.blocks.1.conv2.0.weight]
+    %decoder_blocks_1_conv2_1_weight : [num_users=1] = get_attr[target=decoder.blocks.1.conv2.1.weight]
+    %decoder_blocks_1_conv2_1_bias : [num_users=1] = get_attr[target=decoder.blocks.1.conv2.1.bias]
+    %decoder_blocks_2_conv1_0_weight : [num_users=1] = get_attr[target=decoder.blocks.2.conv1.0.weight]
+    %decoder_blocks_2_conv1_1_weight : [num_users=1] = get_attr[target=decoder.blocks.2.conv1.1.weight]
+    %decoder_blocks_2_conv1_1_bias : [num_users=1] = get_attr[target=decoder.blocks.2.conv1.1.bias]
+    %decoder_blocks_2_conv2_0_weight : [num_users=1] = get_attr[target=decoder.blocks.2.conv2.0.weight]
+    %decoder_blocks_2_conv2_1_weight : [num_users=1] = get_attr[target=decoder.blocks.2.conv2.1.weight]
+    %decoder_blocks_2_conv2_1_bias : [num_users=1] = get_attr[target=decoder.blocks.2.conv2.1.bias]
+    %decoder_blocks_3_conv1_0_weight : [num_users=1] = get_attr[target=decoder.blocks.3.conv1.0.weight]
+    %decoder_blocks_3_conv1_1_weight : [num_users=1] = get_attr[target=decoder.blocks.3.conv1.1.weight]
+    %decoder_blocks_3_conv1_1_bias : [num_users=1] = get_attr[target=decoder.blocks.3.conv1.1.bias]
+    %decoder_blocks_3_conv2_0_weight : [num_users=1] = get_attr[target=decoder.blocks.3.conv2.0.weight]
+    %decoder_blocks_3_conv2_1_weight : [num_users=1] = get_attr[target=decoder.blocks.3.conv2.1.weight]
+    %decoder_blocks_3_conv2_1_bias : [num_users=1] = get_attr[target=decoder.blocks.3.conv2.1.bias]
+    %decoder_blocks_4_conv1_0_weight : [num_users=1] = get_attr[target=decoder.blocks.4.conv1.0.weight]
+    %decoder_blocks_4_conv1_1_weight : [num_users=1] = get_attr[target=decoder.blocks.4.conv1.1.weight]
+    %decoder_blocks_4_conv1_1_bias : [num_users=1] = get_attr[target=decoder.blocks.4.conv1.1.bias]
+    %decoder_blocks_4_conv2_0_weight : [num_users=1] = get_attr[target=decoder.blocks.4.conv2.0.weight]
+    %decoder_blocks_4_conv2_1_weight : [num_users=1] = get_attr[target=decoder.blocks.4.conv2.1.weight]
+    %decoder_blocks_4_conv2_1_bias : [num_users=1] = get_attr[target=decoder.blocks.4.conv2.1.bias]
+    %segmentation_head_0_weight : [num_users=1] = get_attr[target=segmentation_head.0.weight]
+    %segmentation_head_0_bias : [num_users=1] = get_attr[target=segmentation_head.0.bias]
+    %encoder_features_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.0.1.running_mean]
+    %encoder_features_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.0.1.running_var]
+    %encoder_features_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.0.1.num_batches_tracked]
+    %encoder_features_1_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.1.conv.0.1.running_mean]
+    %encoder_features_1_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.1.conv.0.1.running_var]
+    %encoder_features_1_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.1.conv.0.1.num_batches_tracked]
+    %encoder_features_1_conv_2_running_mean : [num_users=1] = get_attr[target=encoder.features.1.conv.2.running_mean]
+    %encoder_features_1_conv_2_running_var : [num_users=1] = get_attr[target=encoder.features.1.conv.2.running_var]
+    %encoder_features_1_conv_2_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.1.conv.2.num_batches_tracked]
+    %encoder_features_2_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.2.conv.0.1.running_mean]
+    %encoder_features_2_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.2.conv.0.1.running_var]
+    %encoder_features_2_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.2.conv.0.1.num_batches_tracked]
+    %encoder_features_2_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.2.conv.1.1.running_mean]
+    %encoder_features_2_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.2.conv.1.1.running_var]
+    %encoder_features_2_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.2.conv.1.1.num_batches_tracked]
+    %encoder_features_2_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.2.conv.3.running_mean]
+    %encoder_features_2_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.2.conv.3.running_var]
+    %encoder_features_2_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.2.conv.3.num_batches_tracked]
+    %encoder_features_3_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.3.conv.0.1.running_mean]
+    %encoder_features_3_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.3.conv.0.1.running_var]
+    %encoder_features_3_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.3.conv.0.1.num_batches_tracked]
+    %encoder_features_3_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.3.conv.1.1.running_mean]
+    %encoder_features_3_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.3.conv.1.1.running_var]
+    %encoder_features_3_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.3.conv.1.1.num_batches_tracked]
+    %encoder_features_3_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.3.conv.3.running_mean]
+    %encoder_features_3_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.3.conv.3.running_var]
+    %encoder_features_3_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.3.conv.3.num_batches_tracked]
+    %encoder_features_4_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.4.conv.0.1.running_mean]
+    %encoder_features_4_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.4.conv.0.1.running_var]
+    %encoder_features_4_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.4.conv.0.1.num_batches_tracked]
+    %encoder_features_4_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.4.conv.1.1.running_mean]
+    %encoder_features_4_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.4.conv.1.1.running_var]
+    %encoder_features_4_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.4.conv.1.1.num_batches_tracked]
+    %encoder_features_4_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.4.conv.3.running_mean]
+    %encoder_features_4_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.4.conv.3.running_var]
+    %encoder_features_4_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.4.conv.3.num_batches_tracked]
+    %encoder_features_5_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.5.conv.0.1.running_mean]
+    %encoder_features_5_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.5.conv.0.1.running_var]
+    %encoder_features_5_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.5.conv.0.1.num_batches_tracked]
+    %encoder_features_5_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.5.conv.1.1.running_mean]
+    %encoder_features_5_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.5.conv.1.1.running_var]
+    %encoder_features_5_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.5.conv.1.1.num_batches_tracked]
+    %encoder_features_5_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.5.conv.3.running_mean]
+    %encoder_features_5_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.5.conv.3.running_var]
+    %encoder_features_5_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.5.conv.3.num_batches_tracked]
+    %encoder_features_6_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.6.conv.0.1.running_mean]
+    %encoder_features_6_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.6.conv.0.1.running_var]
+    %encoder_features_6_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.6.conv.0.1.num_batches_tracked]
+    %encoder_features_6_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.6.conv.1.1.running_mean]
+    %encoder_features_6_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.6.conv.1.1.running_var]
+    %encoder_features_6_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.6.conv.1.1.num_batches_tracked]
+    %encoder_features_6_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.6.conv.3.running_mean]
+    %encoder_features_6_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.6.conv.3.running_var]
+    %encoder_features_6_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.6.conv.3.num_batches_tracked]
+    %encoder_features_7_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.7.conv.0.1.running_mean]
+    %encoder_features_7_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.7.conv.0.1.running_var]
+    %encoder_features_7_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.7.conv.0.1.num_batches_tracked]
+    %encoder_features_7_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.7.conv.1.1.running_mean]
+    %encoder_features_7_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.7.conv.1.1.running_var]
+    %encoder_features_7_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.7.conv.1.1.num_batches_tracked]
+    %encoder_features_7_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.7.conv.3.running_mean]
+    %encoder_features_7_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.7.conv.3.running_var]
+    %encoder_features_7_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.7.conv.3.num_batches_tracked]
+    %encoder_features_8_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.8.conv.0.1.running_mean]
+    %encoder_features_8_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.8.conv.0.1.running_var]
+    %encoder_features_8_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.8.conv.0.1.num_batches_tracked]
+    %encoder_features_8_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.8.conv.1.1.running_mean]
+    %encoder_features_8_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.8.conv.1.1.running_var]
+    %encoder_features_8_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.8.conv.1.1.num_batches_tracked]
+    %encoder_features_8_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.8.conv.3.running_mean]
+    %encoder_features_8_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.8.conv.3.running_var]
+    %encoder_features_8_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.8.conv.3.num_batches_tracked]
+    %encoder_features_9_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.9.conv.0.1.running_mean]
+    %encoder_features_9_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.9.conv.0.1.running_var]
+    %encoder_features_9_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.9.conv.0.1.num_batches_tracked]
+    %encoder_features_9_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.9.conv.1.1.running_mean]
+    %encoder_features_9_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.9.conv.1.1.running_var]
+    %encoder_features_9_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.9.conv.1.1.num_batches_tracked]
+    %encoder_features_9_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.9.conv.3.running_mean]
+    %encoder_features_9_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.9.conv.3.running_var]
+    %encoder_features_9_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.9.conv.3.num_batches_tracked]
+    %encoder_features_10_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.10.conv.0.1.running_mean]
+    %encoder_features_10_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.10.conv.0.1.running_var]
+    %encoder_features_10_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.10.conv.0.1.num_batches_tracked]
+    %encoder_features_10_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.10.conv.1.1.running_mean]
+    %encoder_features_10_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.10.conv.1.1.running_var]
+    %encoder_features_10_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.10.conv.1.1.num_batches_tracked]
+    %encoder_features_10_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.10.conv.3.running_mean]
+    %encoder_features_10_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.10.conv.3.running_var]
+    %encoder_features_10_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.10.conv.3.num_batches_tracked]
+    %encoder_features_11_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.11.conv.0.1.running_mean]
+    %encoder_features_11_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.11.conv.0.1.running_var]
+    %encoder_features_11_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.11.conv.0.1.num_batches_tracked]
+    %encoder_features_11_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.11.conv.1.1.running_mean]
+    %encoder_features_11_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.11.conv.1.1.running_var]
+    %encoder_features_11_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.11.conv.1.1.num_batches_tracked]
+    %encoder_features_11_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.11.conv.3.running_mean]
+    %encoder_features_11_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.11.conv.3.running_var]
+    %encoder_features_11_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.11.conv.3.num_batches_tracked]
+    %encoder_features_12_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.12.conv.0.1.running_mean]
+    %encoder_features_12_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.12.conv.0.1.running_var]
+    %encoder_features_12_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.12.conv.0.1.num_batches_tracked]
+    %encoder_features_12_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.12.conv.1.1.running_mean]
+    %encoder_features_12_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.12.conv.1.1.running_var]
+    %encoder_features_12_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.12.conv.1.1.num_batches_tracked]
+    %encoder_features_12_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.12.conv.3.running_mean]
+    %encoder_features_12_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.12.conv.3.running_var]
+    %encoder_features_12_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.12.conv.3.num_batches_tracked]
+    %encoder_features_13_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.13.conv.0.1.running_mean]
+    %encoder_features_13_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.13.conv.0.1.running_var]
+    %encoder_features_13_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.13.conv.0.1.num_batches_tracked]
+    %encoder_features_13_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.13.conv.1.1.running_mean]
+    %encoder_features_13_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.13.conv.1.1.running_var]
+    %encoder_features_13_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.13.conv.1.1.num_batches_tracked]
+    %encoder_features_13_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.13.conv.3.running_mean]
+    %encoder_features_13_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.13.conv.3.running_var]
+    %encoder_features_13_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.13.conv.3.num_batches_tracked]
+    %encoder_features_14_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.14.conv.0.1.running_mean]
+    %encoder_features_14_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.14.conv.0.1.running_var]
+    %encoder_features_14_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.14.conv.0.1.num_batches_tracked]
+    %encoder_features_14_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.14.conv.1.1.running_mean]
+    %encoder_features_14_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.14.conv.1.1.running_var]
+    %encoder_features_14_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.14.conv.1.1.num_batches_tracked]
+    %encoder_features_14_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.14.conv.3.running_mean]
+    %encoder_features_14_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.14.conv.3.running_var]
+    %encoder_features_14_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.14.conv.3.num_batches_tracked]
+    %encoder_features_15_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.15.conv.0.1.running_mean]
+    %encoder_features_15_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.15.conv.0.1.running_var]
+    %encoder_features_15_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.15.conv.0.1.num_batches_tracked]
+    %encoder_features_15_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.15.conv.1.1.running_mean]
+    %encoder_features_15_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.15.conv.1.1.running_var]
+    %encoder_features_15_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.15.conv.1.1.num_batches_tracked]
+    %encoder_features_15_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.15.conv.3.running_mean]
+    %encoder_features_15_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.15.conv.3.running_var]
+    %encoder_features_15_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.15.conv.3.num_batches_tracked]
+    %encoder_features_16_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.16.conv.0.1.running_mean]
+    %encoder_features_16_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.16.conv.0.1.running_var]
+    %encoder_features_16_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.16.conv.0.1.num_batches_tracked]
+    %encoder_features_16_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.16.conv.1.1.running_mean]
+    %encoder_features_16_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.16.conv.1.1.running_var]
+    %encoder_features_16_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.16.conv.1.1.num_batches_tracked]
+    %encoder_features_16_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.16.conv.3.running_mean]
+    %encoder_features_16_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.16.conv.3.running_var]
+    %encoder_features_16_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.16.conv.3.num_batches_tracked]
+    %encoder_features_17_conv_0_1_running_mean : [num_users=1] = get_attr[target=encoder.features.17.conv.0.1.running_mean]
+    %encoder_features_17_conv_0_1_running_var : [num_users=1] = get_attr[target=encoder.features.17.conv.0.1.running_var]
+    %encoder_features_17_conv_0_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.17.conv.0.1.num_batches_tracked]
+    %encoder_features_17_conv_1_1_running_mean : [num_users=1] = get_attr[target=encoder.features.17.conv.1.1.running_mean]
+    %encoder_features_17_conv_1_1_running_var : [num_users=1] = get_attr[target=encoder.features.17.conv.1.1.running_var]
+    %encoder_features_17_conv_1_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.17.conv.1.1.num_batches_tracked]
+    %encoder_features_17_conv_3_running_mean : [num_users=1] = get_attr[target=encoder.features.17.conv.3.running_mean]
+    %encoder_features_17_conv_3_running_var : [num_users=1] = get_attr[target=encoder.features.17.conv.3.running_var]
+    %encoder_features_17_conv_3_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.17.conv.3.num_batches_tracked]
+    %encoder_features_18_1_running_mean : [num_users=1] = get_attr[target=encoder.features.18.1.running_mean]
+    %encoder_features_18_1_running_var : [num_users=1] = get_attr[target=encoder.features.18.1.running_var]
+    %encoder_features_18_1_num_batches_tracked : [num_users=0] = get_attr[target=encoder.features.18.1.num_batches_tracked]
+    %decoder_blocks_0_conv1_1_running_mean : [num_users=1] = get_attr[target=decoder.blocks.0.conv1.1.running_mean]
+    %decoder_blocks_0_conv1_1_running_var : [num_users=1] = get_attr[target=decoder.blocks.0.conv1.1.running_var]
+    %decoder_blocks_0_conv1_1_num_batches_tracked : [num_users=0] = get_attr[target=decoder.blocks.0.conv1.1.num_batches_tracked]
+    %decoder_blocks_0_conv2_1_running_mean : [num_users=1] = get_attr[target=decoder.blocks.0.conv2.1.running_mean]
+    %decoder_blocks_0_conv2_1_running_var : [num_users=1] = get_attr[target=decoder.blocks.0.conv2.1.running_var]
+    %decoder_blocks_0_conv2_1_num_batches_tracked : [num_users=0] = get_attr[target=decoder.blocks.0.conv2.1.num_batches_tracked]
+    %decoder_blocks_1_conv1_1_running_mean : [num_users=1] = get_attr[target=decoder.blocks.1.conv1.1.running_mean]
+    %decoder_blocks_1_conv1_1_running_var : [num_users=1] = get_attr[target=decoder.blocks.1.conv1.1.running_var]
+    %decoder_blocks_1_conv1_1_num_batches_tracked : [num_users=0] = get_attr[target=decoder.blocks.1.conv1.1.num_batches_tracked]
+    %decoder_blocks_1_conv2_1_running_mean : [num_users=1] = get_attr[target=decoder.blocks.1.conv2.1.running_mean]
+    %decoder_blocks_1_conv2_1_running_var : [num_users=1] = get_attr[target=decoder.blocks.1.conv2.1.running_var]
+    %decoder_blocks_1_conv2_1_num_batches_tracked : [num_users=0] = get_attr[target=decoder.blocks.1.conv2.1.num_batches_tracked]
+    %decoder_blocks_2_conv1_1_running_mean : [num_users=1] = get_attr[target=decoder.blocks.2.conv1.1.running_mean]
+    %decoder_blocks_2_conv1_1_running_var : [num_users=1] = get_attr[target=decoder.blocks.2.conv1.1.running_var]
+    %decoder_blocks_2_conv1_1_num_batches_tracked : [num_users=0] = get_attr[target=decoder.blocks.2.conv1.1.num_batches_tracked]
+    %decoder_blocks_2_conv2_1_running_mean : [num_users=1] = get_attr[target=decoder.blocks.2.conv2.1.running_mean]
+    %decoder_blocks_2_conv2_1_running_var : [num_users=1] = get_attr[target=decoder.blocks.2.conv2.1.running_var]
+    %decoder_blocks_2_conv2_1_num_batches_tracked : [num_users=0] = get_attr[target=decoder.blocks.2.conv2.1.num_batches_tracked]
+    %decoder_blocks_3_conv1_1_running_mean : [num_users=1] = get_attr[target=decoder.blocks.3.conv1.1.running_mean]
+    %decoder_blocks_3_conv1_1_running_var : [num_users=1] = get_attr[target=decoder.blocks.3.conv1.1.running_var]
+    %decoder_blocks_3_conv1_1_num_batches_tracked : [num_users=0] = get_attr[target=decoder.blocks.3.conv1.1.num_batches_tracked]
+    %decoder_blocks_3_conv2_1_running_mean : [num_users=1] = get_attr[target=decoder.blocks.3.conv2.1.running_mean]
+    %decoder_blocks_3_conv2_1_running_var : [num_users=1] = get_attr[target=decoder.blocks.3.conv2.1.running_var]
+    %decoder_blocks_3_conv2_1_num_batches_tracked : [num_users=0] = get_attr[target=decoder.blocks.3.conv2.1.num_batches_tracked]
+    %decoder_blocks_4_conv1_1_running_mean : [num_users=1] = get_attr[target=decoder.blocks.4.conv1.1.running_mean]
+    %decoder_blocks_4_conv1_1_running_var : [num_users=1] = get_attr[target=decoder.blocks.4.conv1.1.running_var]
+    %decoder_blocks_4_conv1_1_num_batches_tracked : [num_users=0] = get_attr[target=decoder.blocks.4.conv1.1.num_batches_tracked]
+    %decoder_blocks_4_conv2_1_running_mean : [num_users=1] = get_attr[target=decoder.blocks.4.conv2.1.running_mean]
+    %decoder_blocks_4_conv2_1_running_var : [num_users=1] = get_attr[target=decoder.blocks.4.conv2.1.running_var]
+    %decoder_blocks_4_conv2_1_num_batches_tracked : [num_users=0] = get_attr[target=decoder.blocks.4.conv2.1.num_batches_tracked]
+    %x : [num_users=2] = placeholder[target=x]
+    %_guards_fn : [num_users=0] = call_module[target=_guards_fn](args = (%x,), kwargs = {})
+    %conv2d : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%x, %encoder_features_0_0_weight, None, [2, 2], [1, 1]), kwargs = {})
+    %batch_norm : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d, %encoder_features_0_1_weight, %encoder_features_0_1_bias, %encoder_features_0_1_running_mean, %encoder_features_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh_ : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm, 0.0, 6.0), kwargs = {})
+    %conv2d_1 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh_, %encoder_features_1_conv_0_0_weight, None, [1, 1], [1, 1], [1, 1], 32), kwargs = {})
+    %batch_norm_1 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_1, %encoder_features_1_conv_0_1_weight, %encoder_features_1_conv_0_1_bias, %encoder_features_1_conv_0_1_running_mean, %encoder_features_1_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__1 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_1, 0.0, 6.0), kwargs = {})
+    %conv2d_2 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__1, %encoder_features_1_conv_1_weight), kwargs = {})
+    %batch_norm_2 : [num_users=2] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_2, %encoder_features_1_conv_2_weight, %encoder_features_1_conv_2_bias, %encoder_features_1_conv_2_running_mean, %encoder_features_1_conv_2_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %conv2d_3 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%batch_norm_2, %encoder_features_2_conv_0_0_weight), kwargs = {})
+    %batch_norm_3 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_3, %encoder_features_2_conv_0_1_weight, %encoder_features_2_conv_0_1_bias, %encoder_features_2_conv_0_1_running_mean, %encoder_features_2_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__2 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_3, 0.0, 6.0), kwargs = {})
+    %conv2d_4 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__2, %encoder_features_2_conv_1_0_weight, None, [2, 2], [1, 1], [1, 1], 96), kwargs = {})
+    %batch_norm_4 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_4, %encoder_features_2_conv_1_1_weight, %encoder_features_2_conv_1_1_bias, %encoder_features_2_conv_1_1_running_mean, %encoder_features_2_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__3 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_4, 0.0, 6.0), kwargs = {})
+    %conv2d_5 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__3, %encoder_features_2_conv_2_weight), kwargs = {})
+    %batch_norm_5 : [num_users=2] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_5, %encoder_features_2_conv_3_weight, %encoder_features_2_conv_3_bias, %encoder_features_2_conv_3_running_mean, %encoder_features_2_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %conv2d_6 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%batch_norm_5, %encoder_features_3_conv_0_0_weight), kwargs = {})
+    %batch_norm_6 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_6, %encoder_features_3_conv_0_1_weight, %encoder_features_3_conv_0_1_bias, %encoder_features_3_conv_0_1_running_mean, %encoder_features_3_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__4 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_6, 0.0, 6.0), kwargs = {})
+    %conv2d_7 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__4, %encoder_features_3_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 144), kwargs = {})
+    %batch_norm_7 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_7, %encoder_features_3_conv_1_1_weight, %encoder_features_3_conv_1_1_bias, %encoder_features_3_conv_1_1_running_mean, %encoder_features_3_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__5 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_7, 0.0, 6.0), kwargs = {})
+    %conv2d_8 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__5, %encoder_features_3_conv_2_weight), kwargs = {})
+    %batch_norm_8 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_8, %encoder_features_3_conv_3_weight, %encoder_features_3_conv_3_bias, %encoder_features_3_conv_3_running_mean, %encoder_features_3_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %add : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%batch_norm_5, %batch_norm_8), kwargs = {})
+    %conv2d_9 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add, %encoder_features_4_conv_0_0_weight), kwargs = {})
+    %batch_norm_9 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_9, %encoder_features_4_conv_0_1_weight, %encoder_features_4_conv_0_1_bias, %encoder_features_4_conv_0_1_running_mean, %encoder_features_4_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__6 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_9, 0.0, 6.0), kwargs = {})
+    %conv2d_10 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__6, %encoder_features_4_conv_1_0_weight, None, [2, 2], [1, 1], [1, 1], 144), kwargs = {})
+    %batch_norm_10 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_10, %encoder_features_4_conv_1_1_weight, %encoder_features_4_conv_1_1_bias, %encoder_features_4_conv_1_1_running_mean, %encoder_features_4_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__7 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_10, 0.0, 6.0), kwargs = {})
+    %conv2d_11 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__7, %encoder_features_4_conv_2_weight), kwargs = {})
+    %batch_norm_11 : [num_users=2] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_11, %encoder_features_4_conv_3_weight, %encoder_features_4_conv_3_bias, %encoder_features_4_conv_3_running_mean, %encoder_features_4_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %conv2d_12 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%batch_norm_11, %encoder_features_5_conv_0_0_weight), kwargs = {})
+    %batch_norm_12 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_12, %encoder_features_5_conv_0_1_weight, %encoder_features_5_conv_0_1_bias, %encoder_features_5_conv_0_1_running_mean, %encoder_features_5_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__8 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_12, 0.0, 6.0), kwargs = {})
+    %conv2d_13 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__8, %encoder_features_5_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 192), kwargs = {})
+    %batch_norm_13 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_13, %encoder_features_5_conv_1_1_weight, %encoder_features_5_conv_1_1_bias, %encoder_features_5_conv_1_1_running_mean, %encoder_features_5_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__9 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_13, 0.0, 6.0), kwargs = {})
+    %conv2d_14 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__9, %encoder_features_5_conv_2_weight), kwargs = {})
+    %batch_norm_14 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_14, %encoder_features_5_conv_3_weight, %encoder_features_5_conv_3_bias, %encoder_features_5_conv_3_running_mean, %encoder_features_5_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %add_1 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%batch_norm_11, %batch_norm_14), kwargs = {})
+    %conv2d_15 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_1, %encoder_features_6_conv_0_0_weight), kwargs = {})
+    %batch_norm_15 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_15, %encoder_features_6_conv_0_1_weight, %encoder_features_6_conv_0_1_bias, %encoder_features_6_conv_0_1_running_mean, %encoder_features_6_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__10 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_15, 0.0, 6.0), kwargs = {})
+    %conv2d_16 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__10, %encoder_features_6_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 192), kwargs = {})
+    %batch_norm_16 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_16, %encoder_features_6_conv_1_1_weight, %encoder_features_6_conv_1_1_bias, %encoder_features_6_conv_1_1_running_mean, %encoder_features_6_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__11 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_16, 0.0, 6.0), kwargs = {})
+    %conv2d_17 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__11, %encoder_features_6_conv_2_weight), kwargs = {})
+    %batch_norm_17 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_17, %encoder_features_6_conv_3_weight, %encoder_features_6_conv_3_bias, %encoder_features_6_conv_3_running_mean, %encoder_features_6_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %add_2 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_1, %batch_norm_17), kwargs = {})
+    %conv2d_18 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_2, %encoder_features_7_conv_0_0_weight), kwargs = {})
+    %batch_norm_18 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_18, %encoder_features_7_conv_0_1_weight, %encoder_features_7_conv_0_1_bias, %encoder_features_7_conv_0_1_running_mean, %encoder_features_7_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__12 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_18, 0.0, 6.0), kwargs = {})
+    %conv2d_19 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__12, %encoder_features_7_conv_1_0_weight, None, [2, 2], [1, 1], [1, 1], 192), kwargs = {})
+    %batch_norm_19 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_19, %encoder_features_7_conv_1_1_weight, %encoder_features_7_conv_1_1_bias, %encoder_features_7_conv_1_1_running_mean, %encoder_features_7_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__13 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_19, 0.0, 6.0), kwargs = {})
+    %conv2d_20 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__13, %encoder_features_7_conv_2_weight), kwargs = {})
+    %batch_norm_20 : [num_users=2] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_20, %encoder_features_7_conv_3_weight, %encoder_features_7_conv_3_bias, %encoder_features_7_conv_3_running_mean, %encoder_features_7_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %conv2d_21 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%batch_norm_20, %encoder_features_8_conv_0_0_weight), kwargs = {})
+    %batch_norm_21 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_21, %encoder_features_8_conv_0_1_weight, %encoder_features_8_conv_0_1_bias, %encoder_features_8_conv_0_1_running_mean, %encoder_features_8_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__14 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_21, 0.0, 6.0), kwargs = {})
+    %conv2d_22 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__14, %encoder_features_8_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 384), kwargs = {})
+    %batch_norm_22 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_22, %encoder_features_8_conv_1_1_weight, %encoder_features_8_conv_1_1_bias, %encoder_features_8_conv_1_1_running_mean, %encoder_features_8_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__15 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_22, 0.0, 6.0), kwargs = {})
+    %conv2d_23 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__15, %encoder_features_8_conv_2_weight), kwargs = {})
+    %batch_norm_23 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_23, %encoder_features_8_conv_3_weight, %encoder_features_8_conv_3_bias, %encoder_features_8_conv_3_running_mean, %encoder_features_8_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %add_3 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%batch_norm_20, %batch_norm_23), kwargs = {})
+    %conv2d_24 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_3, %encoder_features_9_conv_0_0_weight), kwargs = {})
+    %batch_norm_24 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_24, %encoder_features_9_conv_0_1_weight, %encoder_features_9_conv_0_1_bias, %encoder_features_9_conv_0_1_running_mean, %encoder_features_9_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__16 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_24, 0.0, 6.0), kwargs = {})
+    %conv2d_25 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__16, %encoder_features_9_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 384), kwargs = {})
+    %batch_norm_25 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_25, %encoder_features_9_conv_1_1_weight, %encoder_features_9_conv_1_1_bias, %encoder_features_9_conv_1_1_running_mean, %encoder_features_9_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__17 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_25, 0.0, 6.0), kwargs = {})
+    %conv2d_26 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__17, %encoder_features_9_conv_2_weight), kwargs = {})
+    %batch_norm_26 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_26, %encoder_features_9_conv_3_weight, %encoder_features_9_conv_3_bias, %encoder_features_9_conv_3_running_mean, %encoder_features_9_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %add_4 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_3, %batch_norm_26), kwargs = {})
+    %conv2d_27 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_4, %encoder_features_10_conv_0_0_weight), kwargs = {})
+    %batch_norm_27 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_27, %encoder_features_10_conv_0_1_weight, %encoder_features_10_conv_0_1_bias, %encoder_features_10_conv_0_1_running_mean, %encoder_features_10_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__18 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_27, 0.0, 6.0), kwargs = {})
+    %conv2d_28 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__18, %encoder_features_10_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 384), kwargs = {})
+    %batch_norm_28 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_28, %encoder_features_10_conv_1_1_weight, %encoder_features_10_conv_1_1_bias, %encoder_features_10_conv_1_1_running_mean, %encoder_features_10_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__19 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_28, 0.0, 6.0), kwargs = {})
+    %conv2d_29 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__19, %encoder_features_10_conv_2_weight), kwargs = {})
+    %batch_norm_29 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_29, %encoder_features_10_conv_3_weight, %encoder_features_10_conv_3_bias, %encoder_features_10_conv_3_running_mean, %encoder_features_10_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %add_5 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_4, %batch_norm_29), kwargs = {})
+    %conv2d_30 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_5, %encoder_features_11_conv_0_0_weight), kwargs = {})
+    %batch_norm_30 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_30, %encoder_features_11_conv_0_1_weight, %encoder_features_11_conv_0_1_bias, %encoder_features_11_conv_0_1_running_mean, %encoder_features_11_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__20 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_30, 0.0, 6.0), kwargs = {})
+    %conv2d_31 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__20, %encoder_features_11_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 384), kwargs = {})
+    %batch_norm_31 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_31, %encoder_features_11_conv_1_1_weight, %encoder_features_11_conv_1_1_bias, %encoder_features_11_conv_1_1_running_mean, %encoder_features_11_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__21 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_31, 0.0, 6.0), kwargs = {})
+    %conv2d_32 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__21, %encoder_features_11_conv_2_weight), kwargs = {})
+    %batch_norm_32 : [num_users=2] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_32, %encoder_features_11_conv_3_weight, %encoder_features_11_conv_3_bias, %encoder_features_11_conv_3_running_mean, %encoder_features_11_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %conv2d_33 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%batch_norm_32, %encoder_features_12_conv_0_0_weight), kwargs = {})
+    %batch_norm_33 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_33, %encoder_features_12_conv_0_1_weight, %encoder_features_12_conv_0_1_bias, %encoder_features_12_conv_0_1_running_mean, %encoder_features_12_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__22 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_33, 0.0, 6.0), kwargs = {})
+    %conv2d_34 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__22, %encoder_features_12_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 576), kwargs = {})
+    %batch_norm_34 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_34, %encoder_features_12_conv_1_1_weight, %encoder_features_12_conv_1_1_bias, %encoder_features_12_conv_1_1_running_mean, %encoder_features_12_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__23 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_34, 0.0, 6.0), kwargs = {})
+    %conv2d_35 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__23, %encoder_features_12_conv_2_weight), kwargs = {})
+    %batch_norm_35 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_35, %encoder_features_12_conv_3_weight, %encoder_features_12_conv_3_bias, %encoder_features_12_conv_3_running_mean, %encoder_features_12_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %add_6 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%batch_norm_32, %batch_norm_35), kwargs = {})
+    %conv2d_36 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_6, %encoder_features_13_conv_0_0_weight), kwargs = {})
+    %batch_norm_36 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_36, %encoder_features_13_conv_0_1_weight, %encoder_features_13_conv_0_1_bias, %encoder_features_13_conv_0_1_running_mean, %encoder_features_13_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__24 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_36, 0.0, 6.0), kwargs = {})
+    %conv2d_37 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__24, %encoder_features_13_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 576), kwargs = {})
+    %batch_norm_37 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_37, %encoder_features_13_conv_1_1_weight, %encoder_features_13_conv_1_1_bias, %encoder_features_13_conv_1_1_running_mean, %encoder_features_13_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__25 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_37, 0.0, 6.0), kwargs = {})
+    %conv2d_38 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__25, %encoder_features_13_conv_2_weight), kwargs = {})
+    %batch_norm_38 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_38, %encoder_features_13_conv_3_weight, %encoder_features_13_conv_3_bias, %encoder_features_13_conv_3_running_mean, %encoder_features_13_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %add_7 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_6, %batch_norm_38), kwargs = {})
+    %conv2d_39 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_7, %encoder_features_14_conv_0_0_weight), kwargs = {})
+    %batch_norm_39 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_39, %encoder_features_14_conv_0_1_weight, %encoder_features_14_conv_0_1_bias, %encoder_features_14_conv_0_1_running_mean, %encoder_features_14_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__26 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_39, 0.0, 6.0), kwargs = {})
+    %conv2d_40 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__26, %encoder_features_14_conv_1_0_weight, None, [2, 2], [1, 1], [1, 1], 576), kwargs = {})
+    %batch_norm_40 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_40, %encoder_features_14_conv_1_1_weight, %encoder_features_14_conv_1_1_bias, %encoder_features_14_conv_1_1_running_mean, %encoder_features_14_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__27 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_40, 0.0, 6.0), kwargs = {})
+    %conv2d_41 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__27, %encoder_features_14_conv_2_weight), kwargs = {})
+    %batch_norm_41 : [num_users=2] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_41, %encoder_features_14_conv_3_weight, %encoder_features_14_conv_3_bias, %encoder_features_14_conv_3_running_mean, %encoder_features_14_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %conv2d_42 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%batch_norm_41, %encoder_features_15_conv_0_0_weight), kwargs = {})
+    %batch_norm_42 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_42, %encoder_features_15_conv_0_1_weight, %encoder_features_15_conv_0_1_bias, %encoder_features_15_conv_0_1_running_mean, %encoder_features_15_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__28 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_42, 0.0, 6.0), kwargs = {})
+    %conv2d_43 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__28, %encoder_features_15_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 960), kwargs = {})
+    %batch_norm_43 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_43, %encoder_features_15_conv_1_1_weight, %encoder_features_15_conv_1_1_bias, %encoder_features_15_conv_1_1_running_mean, %encoder_features_15_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__29 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_43, 0.0, 6.0), kwargs = {})
+    %conv2d_44 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__29, %encoder_features_15_conv_2_weight), kwargs = {})
+    %batch_norm_44 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_44, %encoder_features_15_conv_3_weight, %encoder_features_15_conv_3_bias, %encoder_features_15_conv_3_running_mean, %encoder_features_15_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %add_8 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%batch_norm_41, %batch_norm_44), kwargs = {})
+    %conv2d_45 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_8, %encoder_features_16_conv_0_0_weight), kwargs = {})
+    %batch_norm_45 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_45, %encoder_features_16_conv_0_1_weight, %encoder_features_16_conv_0_1_bias, %encoder_features_16_conv_0_1_running_mean, %encoder_features_16_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__30 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_45, 0.0, 6.0), kwargs = {})
+    %conv2d_46 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__30, %encoder_features_16_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 960), kwargs = {})
+    %batch_norm_46 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_46, %encoder_features_16_conv_1_1_weight, %encoder_features_16_conv_1_1_bias, %encoder_features_16_conv_1_1_running_mean, %encoder_features_16_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__31 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_46, 0.0, 6.0), kwargs = {})
+    %conv2d_47 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__31, %encoder_features_16_conv_2_weight), kwargs = {})
+    %batch_norm_47 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_47, %encoder_features_16_conv_3_weight, %encoder_features_16_conv_3_bias, %encoder_features_16_conv_3_running_mean, %encoder_features_16_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %add_9 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_8, %batch_norm_47), kwargs = {})
+    %conv2d_48 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_9, %encoder_features_17_conv_0_0_weight), kwargs = {})
+    %batch_norm_48 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_48, %encoder_features_17_conv_0_1_weight, %encoder_features_17_conv_0_1_bias, %encoder_features_17_conv_0_1_running_mean, %encoder_features_17_conv_0_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__32 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_48, 0.0, 6.0), kwargs = {})
+    %conv2d_49 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__32, %encoder_features_17_conv_1_0_weight, None, [1, 1], [1, 1], [1, 1], 960), kwargs = {})
+    %batch_norm_49 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_49, %encoder_features_17_conv_1_1_weight, %encoder_features_17_conv_1_1_bias, %encoder_features_17_conv_1_1_running_mean, %encoder_features_17_conv_1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__33 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_49, 0.0, 6.0), kwargs = {})
+    %conv2d_50 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%hardtanh__33, %encoder_features_17_conv_2_weight), kwargs = {})
+    %batch_norm_50 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_50, %encoder_features_17_conv_3_weight, %encoder_features_17_conv_3_bias, %encoder_features_17_conv_3_running_mean, %encoder_features_17_conv_3_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %conv2d_51 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%batch_norm_50, %encoder_features_18_0_weight), kwargs = {})
+    %batch_norm_51 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_51, %encoder_features_18_1_weight, %encoder_features_18_1_bias, %encoder_features_18_1_running_mean, %encoder_features_18_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %hardtanh__34 : [num_users=1] = call_function[target=torch.ops.aten.hardtanh_.default](args = (%batch_norm_51, 0.0, 6.0), kwargs = {})
+    %upsample_nearest2d : [num_users=1] = call_function[target=torch.ops.aten.upsample_nearest2d.vec](args = (%hardtanh__34, [16, 16], None), kwargs = {})
+    %cat : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%upsample_nearest2d, %add_7], 1), kwargs = {})
+    %conv2d_52 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat, %decoder_blocks_0_conv1_0_weight, None, [1, 1], [1, 1]), kwargs = {})
+    %batch_norm_52 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_52, %decoder_blocks_0_conv1_1_weight, %decoder_blocks_0_conv1_1_bias, %decoder_blocks_0_conv1_1_running_mean, %decoder_blocks_0_conv1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %relu_ : [num_users=1] = call_function[target=torch.ops.aten.relu_.default](args = (%batch_norm_52,), kwargs = {})
+    %conv2d_53 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_, %decoder_blocks_0_conv2_0_weight, None, [1, 1], [1, 1]), kwargs = {})
+    %batch_norm_53 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_53, %decoder_blocks_0_conv2_1_weight, %decoder_blocks_0_conv2_1_bias, %decoder_blocks_0_conv2_1_running_mean, %decoder_blocks_0_conv2_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %relu__1 : [num_users=1] = call_function[target=torch.ops.aten.relu_.default](args = (%batch_norm_53,), kwargs = {})
+    %upsample_nearest2d_1 : [num_users=1] = call_function[target=torch.ops.aten.upsample_nearest2d.vec](args = (%relu__1, [32, 32], None), kwargs = {})
+    %cat_1 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%upsample_nearest2d_1, %add_2], 1), kwargs = {})
+    %conv2d_54 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat_1, %decoder_blocks_1_conv1_0_weight, None, [1, 1], [1, 1]), kwargs = {})
+    %batch_norm_54 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_54, %decoder_blocks_1_conv1_1_weight, %decoder_blocks_1_conv1_1_bias, %decoder_blocks_1_conv1_1_running_mean, %decoder_blocks_1_conv1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %relu__2 : [num_users=1] = call_function[target=torch.ops.aten.relu_.default](args = (%batch_norm_54,), kwargs = {})
+    %conv2d_55 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu__2, %decoder_blocks_1_conv2_0_weight, None, [1, 1], [1, 1]), kwargs = {})
+    %batch_norm_55 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_55, %decoder_blocks_1_conv2_1_weight, %decoder_blocks_1_conv2_1_bias, %decoder_blocks_1_conv2_1_running_mean, %decoder_blocks_1_conv2_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %relu__3 : [num_users=1] = call_function[target=torch.ops.aten.relu_.default](args = (%batch_norm_55,), kwargs = {})
+    %upsample_nearest2d_2 : [num_users=1] = call_function[target=torch.ops.aten.upsample_nearest2d.vec](args = (%relu__3, [64, 64], None), kwargs = {})
+    %cat_2 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%upsample_nearest2d_2, %add], 1), kwargs = {})
+    %conv2d_56 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat_2, %decoder_blocks_2_conv1_0_weight, None, [1, 1], [1, 1]), kwargs = {})
+    %batch_norm_56 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_56, %decoder_blocks_2_conv1_1_weight, %decoder_blocks_2_conv1_1_bias, %decoder_blocks_2_conv1_1_running_mean, %decoder_blocks_2_conv1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %relu__4 : [num_users=1] = call_function[target=torch.ops.aten.relu_.default](args = (%batch_norm_56,), kwargs = {})
+    %conv2d_57 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu__4, %decoder_blocks_2_conv2_0_weight, None, [1, 1], [1, 1]), kwargs = {})
+    %batch_norm_57 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_57, %decoder_blocks_2_conv2_1_weight, %decoder_blocks_2_conv2_1_bias, %decoder_blocks_2_conv2_1_running_mean, %decoder_blocks_2_conv2_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %relu__5 : [num_users=1] = call_function[target=torch.ops.aten.relu_.default](args = (%batch_norm_57,), kwargs = {})
+    %upsample_nearest2d_3 : [num_users=1] = call_function[target=torch.ops.aten.upsample_nearest2d.vec](args = (%relu__5, [128, 128], None), kwargs = {})
+    %cat_3 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%upsample_nearest2d_3, %batch_norm_2], 1), kwargs = {})
+    %conv2d_58 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat_3, %decoder_blocks_3_conv1_0_weight, None, [1, 1], [1, 1]), kwargs = {})
+    %batch_norm_58 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_58, %decoder_blocks_3_conv1_1_weight, %decoder_blocks_3_conv1_1_bias, %decoder_blocks_3_conv1_1_running_mean, %decoder_blocks_3_conv1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %relu__6 : [num_users=1] = call_function[target=torch.ops.aten.relu_.default](args = (%batch_norm_58,), kwargs = {})
+    %conv2d_59 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu__6, %decoder_blocks_3_conv2_0_weight, None, [1, 1], [1, 1]), kwargs = {})
+    %batch_norm_59 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_59, %decoder_blocks_3_conv2_1_weight, %decoder_blocks_3_conv2_1_bias, %decoder_blocks_3_conv2_1_running_mean, %decoder_blocks_3_conv2_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %relu__7 : [num_users=1] = call_function[target=torch.ops.aten.relu_.default](args = (%batch_norm_59,), kwargs = {})
+    %upsample_nearest2d_4 : [num_users=1] = call_function[target=torch.ops.aten.upsample_nearest2d.vec](args = (%relu__7, [256, 256], None), kwargs = {})
+    %conv2d_60 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%upsample_nearest2d_4, %decoder_blocks_4_conv1_0_weight, None, [1, 1], [1, 1]), kwargs = {})
+    %batch_norm_60 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_60, %decoder_blocks_4_conv1_1_weight, %decoder_blocks_4_conv1_1_bias, %decoder_blocks_4_conv1_1_running_mean, %decoder_blocks_4_conv1_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %relu__8 : [num_users=1] = call_function[target=torch.ops.aten.relu_.default](args = (%batch_norm_60,), kwargs = {})
+    %conv2d_61 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu__8, %decoder_blocks_4_conv2_0_weight, None, [1, 1], [1, 1]), kwargs = {})
+    %batch_norm_61 : [num_users=1] = call_function[target=torch.ops.aten.batch_norm.default](args = (%conv2d_61, %decoder_blocks_4_conv2_1_weight, %decoder_blocks_4_conv2_1_bias, %decoder_blocks_4_conv2_1_running_mean, %decoder_blocks_4_conv2_1_running_var, False, 0.1, 1e-05, False), kwargs = {})
+    %relu__9 : [num_users=1] = call_function[target=torch.ops.aten.relu_.default](args = (%batch_norm_61,), kwargs = {})
+    %conv2d_62 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu__9, %segmentation_head_0_weight, %segmentation_head_0_bias, [1, 1], [1, 1]), kwargs = {})
+    return (conv2d_62,)

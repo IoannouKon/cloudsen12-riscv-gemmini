@@ -1,0 +1,11 @@
+{
+  "patch": "qat\\data\\test\\patch_00000.npz",
+  "total_pixels": 65536,
+  "fake_int8_conv_layers": 63,
+  "real_int8_vs_fake_int8_agreement": 0.682464599609375,
+  "real_int8_vs_fp32_agreement": 0.6378326416015625,
+  "fake_int8_vs_fp32_agreement": 0.9153594970703125,
+  "real_int8_pixel_accuracy": 0.9008331298828125,
+  "fake_int8_pixel_accuracy": 0.7664947509765625,
+  "fp32_pixel_accuracy": 0.7229461669921875
+}

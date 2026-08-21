@@ -1,0 +1,8 @@
+{
+  "pixels": 65536,
+  "strict_q31_accuracy": 0.9002227783203125,
+  "old_q31_accuracy": 0.9044952392578125,
+  "strict_vs_old_agreement": 0.97845458984375,
+  "strict_mismatched_pixels": 6539,
+  "improved_over_old_q31": false
+}

@@ -1,0 +1,10 @@
+{
+  "status": "q31_conversion_not_accepted",
+  "patches_tested": 25,
+  "weighted_pixel_accuracy": 0.781705322265625,
+  "previous_python_int8_accuracy": 0.8604864501953124,
+  "accuracy_loss": 0.0787811279296874,
+  "pure_c_int8_approved": false,
+  "final_benchmark_approved": false,
+  "next_step": "Train or calibrate a Q31-aware deployment-QAT model with integer Add, Concat, and Conv-input scale alignment."
+}

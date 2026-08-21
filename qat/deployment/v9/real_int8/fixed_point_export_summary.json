@@ -1,0 +1,7 @@
+{
+  "layers_processed": 63,
+  "multiplier_type": "int32",
+  "shift_type": "int32",
+  "runtime_floating_point_required": false,
+  "manifest": "qat\\deployment\\v9\\real_int8\\model_int8_fixed_point_manifest.json"
+}

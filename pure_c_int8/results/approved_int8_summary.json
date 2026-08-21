@@ -1,0 +1,21 @@
+{
+  "patches_tested": 25,
+  "total_pixels": 1638400,
+  "float_align_c_pixel_accuracy": 0.86048645019532,
+  "original_python_int8_accuracy": 0.8604864501953124,
+  "difference_from_python_int8": 7.549516567451064e-15,
+  "previous_q31_c_accuracy": 0.781705322265625,
+  "improvement_over_q31_c": 0.07878112792969505,
+  "mean_patch_accuracy": 0.86048645019532,
+  "median_patch_accuracy": 0.892074584961,
+  "minimum_patch_accuracy": 0.387268066406,
+  "maximum_patch_accuracy": 1.0,
+  "mean_seconds": 2.4032,
+  "median_seconds": 2.41,
+  "minimum_seconds": 2.19,
+  "maximum_seconds": 2.53,
+  "maximum_peak_rss_mib": 34.68359375,
+  "accuracy_gate_84_percent": true,
+  "accuracy_gate_85_percent": true,
+  "implementation": "Pure C with INT8 tensors and weights, INT32 accumulation, Q31 convolution output requantization, and floating-point inter-tensor scale alignment"
+}

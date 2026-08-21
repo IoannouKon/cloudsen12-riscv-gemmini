@@ -1,0 +1,41 @@
+{
+  "strict_load": true,
+  "missing": 0,
+  "unexpected": 0,
+  "best": {
+    "pixel_accuracy": 0.8410408020019531,
+    "agreement_vs_fp32": 0.8515796661376953,
+    "epoch": 2,
+    "loss": 8917.228969726562,
+    "seconds": 24.320483207702637
+  },
+  "history": [
+    {
+      "epoch": 0,
+      "pixel_accuracy": 0.8404198455810546,
+      "agreement_vs_fp32": 0.8512593841552735
+    },
+    {
+      "pixel_accuracy": 0.8409015655517578,
+      "agreement_vs_fp32": 0.8517039489746093,
+      "epoch": 1,
+      "loss": 8935.765071289063,
+      "seconds": 25.303457021713257
+    },
+    {
+      "pixel_accuracy": 0.8410408020019531,
+      "agreement_vs_fp32": 0.8515796661376953,
+      "epoch": 2,
+      "loss": 8917.228969726562,
+      "seconds": 24.320483207702637
+    },
+    {
+      "pixel_accuracy": 0.8399007415771484,
+      "agreement_vs_fp32": 0.8509029388427735,
+      "epoch": 3,
+      "loss": 8910.870701171874,
+      "seconds": 24.854772329330444
+    }
+  ],
+  "package": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\deployment\\v9\\q31_retry_strict\\package"
+}

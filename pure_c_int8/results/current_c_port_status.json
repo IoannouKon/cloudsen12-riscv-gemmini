@@ -1,0 +1,10 @@
+{
+  "status": "runtime_executes_but_not_bit_exact",
+  "layers_executed": 63,
+  "mask_pixels": 65536,
+  "agreement_vs_old_python_reference": 0.8685455322265625,
+  "mismatched_pixels": 8615,
+  "pure_c_int8_approved": false,
+  "cause": "Python reference used floating-point inter-tensor scale alignment while C used Q31 integer alignment.",
+  "next_step": "Regenerate Python validation with Q31 alignment for Conv inputs, Add, and Concat, then validate C against that reference."
+}

@@ -1,0 +1,14 @@
+{
+  "patch": "qat\\data\\test\\patch_00000.npz",
+  "layers": 63,
+  "real_int8_vs_deployment_qat_agreement": 0.946746826171875,
+  "real_int8_vs_fp32_agreement": 0.749176025390625,
+  "deployment_qat_vs_fp32_agreement": 0.761871337890625,
+  "real_int8_pixel_accuracy": 0.8488006591796875,
+  "deployment_qat_pixel_accuracy": 0.8531646728515625,
+  "fp32_pixel_accuracy": 0.7229461669921875,
+  "runtime_seconds": 5.420746900141239,
+  "final_scale": 0.44630801583838275,
+  "pure_c_export_approved": false,
+  "acceptance_threshold": 0.95
+}

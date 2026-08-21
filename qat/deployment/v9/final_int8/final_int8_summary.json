@@ -1,0 +1,7 @@
+{
+  "convolution_layers": 63,
+  "folded_batchnorm_layers": 62,
+  "calibration_patches": 200,
+  "runtime_floating_point_required": false,
+  "manifest": "qat\\deployment\\v9\\final_int8\\final_int8_manifest.json"
+}

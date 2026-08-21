@@ -55,3 +55,9 @@ weights/*.pth
 
 # Input tensors and reference masks: regenerate or publish separately
 inputs/*.bin
+
+# Temporary transfer bundles
+*_base64.txt
+*.bundle
+*.tar.gz
+Download*.zip

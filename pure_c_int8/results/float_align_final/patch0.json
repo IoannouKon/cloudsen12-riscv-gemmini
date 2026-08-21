@@ -1,0 +1,6 @@
+{
+  "agreement_vs_approved_python_integer": 1.0,
+  "pixel_accuracy": 0.8488006591796875,
+  "mismatches_vs_python": 0,
+  "continue_25patch": true
+}

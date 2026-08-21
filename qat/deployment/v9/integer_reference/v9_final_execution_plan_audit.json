@@ -1,0 +1,28 @@
+{
+  "qat_conv_layers": 63,
+  "graph_nodes": 566,
+  "folded_batchnorm_nodes_removed": 62,
+  "export_guard_nodes_removed": 1,
+  "remaining_unsupported_compute_nodes": [],
+  "remaining_unsupported_count": 0,
+  "ready_for_integer_reference_generation": true,
+  "deployment_operations": {
+    "conv_or_depthwise_conv": 63,
+    "batchnorm": 0,
+    "relu6_or_clip": 35,
+    "relu": 10,
+    "residual_add": 10,
+    "resize": 5,
+    "concat": 4,
+    "argmax": 1
+  },
+  "runtime_policy": {
+    "weights": "int8",
+    "activations": "int8",
+    "biases": "int32",
+    "accumulators": "int32",
+    "final_logits": "int32",
+    "output_mask": "uint8",
+    "floating_point_runtime": false
+  }
+}
