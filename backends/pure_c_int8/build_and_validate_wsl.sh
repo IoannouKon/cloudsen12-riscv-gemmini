@@ -1,0 +1,1 @@
+../../pure_c_int8/build_and_validate_wsl.sh

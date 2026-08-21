@@ -85,18 +85,25 @@ An image-level decision can be derived from the fraction of pixels classified as
 backends/python_original/   Original Python/PyTorch workflow
 backends/cpp_onnx/          C++ OpenCV DNN backend using ONNX
 backends/pure_c/            Links to the full pure-C backend
+backends/pure_c_int8/       Links to the pure-C INT8 backend package
 src/                        Pure-C implementation and generated forward pass
 include/                    Pure-C headers
 ```
 
+For a short description of each backend folder, see `backends/README.md`.
+
 ## Repository Structure
+
+See `FOLDER_GUIDE.md` for a quick purpose summary of the main folders.
 
 ```text
 .
 ├── backends/
+│   ├── README.md
 │   ├── python_original/
 │   ├── cpp_onnx/
-│   └── pure_c/
+│   ├── pure_c/
+│   └── pure_c_int8/
 ├── benchmark/
 │   ├── data/
 │   ├── results/
@@ -105,12 +112,9 @@ include/                    Pure-C headers
 ├── config/
 ├── docs/
 ├── experiments/
-├── gemmini/
 ├── include/
-├── inputs/
-├── models/
-├── outputs/
-├── riscv/
+├── pure_c_int8/
+├── qat/
 ├── scripts/
 ├── src/
 └── weights/

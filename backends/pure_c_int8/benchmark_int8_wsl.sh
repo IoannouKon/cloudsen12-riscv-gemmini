@@ -1,0 +1,1 @@
+../../pure_c_int8/benchmark_int8_wsl.sh
