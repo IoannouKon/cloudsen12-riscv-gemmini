@@ -1,0 +1,2470 @@
+{
+  "model": "CloudSEN12 UNetMobV2_V2",
+  "source_checkpoint": "qat\\deployment\\v9\\qat_int8_v9_best_locked.pth",
+  "quantization": {
+    "weights": "signed INT8, symmetric, per output channel",
+    "activations": "signed INT8, symmetric, per tensor",
+    "biases": "signed INT32",
+    "accumulator": "signed INT32",
+    "calibration_patches": 200
+  },
+  "layers": [
+    {
+      "index": 0,
+      "name": "encoder.features.0.0",
+      "identifier": "conv_000_encoder.features.0.0",
+      "weight_file": "weights_int8\\conv_000_encoder.features.0.0.bin",
+      "bias_file": "biases_int32\\conv_000_encoder.features.0.0.bin",
+      "weight_scale_file": "scales\\conv_000_encoder.features.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_000_encoder.features.0.0_real_multipliers.bin",
+      "weight_shape": [
+        32,
+        13,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        32
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.01062677131863091,
+      "input_zero_point": 0,
+      "output_scale": 0.07764705147330217,
+      "output_zero_point": 0,
+      "input_abs_max": 1.3495999574661255,
+      "output_abs_max": 9.861175537109375,
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 1,
+      "name": "encoder.features.1.conv.0.0",
+      "identifier": "conv_001_encoder.features.1.conv.0.0",
+      "weight_file": "weights_int8\\conv_001_encoder.features.1.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_001_encoder.features.1.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_001_encoder.features.1.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_001_encoder.features.1.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        32,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        32
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.03837231388242226,
+      "input_zero_point": 0,
+      "output_scale": 0.1267333443709246,
+      "output_zero_point": 0,
+      "input_abs_max": 4.873283863067627,
+      "output_abs_max": 16.095134735107422,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 32
+    },
+    {
+      "index": 2,
+      "name": "encoder.features.1.conv.1",
+      "identifier": "conv_002_encoder.features.1.conv.1",
+      "weight_file": "weights_int8\\conv_002_encoder.features.1.conv.1.bin",
+      "bias_file": "biases_int32\\conv_002_encoder.features.1.conv.1.bin",
+      "weight_scale_file": "scales\\conv_002_encoder.features.1.conv.1_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_002_encoder.features.1.conv.1_real_multipliers.bin",
+      "weight_shape": [
+        16,
+        32,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        16
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.09487595145157941,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 12.049245834350586,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 3,
+      "name": "encoder.features.2.conv.0.0",
+      "identifier": "conv_003_encoder.features.2.conv.0.0",
+      "weight_file": "weights_int8\\conv_003_encoder.features.2.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_003_encoder.features.2.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_003_encoder.features.2.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_003_encoder.features.2.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        96,
+        16,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        96
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.08921400956281526,
+      "input_zero_point": 0,
+      "output_scale": 0.0959459890530804,
+      "output_zero_point": 0,
+      "input_abs_max": 11.330179214477539,
+      "output_abs_max": 12.185140609741211,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 4,
+      "name": "encoder.features.2.conv.1.0",
+      "identifier": "conv_004_encoder.features.2.conv.1.0",
+      "weight_file": "weights_int8\\conv_004_encoder.features.2.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_004_encoder.features.2.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_004_encoder.features.2.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_004_encoder.features.2.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        96,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        96
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.07230079080176166,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 9.18220043182373,
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 96
+    },
+    {
+      "index": 5,
+      "name": "encoder.features.2.conv.2",
+      "identifier": "conv_005_encoder.features.2.conv.2",
+      "weight_file": "weights_int8\\conv_005_encoder.features.2.conv.2.bin",
+      "bias_file": "biases_int32\\conv_005_encoder.features.2.conv.2.bin",
+      "weight_scale_file": "scales\\conv_005_encoder.features.2.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_005_encoder.features.2.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        24,
+        96,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        24
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.04557808553139994,
+      "input_zero_point": 0,
+      "output_scale": 0.04150000895102193,
+      "output_zero_point": 0,
+      "input_abs_max": 5.788416862487793,
+      "output_abs_max": 5.270501136779785,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 6,
+      "name": "encoder.features.3.conv.0.0",
+      "identifier": "conv_006_encoder.features.3.conv.0.0",
+      "weight_file": "weights_int8\\conv_006_encoder.features.3.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_006_encoder.features.3.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_006_encoder.features.3.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_006_encoder.features.3.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        144,
+        24,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        144
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.037185391103188824,
+      "input_zero_point": 0,
+      "output_scale": 0.04923322632556825,
+      "output_zero_point": 0,
+      "input_abs_max": 4.7225446701049805,
+      "output_abs_max": 6.252619743347168,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 7,
+      "name": "encoder.features.3.conv.1.0",
+      "identifier": "conv_007_encoder.features.3.conv.1.0",
+      "weight_file": "weights_int8\\conv_007_encoder.features.3.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_007_encoder.features.3.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_007_encoder.features.3.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_007_encoder.features.3.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        144,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        144
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.029911874786136657,
+      "input_zero_point": 0,
+      "output_scale": 0.01847326849389264,
+      "output_zero_point": 0,
+      "input_abs_max": 3.7988080978393555,
+      "output_abs_max": 2.3461050987243652,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 144
+    },
+    {
+      "index": 8,
+      "name": "encoder.features.3.conv.2",
+      "identifier": "conv_008_encoder.features.3.conv.2",
+      "weight_file": "weights_int8\\conv_008_encoder.features.3.conv.2.bin",
+      "bias_file": "biases_int32\\conv_008_encoder.features.3.conv.2.bin",
+      "weight_scale_file": "scales\\conv_008_encoder.features.3.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_008_encoder.features.3.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        24,
+        144,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        24
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.03150638820618156,
+      "input_zero_point": 0,
+      "output_scale": 0.04322817194180226,
+      "output_zero_point": 0,
+      "input_abs_max": 4.001311302185059,
+      "output_abs_max": 5.489977836608887,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 9,
+      "name": "encoder.features.4.conv.0.0",
+      "identifier": "conv_009_encoder.features.4.conv.0.0",
+      "weight_file": "weights_int8\\conv_009_encoder.features.4.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_009_encoder.features.4.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_009_encoder.features.4.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_009_encoder.features.4.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        144,
+        24,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        144
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.06013678002545214,
+      "input_zero_point": 0,
+      "output_scale": 0.0777643759419599,
+      "output_zero_point": 0,
+      "input_abs_max": 7.637371063232422,
+      "output_abs_max": 9.876075744628906,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 10,
+      "name": "encoder.features.4.conv.1.0",
+      "identifier": "conv_010_encoder.features.4.conv.1.0",
+      "weight_file": "weights_int8\\conv_010_encoder.features.4.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_010_encoder.features.4.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_010_encoder.features.4.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_010_encoder.features.4.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        144,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        144
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.029765525202112873,
+      "input_zero_point": 0,
+      "output_scale": 0.018860985913614587,
+      "output_zero_point": 0,
+      "input_abs_max": 3.780221700668335,
+      "output_abs_max": 2.3953452110290527,
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 144
+    },
+    {
+      "index": 11,
+      "name": "encoder.features.4.conv.2",
+      "identifier": "conv_011_encoder.features.4.conv.2",
+      "weight_file": "weights_int8\\conv_011_encoder.features.4.conv.2.bin",
+      "bias_file": "biases_int32\\conv_011_encoder.features.4.conv.2.bin",
+      "weight_scale_file": "scales\\conv_011_encoder.features.4.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_011_encoder.features.4.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        32,
+        144,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        32
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.03955823042261319,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 5.023895263671875,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 12,
+      "name": "encoder.features.5.conv.0.0",
+      "identifier": "conv_012_encoder.features.5.conv.0.0",
+      "weight_file": "weights_int8\\conv_012_encoder.features.5.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_012_encoder.features.5.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_012_encoder.features.5.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_012_encoder.features.5.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        192,
+        32,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        192
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.03874595521941898,
+      "input_zero_point": 0,
+      "output_scale": 0.0492020441791204,
+      "output_zero_point": 0,
+      "input_abs_max": 4.920736312866211,
+      "output_abs_max": 6.248659610748291,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 13,
+      "name": "encoder.features.5.conv.1.0",
+      "identifier": "conv_013_encoder.features.5.conv.1.0",
+      "weight_file": "weights_int8\\conv_013_encoder.features.5.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_013_encoder.features.5.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_013_encoder.features.5.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_013_encoder.features.5.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        192,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        192
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.02239312900332954,
+      "input_zero_point": 0,
+      "output_scale": 0.013638492644302488,
+      "output_zero_point": 0,
+      "input_abs_max": 2.8439273834228516,
+      "output_abs_max": 1.732088565826416,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 192
+    },
+    {
+      "index": 14,
+      "name": "encoder.features.5.conv.2",
+      "identifier": "conv_014_encoder.features.5.conv.2",
+      "weight_file": "weights_int8\\conv_014_encoder.features.5.conv.2.bin",
+      "bias_file": "biases_int32\\conv_014_encoder.features.5.conv.2.bin",
+      "weight_scale_file": "scales\\conv_014_encoder.features.5.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_014_encoder.features.5.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        32,
+        192,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        32
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.031428183157612956,
+      "input_zero_point": 0,
+      "output_scale": 0.0205794807494156,
+      "output_zero_point": 0,
+      "input_abs_max": 3.9913792610168457,
+      "output_abs_max": 2.6135940551757812,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 15,
+      "name": "encoder.features.6.conv.0.0",
+      "identifier": "conv_015_encoder.features.6.conv.0.0",
+      "weight_file": "weights_int8\\conv_015_encoder.features.6.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_015_encoder.features.6.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_015_encoder.features.6.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_015_encoder.features.6.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        192,
+        32,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        192
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.051987955889363925,
+      "input_zero_point": 0,
+      "output_scale": 0.06490050338384673,
+      "output_zero_point": 0,
+      "input_abs_max": 6.602470397949219,
+      "output_abs_max": 8.242363929748535,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 16,
+      "name": "encoder.features.6.conv.1.0",
+      "identifier": "conv_016_encoder.features.6.conv.1.0",
+      "weight_file": "weights_int8\\conv_016_encoder.features.6.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_016_encoder.features.6.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_016_encoder.features.6.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_016_encoder.features.6.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        192,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        192
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.04046443503672682,
+      "input_zero_point": 0,
+      "output_scale": 0.03289253505196158,
+      "output_zero_point": 0,
+      "input_abs_max": 5.138983249664307,
+      "output_abs_max": 4.177351951599121,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 192
+    },
+    {
+      "index": 17,
+      "name": "encoder.features.6.conv.2",
+      "identifier": "conv_017_encoder.features.6.conv.2",
+      "weight_file": "weights_int8\\conv_017_encoder.features.6.conv.2.bin",
+      "bias_file": "biases_int32\\conv_017_encoder.features.6.conv.2.bin",
+      "weight_scale_file": "scales\\conv_017_encoder.features.6.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_017_encoder.features.6.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        32,
+        192,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        32
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.02577719350499431,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 3.2737035751342773,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 18,
+      "name": "encoder.features.7.conv.0.0",
+      "identifier": "conv_018_encoder.features.7.conv.0.0",
+      "weight_file": "weights_int8\\conv_018_encoder.features.7.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_018_encoder.features.7.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_018_encoder.features.7.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_018_encoder.features.7.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        192,
+        32,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        192
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.07332963267649252,
+      "input_zero_point": 0,
+      "output_scale": 0.09244955618550459,
+      "output_zero_point": 0,
+      "input_abs_max": 9.31286334991455,
+      "output_abs_max": 11.741093635559082,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 19,
+      "name": "encoder.features.7.conv.1.0",
+      "identifier": "conv_019_encoder.features.7.conv.1.0",
+      "weight_file": "weights_int8\\conv_019_encoder.features.7.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_019_encoder.features.7.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_019_encoder.features.7.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_019_encoder.features.7.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        192,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        192
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.03223737581508366,
+      "input_zero_point": 0,
+      "output_scale": 0.029132118375282588,
+      "output_zero_point": 0,
+      "input_abs_max": 4.094146728515625,
+      "output_abs_max": 3.6997790336608887,
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 192
+    },
+    {
+      "index": 20,
+      "name": "encoder.features.7.conv.2",
+      "identifier": "conv_020_encoder.features.7.conv.2",
+      "weight_file": "weights_int8\\conv_020_encoder.features.7.conv.2.bin",
+      "bias_file": "biases_int32\\conv_020_encoder.features.7.conv.2.bin",
+      "weight_scale_file": "scales\\conv_020_encoder.features.7.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_020_encoder.features.7.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        64,
+        192,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        64
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.08919404998539,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 11.327644348144531,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 21,
+      "name": "encoder.features.8.conv.0.0",
+      "identifier": "conv_021_encoder.features.8.conv.0.0",
+      "weight_file": "weights_int8\\conv_021_encoder.features.8.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_021_encoder.features.8.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_021_encoder.features.8.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_021_encoder.features.8.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        384
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.046259414492629644,
+      "input_zero_point": 0,
+      "output_scale": 0.08245508689580001,
+      "output_zero_point": 0,
+      "input_abs_max": 5.874945640563965,
+      "output_abs_max": 10.471796035766602,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 22,
+      "name": "encoder.features.8.conv.1.0",
+      "identifier": "conv_022_encoder.features.8.conv.1.0",
+      "weight_file": "weights_int8\\conv_022_encoder.features.8.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_022_encoder.features.8.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_022_encoder.features.8.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_022_encoder.features.8.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        384
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.02031409458851251,
+      "input_zero_point": 0,
+      "output_scale": 0.008929474147286003,
+      "output_zero_point": 0,
+      "input_abs_max": 2.579890012741089,
+      "output_abs_max": 1.1340432167053223,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 384
+    },
+    {
+      "index": 23,
+      "name": "encoder.features.8.conv.2",
+      "identifier": "conv_023_encoder.features.8.conv.2",
+      "weight_file": "weights_int8\\conv_023_encoder.features.8.conv.2.bin",
+      "bias_file": "biases_int32\\conv_023_encoder.features.8.conv.2.bin",
+      "weight_scale_file": "scales\\conv_023_encoder.features.8.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_023_encoder.features.8.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        64,
+        384,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        64
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.024868454520157943,
+      "input_zero_point": 0,
+      "output_scale": 0.029618595528790332,
+      "output_zero_point": 0,
+      "input_abs_max": 3.1582937240600586,
+      "output_abs_max": 3.761561632156372,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 24,
+      "name": "encoder.features.9.conv.0.0",
+      "identifier": "conv_024_encoder.features.9.conv.0.0",
+      "weight_file": "weights_int8\\conv_024_encoder.features.9.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_024_encoder.features.9.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_024_encoder.features.9.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_024_encoder.features.9.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        384
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.04726564602589044,
+      "input_zero_point": 0,
+      "output_scale": 0.08400601664866049,
+      "output_zero_point": 0,
+      "input_abs_max": 6.002737045288086,
+      "output_abs_max": 10.668764114379883,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 25,
+      "name": "encoder.features.9.conv.1.0",
+      "identifier": "conv_025_encoder.features.9.conv.1.0",
+      "weight_file": "weights_int8\\conv_025_encoder.features.9.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_025_encoder.features.9.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_025_encoder.features.9.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_025_encoder.features.9.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        384
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.026329346529142126,
+      "input_zero_point": 0,
+      "output_scale": 0.009310172298761804,
+      "output_zero_point": 0,
+      "input_abs_max": 3.34382700920105,
+      "output_abs_max": 1.182391881942749,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 384
+    },
+    {
+      "index": 26,
+      "name": "encoder.features.9.conv.2",
+      "identifier": "conv_026_encoder.features.9.conv.2",
+      "weight_file": "weights_int8\\conv_026_encoder.features.9.conv.2.bin",
+      "bias_file": "biases_int32\\conv_026_encoder.features.9.conv.2.bin",
+      "weight_scale_file": "scales\\conv_026_encoder.features.9.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_026_encoder.features.9.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        64,
+        384,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        64
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.04760240945290393,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 6.045506000518799,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 27,
+      "name": "encoder.features.10.conv.0.0",
+      "identifier": "conv_027_encoder.features.10.conv.0.0",
+      "weight_file": "weights_int8\\conv_027_encoder.features.10.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_027_encoder.features.10.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_027_encoder.features.10.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_027_encoder.features.10.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        384
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.06010885313739927,
+      "input_zero_point": 0,
+      "output_scale": 0.09881295932559517,
+      "output_zero_point": 0,
+      "input_abs_max": 7.633824348449707,
+      "output_abs_max": 12.549245834350586,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 28,
+      "name": "encoder.features.10.conv.1.0",
+      "identifier": "conv_028_encoder.features.10.conv.1.0",
+      "weight_file": "weights_int8\\conv_028_encoder.features.10.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_028_encoder.features.10.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_028_encoder.features.10.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_028_encoder.features.10.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        384
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.02690872620409868,
+      "input_zero_point": 0,
+      "output_scale": 0.013448369784617987,
+      "output_zero_point": 0,
+      "input_abs_max": 3.4174082279205322,
+      "output_abs_max": 1.7079429626464844,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 384
+    },
+    {
+      "index": 29,
+      "name": "encoder.features.10.conv.2",
+      "identifier": "conv_029_encoder.features.10.conv.2",
+      "weight_file": "weights_int8\\conv_029_encoder.features.10.conv.2.bin",
+      "bias_file": "biases_int32\\conv_029_encoder.features.10.conv.2.bin",
+      "weight_scale_file": "scales\\conv_029_encoder.features.10.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_029_encoder.features.10.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        64,
+        384,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        64
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.06265250528891256,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 7.9568681716918945,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 30,
+      "name": "encoder.features.11.conv.0.0",
+      "identifier": "conv_030_encoder.features.11.conv.0.0",
+      "weight_file": "weights_int8\\conv_030_encoder.features.11.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_030_encoder.features.11.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_030_encoder.features.11.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_030_encoder.features.11.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        384,
+        64,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        384
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.08593664394588921,
+      "input_zero_point": 0,
+      "output_scale": 0.14722271416130966,
+      "output_zero_point": 0,
+      "input_abs_max": 10.91395378112793,
+      "output_abs_max": 18.697284698486328,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 31,
+      "name": "encoder.features.11.conv.1.0",
+      "identifier": "conv_031_encoder.features.11.conv.1.0",
+      "weight_file": "weights_int8\\conv_031_encoder.features.11.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_031_encoder.features.11.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_031_encoder.features.11.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_031_encoder.features.11.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        384,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        384
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.033440882765402004,
+      "input_zero_point": 0,
+      "output_scale": 0.02196246244775967,
+      "output_zero_point": 0,
+      "input_abs_max": 4.246992111206055,
+      "output_abs_max": 2.7892327308654785,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 384
+    },
+    {
+      "index": 32,
+      "name": "encoder.features.11.conv.2",
+      "identifier": "conv_032_encoder.features.11.conv.2",
+      "weight_file": "weights_int8\\conv_032_encoder.features.11.conv.2.bin",
+      "bias_file": "biases_int32\\conv_032_encoder.features.11.conv.2.bin",
+      "weight_scale_file": "scales\\conv_032_encoder.features.11.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_032_encoder.features.11.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        96,
+        384,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        96
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.0672420817097341,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 8.53974437713623,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 33,
+      "name": "encoder.features.12.conv.0.0",
+      "identifier": "conv_033_encoder.features.12.conv.0.0",
+      "weight_file": "weights_int8\\conv_033_encoder.features.12.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_033_encoder.features.12.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_033_encoder.features.12.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_033_encoder.features.12.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        576,
+        96,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        576
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.040535885517991435,
+      "input_zero_point": 0,
+      "output_scale": 0.09405747361070528,
+      "output_zero_point": 0,
+      "input_abs_max": 5.148057460784912,
+      "output_abs_max": 11.94529914855957,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 34,
+      "name": "encoder.features.12.conv.1.0",
+      "identifier": "conv_034_encoder.features.12.conv.1.0",
+      "weight_file": "weights_int8\\conv_034_encoder.features.12.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_034_encoder.features.12.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_034_encoder.features.12.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_034_encoder.features.12.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        576,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        576
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.024317133145069513,
+      "input_zero_point": 0,
+      "output_scale": 0.013778908046211784,
+      "output_zero_point": 0,
+      "input_abs_max": 3.088275909423828,
+      "output_abs_max": 1.7499213218688965,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 576
+    },
+    {
+      "index": 35,
+      "name": "encoder.features.12.conv.2",
+      "identifier": "conv_035_encoder.features.12.conv.2",
+      "weight_file": "weights_int8\\conv_035_encoder.features.12.conv.2.bin",
+      "bias_file": "biases_int32\\conv_035_encoder.features.12.conv.2.bin",
+      "weight_scale_file": "scales\\conv_035_encoder.features.12.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_035_encoder.features.12.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        96,
+        576,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        96
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.10466170123242956,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 13.292036056518555,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 36,
+      "name": "encoder.features.13.conv.0.0",
+      "identifier": "conv_036_encoder.features.13.conv.0.0",
+      "weight_file": "weights_int8\\conv_036_encoder.features.13.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_036_encoder.features.13.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_036_encoder.features.13.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_036_encoder.features.13.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        576,
+        96,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        576
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.06753419140192467,
+      "input_zero_point": 0,
+      "output_scale": 0.1925121217262088,
+      "output_zero_point": 0,
+      "input_abs_max": 8.576842308044434,
+      "output_abs_max": 24.449039459228516,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 37,
+      "name": "encoder.features.13.conv.1.0",
+      "identifier": "conv_037_encoder.features.13.conv.1.0",
+      "weight_file": "weights_int8\\conv_037_encoder.features.13.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_037_encoder.features.13.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_037_encoder.features.13.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_037_encoder.features.13.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        576,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        576
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.02965865735932598,
+      "input_zero_point": 0,
+      "output_scale": 0.018153299496868464,
+      "output_zero_point": 0,
+      "input_abs_max": 3.7666494846343994,
+      "output_abs_max": 2.305469036102295,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 576
+    },
+    {
+      "index": 38,
+      "name": "encoder.features.13.conv.2",
+      "identifier": "conv_038_encoder.features.13.conv.2",
+      "weight_file": "weights_int8\\conv_038_encoder.features.13.conv.2.bin",
+      "bias_file": "biases_int32\\conv_038_encoder.features.13.conv.2.bin",
+      "weight_scale_file": "scales\\conv_038_encoder.features.13.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_038_encoder.features.13.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        96,
+        576,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        96
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.10739014843317467,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 13.638548851013184,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 39,
+      "name": "encoder.features.14.conv.0.0",
+      "identifier": "conv_039_encoder.features.14.conv.0.0",
+      "weight_file": "weights_int8\\conv_039_encoder.features.14.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_039_encoder.features.14.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_039_encoder.features.14.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_039_encoder.features.14.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        576,
+        96,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        576
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.0937816289466197,
+      "input_zero_point": 0,
+      "output_scale": 0.21528057789239358,
+      "output_zero_point": 0,
+      "input_abs_max": 11.910266876220703,
+      "output_abs_max": 27.340633392333984,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 40,
+      "name": "encoder.features.14.conv.1.0",
+      "identifier": "conv_040_encoder.features.14.conv.1.0",
+      "weight_file": "weights_int8\\conv_040_encoder.features.14.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_040_encoder.features.14.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_040_encoder.features.14.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_040_encoder.features.14.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        576,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        576
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.037400880197840415,
+      "input_zero_point": 0,
+      "output_scale": 0.027153242291427973,
+      "output_zero_point": 0,
+      "input_abs_max": 4.749911785125732,
+      "output_abs_max": 3.4484617710113525,
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 576
+    },
+    {
+      "index": 41,
+      "name": "encoder.features.14.conv.2",
+      "identifier": "conv_041_encoder.features.14.conv.2",
+      "weight_file": "weights_int8\\conv_041_encoder.features.14.conv.2.bin",
+      "bias_file": "biases_int32\\conv_041_encoder.features.14.conv.2.bin",
+      "weight_scale_file": "scales\\conv_041_encoder.features.14.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_041_encoder.features.14.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        160,
+        576,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        160
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.09936436330239604,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 12.619274139404297,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 42,
+      "name": "encoder.features.15.conv.0.0",
+      "identifier": "conv_042_encoder.features.15.conv.0.0",
+      "weight_file": "weights_int8\\conv_042_encoder.features.15.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_042_encoder.features.15.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_042_encoder.features.15.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_042_encoder.features.15.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        960,
+        160,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        960
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.02826362519752322,
+      "input_zero_point": 0,
+      "output_scale": 0.09413749214232438,
+      "output_zero_point": 0,
+      "input_abs_max": 3.589480400085449,
+      "output_abs_max": 11.955461502075195,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 43,
+      "name": "encoder.features.15.conv.1.0",
+      "identifier": "conv_043_encoder.features.15.conv.1.0",
+      "weight_file": "weights_int8\\conv_043_encoder.features.15.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_043_encoder.features.15.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_043_encoder.features.15.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_043_encoder.features.15.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        960,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        960
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.02583671930268055,
+      "input_zero_point": 0,
+      "output_scale": 0.012342808753486693,
+      "output_zero_point": 0,
+      "input_abs_max": 3.2812633514404297,
+      "output_abs_max": 1.56753671169281,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 960
+    },
+    {
+      "index": 44,
+      "name": "encoder.features.15.conv.2",
+      "identifier": "conv_044_encoder.features.15.conv.2",
+      "weight_file": "weights_int8\\conv_044_encoder.features.15.conv.2.bin",
+      "bias_file": "biases_int32\\conv_044_encoder.features.15.conv.2.bin",
+      "weight_scale_file": "scales\\conv_044_encoder.features.15.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_044_encoder.features.15.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        160,
+        960,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        160
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.08016357271690068,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 10.180773735046387,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 45,
+      "name": "encoder.features.16.conv.0.0",
+      "identifier": "conv_045_encoder.features.16.conv.0.0",
+      "weight_file": "weights_int8\\conv_045_encoder.features.16.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_045_encoder.features.16.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_045_encoder.features.16.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_045_encoder.features.16.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        960,
+        160,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        960
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.031208291767150398,
+      "input_zero_point": 0,
+      "output_scale": 0.15472499216635396,
+      "output_zero_point": 0,
+      "input_abs_max": 3.9634530544281006,
+      "output_abs_max": 19.650074005126953,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 46,
+      "name": "encoder.features.16.conv.1.0",
+      "identifier": "conv_046_encoder.features.16.conv.1.0",
+      "weight_file": "weights_int8\\conv_046_encoder.features.16.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_046_encoder.features.16.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_046_encoder.features.16.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_046_encoder.features.16.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        960,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        960
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.020874860718494325,
+      "input_zero_point": 0,
+      "output_scale": 0.01233303359174353,
+      "output_zero_point": 0,
+      "input_abs_max": 2.6511073112487793,
+      "output_abs_max": 1.5662952661514282,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 960
+    },
+    {
+      "index": 47,
+      "name": "encoder.features.16.conv.2",
+      "identifier": "conv_047_encoder.features.16.conv.2",
+      "weight_file": "weights_int8\\conv_047_encoder.features.16.conv.2.bin",
+      "bias_file": "biases_int32\\conv_047_encoder.features.16.conv.2.bin",
+      "weight_scale_file": "scales\\conv_047_encoder.features.16.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_047_encoder.features.16.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        160,
+        960,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        160
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.1667995152510996,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 21.18353843688965,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 48,
+      "name": "encoder.features.17.conv.0.0",
+      "identifier": "conv_048_encoder.features.17.conv.0.0",
+      "weight_file": "weights_int8\\conv_048_encoder.features.17.conv.0.0.bin",
+      "bias_file": "biases_int32\\conv_048_encoder.features.17.conv.0.0.bin",
+      "weight_scale_file": "scales\\conv_048_encoder.features.17.conv.0.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_048_encoder.features.17.conv.0.0_real_multipliers.bin",
+      "weight_shape": [
+        960,
+        160,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        960
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.16564131909468044,
+      "input_zero_point": 0,
+      "output_scale": 0.4583194161963275,
+      "output_zero_point": 0,
+      "input_abs_max": 21.036447525024414,
+      "output_abs_max": 58.206565856933594,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 49,
+      "name": "encoder.features.17.conv.1.0",
+      "identifier": "conv_049_encoder.features.17.conv.1.0",
+      "weight_file": "weights_int8\\conv_049_encoder.features.17.conv.1.0.bin",
+      "bias_file": "biases_int32\\conv_049_encoder.features.17.conv.1.0.bin",
+      "weight_scale_file": "scales\\conv_049_encoder.features.17.conv.1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_049_encoder.features.17.conv.1.0_real_multipliers.bin",
+      "weight_shape": [
+        960,
+        1,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        960
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 0.02384624518747405,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 3.028473138809204,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 960
+    },
+    {
+      "index": 50,
+      "name": "encoder.features.17.conv.2",
+      "identifier": "conv_050_encoder.features.17.conv.2",
+      "weight_file": "weights_int8\\conv_050_encoder.features.17.conv.2.bin",
+      "bias_file": "biases_int32\\conv_050_encoder.features.17.conv.2.bin",
+      "weight_scale_file": "scales\\conv_050_encoder.features.17.conv.2_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_050_encoder.features.17.conv.2_real_multipliers.bin",
+      "weight_shape": [
+        320,
+        960,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        320
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.047244094488188976,
+      "input_zero_point": 0,
+      "output_scale": 1.622134231206939,
+      "output_zero_point": 0,
+      "input_abs_max": 6.0,
+      "output_abs_max": 206.01104736328125,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 51,
+      "name": "encoder.features.18.0",
+      "identifier": "conv_051_encoder.features.18.0",
+      "weight_file": "weights_int8\\conv_051_encoder.features.18.0.bin",
+      "bias_file": "biases_int32\\conv_051_encoder.features.18.0.bin",
+      "weight_scale_file": "scales\\conv_051_encoder.features.18.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_051_encoder.features.18.0_real_multipliers.bin",
+      "weight_shape": [
+        1280,
+        320,
+        1,
+        1
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        1280
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.12218222280186931,
+      "input_zero_point": 0,
+      "output_scale": 2.6399473655880907,
+      "output_zero_point": 0,
+      "input_abs_max": 15.517142295837402,
+      "output_abs_max": 335.2733154296875,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 52,
+      "name": "decoder.blocks.0.conv1.0",
+      "identifier": "conv_052_decoder.blocks.0.conv1.0",
+      "weight_file": "weights_int8\\conv_052_decoder.blocks.0.conv1.0.bin",
+      "bias_file": "biases_int32\\conv_052_decoder.blocks.0.conv1.0.bin",
+      "weight_scale_file": "scales\\conv_052_decoder.blocks.0.conv1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_052_decoder.blocks.0.conv1.0_real_multipliers.bin",
+      "weight_shape": [
+        256,
+        1376,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        256
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.0937816289466197,
+      "input_zero_point": 0,
+      "output_scale": 28.137268546998033,
+      "output_zero_point": 0,
+      "input_abs_max": 11.910266876220703,
+      "output_abs_max": 3573.43310546875,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 53,
+      "name": "decoder.blocks.0.conv2.0",
+      "identifier": "conv_053_decoder.blocks.0.conv2.0",
+      "weight_file": "weights_int8\\conv_053_decoder.blocks.0.conv2.0.bin",
+      "bias_file": "biases_int32\\conv_053_decoder.blocks.0.conv2.0.bin",
+      "weight_scale_file": "scales\\conv_053_decoder.blocks.0.conv2.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_053_decoder.blocks.0.conv2.0_real_multipliers.bin",
+      "weight_shape": [
+        256,
+        256,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        256
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.1687272139421598,
+      "input_zero_point": 0,
+      "output_scale": 20.36976731668307,
+      "output_zero_point": 0,
+      "input_abs_max": 21.428356170654297,
+      "output_abs_max": 2586.96044921875,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 54,
+      "name": "decoder.blocks.1.conv1.0",
+      "identifier": "conv_054_decoder.blocks.1.conv1.0",
+      "weight_file": "weights_int8\\conv_054_decoder.blocks.1.conv1.0.bin",
+      "bias_file": "biases_int32\\conv_054_decoder.blocks.1.conv1.0.bin",
+      "weight_scale_file": "scales\\conv_054_decoder.blocks.1.conv1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_054_decoder.blocks.1.conv1.0_real_multipliers.bin",
+      "weight_shape": [
+        128,
+        288,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        128
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.194250767625223,
+      "input_zero_point": 0,
+      "output_scale": 21.208926703986222,
+      "output_zero_point": 0,
+      "input_abs_max": 24.66984748840332,
+      "output_abs_max": 2693.53369140625,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 55,
+      "name": "decoder.blocks.1.conv2.0",
+      "identifier": "conv_055_decoder.blocks.1.conv2.0",
+      "weight_file": "weights_int8\\conv_055_decoder.blocks.1.conv2.0.bin",
+      "bias_file": "biases_int32\\conv_055_decoder.blocks.1.conv2.0.bin",
+      "weight_scale_file": "scales\\conv_055_decoder.blocks.1.conv2.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_055_decoder.blocks.1.conv2.0_real_multipliers.bin",
+      "weight_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        128
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.2823500145138718,
+      "input_zero_point": 0,
+      "output_scale": 12.286672036478839,
+      "output_zero_point": 0,
+      "input_abs_max": 35.85845184326172,
+      "output_abs_max": 1560.4073486328125,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 56,
+      "name": "decoder.blocks.2.conv1.0",
+      "identifier": "conv_056_decoder.blocks.2.conv1.0",
+      "weight_file": "weights_int8\\conv_056_decoder.blocks.2.conv1.0.bin",
+      "bias_file": "biases_int32\\conv_056_decoder.blocks.2.conv1.0.bin",
+      "weight_scale_file": "scales\\conv_056_decoder.blocks.2.conv1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_056_decoder.blocks.2.conv1.0_real_multipliers.bin",
+      "weight_shape": [
+        64,
+        152,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        64
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.23379740377110758,
+      "input_zero_point": 0,
+      "output_scale": 11.452558862881398,
+      "output_zero_point": 0,
+      "input_abs_max": 29.692270278930664,
+      "output_abs_max": 1454.4749755859375,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 57,
+      "name": "decoder.blocks.2.conv2.0",
+      "identifier": "conv_057_decoder.blocks.2.conv2.0",
+      "weight_file": "weights_int8\\conv_057_decoder.blocks.2.conv2.0.bin",
+      "bias_file": "biases_int32\\conv_057_decoder.blocks.2.conv2.0.bin",
+      "weight_scale_file": "scales\\conv_057_decoder.blocks.2.conv2.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_057_decoder.blocks.2.conv2.0_real_multipliers.bin",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        64
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.2700222946527436,
+      "input_zero_point": 0,
+      "output_scale": 5.017433947465551,
+      "output_zero_point": 0,
+      "input_abs_max": 34.29283142089844,
+      "output_abs_max": 637.214111328125,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 58,
+      "name": "decoder.blocks.3.conv1.0",
+      "identifier": "conv_058_decoder.blocks.3.conv1.0",
+      "weight_file": "weights_int8\\conv_058_decoder.blocks.3.conv1.0.bin",
+      "bias_file": "biases_int32\\conv_058_decoder.blocks.3.conv1.0.bin",
+      "weight_scale_file": "scales\\conv_058_decoder.blocks.3.conv1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_058_decoder.blocks.3.conv1.0_real_multipliers.bin",
+      "weight_shape": [
+        32,
+        80,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        32
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.29560647799274115,
+      "input_zero_point": 0,
+      "output_scale": 3.1731473667415107,
+      "output_zero_point": 0,
+      "input_abs_max": 37.542022705078125,
+      "output_abs_max": 402.9897155761719,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 59,
+      "name": "decoder.blocks.3.conv2.0",
+      "identifier": "conv_059_decoder.blocks.3.conv2.0",
+      "weight_file": "weights_int8\\conv_059_decoder.blocks.3.conv2.0.bin",
+      "bias_file": "biases_int32\\conv_059_decoder.blocks.3.conv2.0.bin",
+      "weight_scale_file": "scales\\conv_059_decoder.blocks.3.conv2.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_059_decoder.blocks.3.conv2.0_real_multipliers.bin",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        32
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.29429458257720226,
+      "input_zero_point": 0,
+      "output_scale": 2.3425415519654282,
+      "output_zero_point": 0,
+      "input_abs_max": 37.37541198730469,
+      "output_abs_max": 297.5027770996094,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 60,
+      "name": "decoder.blocks.4.conv1.0",
+      "identifier": "conv_060_decoder.blocks.4.conv1.0",
+      "weight_file": "weights_int8\\conv_060_decoder.blocks.4.conv1.0.bin",
+      "bias_file": "biases_int32\\conv_060_decoder.blocks.4.conv1.0.bin",
+      "weight_scale_file": "scales\\conv_060_decoder.blocks.4.conv1.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_060_decoder.blocks.4.conv1.0_real_multipliers.bin",
+      "weight_shape": [
+        16,
+        32,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        16
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.3461076030581016,
+      "input_zero_point": 0,
+      "output_scale": 3.031212994432825,
+      "output_zero_point": 0,
+      "input_abs_max": 43.955665588378906,
+      "output_abs_max": 384.96405029296875,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 61,
+      "name": "decoder.blocks.4.conv2.0",
+      "identifier": "conv_061_decoder.blocks.4.conv2.0",
+      "weight_file": "weights_int8\\conv_061_decoder.blocks.4.conv2.0.bin",
+      "bias_file": "biases_int32\\conv_061_decoder.blocks.4.conv2.0.bin",
+      "weight_scale_file": "scales\\conv_061_decoder.blocks.4.conv2.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_061_decoder.blocks.4.conv2.0_real_multipliers.bin",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        16
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.31761301596333663,
+      "input_zero_point": 0,
+      "output_scale": 1.777915894515871,
+      "output_zero_point": 0,
+      "input_abs_max": 40.33685302734375,
+      "output_abs_max": 225.79531860351562,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    },
+    {
+      "index": 62,
+      "name": "segmentation_head.0",
+      "identifier": "conv_062_segmentation_head.0",
+      "weight_file": "weights_int8\\conv_062_segmentation_head.0.bin",
+      "bias_file": "biases_int32\\conv_062_segmentation_head.0.bin",
+      "weight_scale_file": "scales\\conv_062_segmentation_head.0_weight_scales.bin",
+      "real_multiplier_file": "scales\\conv_062_segmentation_head.0_real_multipliers.bin",
+      "weight_shape": [
+        4,
+        16,
+        3,
+        3
+      ],
+      "weight_dtype": "int8",
+      "bias_shape": [
+        4
+      ],
+      "bias_dtype": "int32",
+      "input_scale": 0.3268647982379583,
+      "input_zero_point": 0,
+      "output_scale": 0.44630801583838275,
+      "output_zero_point": 0,
+      "input_abs_max": 41.5118293762207,
+      "output_abs_max": 56.68111801147461,
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1
+    }
+  ]
+}

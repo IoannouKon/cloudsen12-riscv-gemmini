@@ -1,0 +1,2877 @@
+{
+  "checkpoint": "qat\\deployment\\v9\\qat_int8_v9_best_locked.pth",
+  "qat_convolution_layers": 63,
+  "operator_type_counts": {
+    "Activation": 1,
+    "Attention": 10,
+    "BatchNorm2d": 62,
+    "Conv2dNormActivation": 35,
+    "Conv2dReLU": 10,
+    "Identity": 13,
+    "InvertedResidual": 17,
+    "MobileNetV2Encoder": 1,
+    "ModuleList": 1,
+    "QATConv2d": 63,
+    "ReLU": 10,
+    "ReLU6": 35,
+    "SegmentationHead": 1,
+    "Sequential": 18,
+    "SymmetricFakeQuant": 126,
+    "UnetDecoder": 1,
+    "UnetDecoderBlock": 5
+  },
+  "operators": [
+    {
+      "name": "encoder",
+      "type": "MobileNetV2Encoder"
+    },
+    {
+      "name": "encoder.features",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        32,
+        13,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.1",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.1.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.1.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.1.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 32,
+      "weight_shape": [
+        32,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.1.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.1.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.1.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.1.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.1.conv.1",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        16,
+        32,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.1.conv.1.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.1.conv.1.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.1.conv.2",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.2",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.2.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.2.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.2.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        96,
+        16,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.2.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.2.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.2.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.2.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.2.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.2.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 96,
+      "weight_shape": [
+        96,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.2.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.2.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.2.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.2.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.2.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        24,
+        96,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.2.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.2.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.2.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.3",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.3.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.3.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.3.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        144,
+        24,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.3.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.3.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.3.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.3.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.3.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.3.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 144,
+      "weight_shape": [
+        144,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.3.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.3.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.3.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.3.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.3.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        24,
+        144,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.3.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.3.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.3.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.4",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.4.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.4.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.4.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        144,
+        24,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.4.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.4.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.4.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.4.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.4.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.4.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 144,
+      "weight_shape": [
+        144,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.4.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.4.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.4.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.4.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.4.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        32,
+        144,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.4.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.4.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.4.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.5",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.5.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.5.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.5.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        192,
+        32,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.5.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.5.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.5.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.5.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.5.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.5.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 192,
+      "weight_shape": [
+        192,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.5.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.5.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.5.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.5.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.5.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        32,
+        192,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.5.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.5.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.5.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.6",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.6.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.6.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.6.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        192,
+        32,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.6.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.6.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.6.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.6.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.6.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.6.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 192,
+      "weight_shape": [
+        192,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.6.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.6.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.6.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.6.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.6.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        32,
+        192,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.6.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.6.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.6.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.7",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.7.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.7.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.7.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        192,
+        32,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.7.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.7.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.7.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.7.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.7.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.7.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 192,
+      "weight_shape": [
+        192,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.7.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.7.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.7.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.7.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.7.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        64,
+        192,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.7.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.7.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.7.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.8",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.8.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.8.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.8.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        384,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.8.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.8.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.8.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.8.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.8.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.8.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 384,
+      "weight_shape": [
+        384,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.8.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.8.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.8.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.8.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.8.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        64,
+        384,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.8.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.8.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.8.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.9",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.9.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.9.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.9.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        384,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.9.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.9.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.9.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.9.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.9.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.9.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 384,
+      "weight_shape": [
+        384,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.9.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.9.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.9.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.9.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.9.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        64,
+        384,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.9.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.9.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.9.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.10",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.10.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.10.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.10.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        384,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.10.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.10.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.10.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.10.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.10.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.10.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 384,
+      "weight_shape": [
+        384,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.10.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.10.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.10.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.10.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.10.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        64,
+        384,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.10.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.10.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.10.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.11",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.11.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.11.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.11.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        384,
+        64,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.11.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.11.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.11.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.11.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.11.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.11.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 384,
+      "weight_shape": [
+        384,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.11.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.11.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.11.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.11.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.11.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        96,
+        384,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.11.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.11.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.11.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.12",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.12.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.12.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.12.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        576,
+        96,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.12.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.12.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.12.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.12.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.12.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.12.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 576,
+      "weight_shape": [
+        576,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.12.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.12.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.12.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.12.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.12.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        96,
+        576,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.12.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.12.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.12.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.13",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.13.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.13.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.13.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        576,
+        96,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.13.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.13.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.13.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.13.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.13.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.13.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 576,
+      "weight_shape": [
+        576,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.13.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.13.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.13.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.13.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.13.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        96,
+        576,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.13.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.13.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.13.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.14",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.14.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.14.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.14.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        576,
+        96,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.14.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.14.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.14.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.14.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.14.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.14.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 576,
+      "weight_shape": [
+        576,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.14.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.14.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.14.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.14.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.14.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        160,
+        576,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.14.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.14.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.14.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.15",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.15.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.15.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.15.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        960,
+        160,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.15.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.15.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.15.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.15.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.15.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.15.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 960,
+      "weight_shape": [
+        960,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.15.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.15.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.15.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.15.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.15.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        160,
+        960,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.15.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.15.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.15.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.16",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.16.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.16.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.16.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        960,
+        160,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.16.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.16.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.16.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.16.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.16.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.16.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 960,
+      "weight_shape": [
+        960,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.16.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.16.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.16.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.16.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.16.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        160,
+        960,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.16.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.16.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.16.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.17",
+      "type": "InvertedResidual"
+    },
+    {
+      "name": "encoder.features.17.conv",
+      "type": "Sequential"
+    },
+    {
+      "name": "encoder.features.17.conv.0",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.17.conv.0.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        960,
+        160,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.17.conv.0.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.17.conv.0.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.17.conv.0.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.17.conv.0.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.17.conv.1",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.17.conv.1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 960,
+      "weight_shape": [
+        960,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "encoder.features.17.conv.1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.17.conv.1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.17.conv.1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.17.conv.1.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "encoder.features.17.conv.2",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        320,
+        960,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.17.conv.2.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.17.conv.2.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.17.conv.3",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.18",
+      "type": "Conv2dNormActivation"
+    },
+    {
+      "name": "encoder.features.18.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        1280,
+        320,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "encoder.features.18.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.18.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "encoder.features.18.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "encoder.features.18.2",
+      "type": "ReLU6"
+    },
+    {
+      "name": "decoder",
+      "type": "UnetDecoder"
+    },
+    {
+      "name": "decoder.center",
+      "type": "Identity"
+    },
+    {
+      "name": "decoder.blocks",
+      "type": "ModuleList"
+    },
+    {
+      "name": "decoder.blocks.0",
+      "type": "UnetDecoderBlock"
+    },
+    {
+      "name": "decoder.blocks.0.conv1",
+      "type": "Conv2dReLU"
+    },
+    {
+      "name": "decoder.blocks.0.conv1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        256,
+        1376,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "decoder.blocks.0.conv1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.0.conv1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.0.conv1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "decoder.blocks.0.conv1.2",
+      "type": "ReLU"
+    },
+    {
+      "name": "decoder.blocks.0.attention1",
+      "type": "Attention"
+    },
+    {
+      "name": "decoder.blocks.0.attention1.attention",
+      "type": "Identity"
+    },
+    {
+      "name": "decoder.blocks.0.conv2",
+      "type": "Conv2dReLU"
+    },
+    {
+      "name": "decoder.blocks.0.conv2.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        256,
+        256,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "decoder.blocks.0.conv2.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.0.conv2.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.0.conv2.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "decoder.blocks.0.conv2.2",
+      "type": "ReLU"
+    },
+    {
+      "name": "decoder.blocks.0.attention2",
+      "type": "Attention"
+    },
+    {
+      "name": "decoder.blocks.0.attention2.attention",
+      "type": "Identity"
+    },
+    {
+      "name": "decoder.blocks.1",
+      "type": "UnetDecoderBlock"
+    },
+    {
+      "name": "decoder.blocks.1.conv1",
+      "type": "Conv2dReLU"
+    },
+    {
+      "name": "decoder.blocks.1.conv1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        128,
+        288,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "decoder.blocks.1.conv1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.1.conv1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.1.conv1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "decoder.blocks.1.conv1.2",
+      "type": "ReLU"
+    },
+    {
+      "name": "decoder.blocks.1.attention1",
+      "type": "Attention"
+    },
+    {
+      "name": "decoder.blocks.1.attention1.attention",
+      "type": "Identity"
+    },
+    {
+      "name": "decoder.blocks.1.conv2",
+      "type": "Conv2dReLU"
+    },
+    {
+      "name": "decoder.blocks.1.conv2.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        128,
+        128,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "decoder.blocks.1.conv2.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.1.conv2.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.1.conv2.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "decoder.blocks.1.conv2.2",
+      "type": "ReLU"
+    },
+    {
+      "name": "decoder.blocks.1.attention2",
+      "type": "Attention"
+    },
+    {
+      "name": "decoder.blocks.1.attention2.attention",
+      "type": "Identity"
+    },
+    {
+      "name": "decoder.blocks.2",
+      "type": "UnetDecoderBlock"
+    },
+    {
+      "name": "decoder.blocks.2.conv1",
+      "type": "Conv2dReLU"
+    },
+    {
+      "name": "decoder.blocks.2.conv1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        64,
+        152,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "decoder.blocks.2.conv1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.2.conv1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.2.conv1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "decoder.blocks.2.conv1.2",
+      "type": "ReLU"
+    },
+    {
+      "name": "decoder.blocks.2.attention1",
+      "type": "Attention"
+    },
+    {
+      "name": "decoder.blocks.2.attention1.attention",
+      "type": "Identity"
+    },
+    {
+      "name": "decoder.blocks.2.conv2",
+      "type": "Conv2dReLU"
+    },
+    {
+      "name": "decoder.blocks.2.conv2.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "decoder.blocks.2.conv2.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.2.conv2.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.2.conv2.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "decoder.blocks.2.conv2.2",
+      "type": "ReLU"
+    },
+    {
+      "name": "decoder.blocks.2.attention2",
+      "type": "Attention"
+    },
+    {
+      "name": "decoder.blocks.2.attention2.attention",
+      "type": "Identity"
+    },
+    {
+      "name": "decoder.blocks.3",
+      "type": "UnetDecoderBlock"
+    },
+    {
+      "name": "decoder.blocks.3.conv1",
+      "type": "Conv2dReLU"
+    },
+    {
+      "name": "decoder.blocks.3.conv1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        32,
+        80,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "decoder.blocks.3.conv1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.3.conv1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.3.conv1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "decoder.blocks.3.conv1.2",
+      "type": "ReLU"
+    },
+    {
+      "name": "decoder.blocks.3.attention1",
+      "type": "Attention"
+    },
+    {
+      "name": "decoder.blocks.3.attention1.attention",
+      "type": "Identity"
+    },
+    {
+      "name": "decoder.blocks.3.conv2",
+      "type": "Conv2dReLU"
+    },
+    {
+      "name": "decoder.blocks.3.conv2.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "decoder.blocks.3.conv2.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.3.conv2.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.3.conv2.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "decoder.blocks.3.conv2.2",
+      "type": "ReLU"
+    },
+    {
+      "name": "decoder.blocks.3.attention2",
+      "type": "Attention"
+    },
+    {
+      "name": "decoder.blocks.3.attention2.attention",
+      "type": "Identity"
+    },
+    {
+      "name": "decoder.blocks.4",
+      "type": "UnetDecoderBlock"
+    },
+    {
+      "name": "decoder.blocks.4.conv1",
+      "type": "Conv2dReLU"
+    },
+    {
+      "name": "decoder.blocks.4.conv1.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        16,
+        32,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "decoder.blocks.4.conv1.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.4.conv1.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.4.conv1.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "decoder.blocks.4.conv1.2",
+      "type": "ReLU"
+    },
+    {
+      "name": "decoder.blocks.4.attention1",
+      "type": "Attention"
+    },
+    {
+      "name": "decoder.blocks.4.attention1.attention",
+      "type": "Identity"
+    },
+    {
+      "name": "decoder.blocks.4.conv2",
+      "type": "Conv2dReLU"
+    },
+    {
+      "name": "decoder.blocks.4.conv2.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "decoder.blocks.4.conv2.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.4.conv2.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "decoder.blocks.4.conv2.1",
+      "type": "BatchNorm2d"
+    },
+    {
+      "name": "decoder.blocks.4.conv2.2",
+      "type": "ReLU"
+    },
+    {
+      "name": "decoder.blocks.4.attention2",
+      "type": "Attention"
+    },
+    {
+      "name": "decoder.blocks.4.attention2.attention",
+      "type": "Identity"
+    },
+    {
+      "name": "segmentation_head",
+      "type": "SegmentationHead"
+    },
+    {
+      "name": "segmentation_head.0",
+      "type": "QATConv2d",
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "weight_shape": [
+        4,
+        16,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "segmentation_head.0.input_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "segmentation_head.0.output_fake_quant",
+      "type": "SymmetricFakeQuant"
+    },
+    {
+      "name": "segmentation_head.1",
+      "type": "Identity"
+    },
+    {
+      "name": "segmentation_head.2",
+      "type": "Activation"
+    },
+    {
+      "name": "segmentation_head.2.activation",
+      "type": "Identity"
+    }
+  ],
+  "required_integer_operations": [
+    "Conv2D INT8 x INT8 to INT32",
+    "Depthwise Conv2D INT8 x INT8 to INT32",
+    "Q31 fixed-point requantization",
+    "ReLU or Clip in INT8 domain",
+    "Residual Add with scale alignment",
+    "Concat with input-scale alignment",
+    "Nearest-neighbor Resize using INT8 copy",
+    "Argmax over INT8 or INT32 logits"
+  ],
+  "status": {
+    "int8_weights_exported": true,
+    "int32_biases_exported": true,
+    "batchnorm_folded": true,
+    "q31_requantization_validated": true,
+    "integer_argmax_validated": true,
+    "full_integer_execution_plan": false,
+    "full_integer_python_reference": false
+  }
+}

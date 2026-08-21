@@ -1,0 +1,10 @@
+Recommended version: V28
+Agreement vs FP32: 83.1014%
+Mismatch vs FP32: 16.8986%
+Pixel accuracy: 79.0975%
+Mean IoU: 61.3732%
+Clear IoU: 73.3861%
+Thick-cloud IoU: 74.2514%
+Thin-cloud IoU: 36.1302%
+Cloud-shadow IoU: 61.7251%
+Checkpoint: qat\checkpoints\qat_int8_v28_best.pth

@@ -1,0 +1,451 @@
+{
+  "layers_validated": 63,
+  "global_weight_rmse": 0.0008988724567485161,
+  "maximum_weight_error": 0.22324993103507929,
+  "maximum_bias_error": 0.0053930891056085395,
+  "weight_files_valid": true,
+  "bias_files_valid": true,
+  "layers": [
+    {
+      "index": 0,
+      "name": "encoder.features.0.0",
+      "weight_rmse": 0.0014654100337357554,
+      "weight_max_error": 0.007178266569385361,
+      "bias_max_error": 3.9632635798869664e-05
+    },
+    {
+      "index": 1,
+      "name": "encoder.features.1.conv.0.0",
+      "weight_rmse": 0.016580740265237932,
+      "weight_max_error": 0.11669292975598466,
+      "bias_max_error": 0.0016951461503484921
+    },
+    {
+      "index": 2,
+      "name": "encoder.features.1.conv.1",
+      "weight_rmse": 0.0015295369208380852,
+      "weight_max_error": 0.003881688875065544,
+      "bias_max_error": 0.00011927347291440515
+    },
+    {
+      "index": 3,
+      "name": "encoder.features.2.conv.0.0",
+      "weight_rmse": 0.0009464674303268294,
+      "weight_max_error": 0.005036302438871099,
+      "bias_max_error": 0.00036725544820859213
+    },
+    {
+      "index": 4,
+      "name": "encoder.features.2.conv.1.0",
+      "weight_rmse": 0.0027885380059775975,
+      "weight_max_error": 0.011754101655614635,
+      "bias_max_error": 0.0005433245573161216
+    },
+    {
+      "index": 5,
+      "name": "encoder.features.2.conv.2",
+      "weight_rmse": 0.0012456207080251103,
+      "weight_max_error": 0.003030161483315974,
+      "bias_max_error": 0.00013048677818883192
+    },
+    {
+      "index": 6,
+      "name": "encoder.features.3.conv.0.0",
+      "weight_rmse": 0.0005732329326248326,
+      "weight_max_error": 0.0023719390604909074,
+      "bias_max_error": 7.059917469620647e-05
+    },
+    {
+      "index": 7,
+      "name": "encoder.features.3.conv.1.0",
+      "weight_rmse": 0.003933708178854799,
+      "weight_max_error": 0.025819348244685833,
+      "bias_max_error": 0.0005230338627062459
+    },
+    {
+      "index": 8,
+      "name": "encoder.features.3.conv.2",
+      "weight_rmse": 0.0012800482563093273,
+      "weight_max_error": 0.00374263563875373,
+      "bias_max_error": 0.00011417070886687863
+    },
+    {
+      "index": 9,
+      "name": "encoder.features.4.conv.0.0",
+      "weight_rmse": 0.0004178515113613504,
+      "weight_max_error": 0.0019583332491671934,
+      "bias_max_error": 9.620894460948826e-05
+    },
+    {
+      "index": 10,
+      "name": "encoder.features.4.conv.1.0",
+      "weight_rmse": 0.0022078805051463286,
+      "weight_max_error": 0.011070479558208834,
+      "bias_max_error": 0.00026505622836903164
+    },
+    {
+      "index": 11,
+      "name": "encoder.features.4.conv.2",
+      "weight_rmse": 0.0011054505274000225,
+      "weight_max_error": 0.0030891553858133636,
+      "bias_max_error": 0.00012608762638577353
+    },
+    {
+      "index": 12,
+      "name": "encoder.features.5.conv.0.0",
+      "weight_rmse": 0.00026214361767933937,
+      "weight_max_error": 0.0013059518468661602,
+      "bias_max_error": 2.9550088509397443e-05
+    },
+    {
+      "index": 13,
+      "name": "encoder.features.5.conv.1.0",
+      "weight_rmse": 0.003764845421579187,
+      "weight_max_error": 0.029087246402980778,
+      "bias_max_error": 0.0005992499248101135
+    },
+    {
+      "index": 14,
+      "name": "encoder.features.5.conv.2",
+      "weight_rmse": 0.001423809324749427,
+      "weight_max_error": 0.004391500682342675,
+      "bias_max_error": 0.0001122297691347196
+    },
+    {
+      "index": 15,
+      "name": "encoder.features.6.conv.0.0",
+      "weight_rmse": 0.000249793771925026,
+      "weight_max_error": 0.0012835194393405747,
+      "bias_max_error": 4.3494994061421544e-05
+    },
+    {
+      "index": 16,
+      "name": "encoder.features.6.conv.1.0",
+      "weight_rmse": 0.0037842465801384865,
+      "weight_max_error": 0.04235843786104487,
+      "bias_max_error": 0.0014437407684946835
+    },
+    {
+      "index": 17,
+      "name": "encoder.features.6.conv.2",
+      "weight_rmse": 0.0016525826047972994,
+      "weight_max_error": 0.00500616305104391,
+      "bias_max_error": 0.00017405683030952135
+    },
+    {
+      "index": 18,
+      "name": "encoder.features.7.conv.0.0",
+      "weight_rmse": 0.00030627059633709237,
+      "weight_max_error": 0.001265224450685845,
+      "bias_max_error": 7.525860452095579e-05
+    },
+    {
+      "index": 19,
+      "name": "encoder.features.7.conv.1.0",
+      "weight_rmse": 0.003540830094974597,
+      "weight_max_error": 0.05997602958378856,
+      "bias_max_error": 0.0011651345865703044
+    },
+    {
+      "index": 20,
+      "name": "encoder.features.7.conv.2",
+      "weight_rmse": 0.0006814733364453095,
+      "weight_max_error": 0.0023500274456157468,
+      "bias_max_error": 8.195005987798876e-05
+    },
+    {
+      "index": 21,
+      "name": "encoder.features.8.conv.0.0",
+      "weight_rmse": 0.00016397772441965202,
+      "weight_max_error": 0.001082905458183743,
+      "bias_max_error": 4.4602403672780455e-05
+    },
+    {
+      "index": 22,
+      "name": "encoder.features.8.conv.1.0",
+      "weight_rmse": 0.004757323086422551,
+      "weight_max_error": 0.05717486190044996,
+      "bias_max_error": 0.0010842966948996224
+    },
+    {
+      "index": 23,
+      "name": "encoder.features.8.conv.2",
+      "weight_rmse": 0.000797299522768713,
+      "weight_max_error": 0.002789254586293005,
+      "bias_max_error": 4.685652900296433e-05
+    },
+    {
+      "index": 24,
+      "name": "encoder.features.9.conv.0.0",
+      "weight_rmse": 0.00015535560685108778,
+      "weight_max_error": 0.0008707072321824244,
+      "bias_max_error": 2.8942870605952464e-05
+    },
+    {
+      "index": 25,
+      "name": "encoder.features.9.conv.1.0",
+      "weight_rmse": 0.0071700089080427324,
+      "weight_max_error": 0.08316786458173198,
+      "bias_max_error": 0.00176805808068628
+    },
+    {
+      "index": 26,
+      "name": "encoder.features.9.conv.2",
+      "weight_rmse": 0.0006133238597774397,
+      "weight_max_error": 0.0017739649070060148,
+      "bias_max_error": 5.647215073645295e-05
+    },
+    {
+      "index": 27,
+      "name": "encoder.features.10.conv.0.0",
+      "weight_rmse": 0.0001443225965600008,
+      "weight_max_error": 0.0008731524599349394,
+      "bias_max_error": 2.8162794376292155e-05
+    },
+    {
+      "index": 28,
+      "name": "encoder.features.10.conv.1.0",
+      "weight_rmse": 0.007897892330714685,
+      "weight_max_error": 0.09923006042720761,
+      "bias_max_error": 0.0016677560768952604
+    },
+    {
+      "index": 29,
+      "name": "encoder.features.10.conv.2",
+      "weight_rmse": 0.000609808321696518,
+      "weight_max_error": 0.001875128289024662,
+      "bias_max_error": 6.406516588747246e-05
+    },
+    {
+      "index": 30,
+      "name": "encoder.features.11.conv.0.0",
+      "weight_rmse": 0.0001827296291440567,
+      "weight_max_error": 0.0009290274144626992,
+      "bias_max_error": 5.8746816447186045e-05
+    },
+    {
+      "index": 31,
+      "name": "encoder.features.11.conv.1.0",
+      "weight_rmse": 0.005499296732778223,
+      "weight_max_error": 0.06064176137053123,
+      "bias_max_error": 0.0021286202915168865
+    },
+    {
+      "index": 32,
+      "name": "encoder.features.11.conv.2",
+      "weight_rmse": 0.0005767677701806243,
+      "weight_max_error": 0.001758737775577804,
+      "bias_max_error": 6.107771819402474e-05
+    },
+    {
+      "index": 33,
+      "name": "encoder.features.12.conv.0.0",
+      "weight_rmse": 0.0001248368245968414,
+      "weight_max_error": 0.0006901042491901585,
+      "bias_max_error": 1.720774700886274e-05
+    },
+    {
+      "index": 34,
+      "name": "encoder.features.12.conv.1.0",
+      "weight_rmse": 0.006862649904803344,
+      "weight_max_error": 0.16440064137376265,
+      "bias_max_error": 0.0013908131882797714
+    },
+    {
+      "index": 35,
+      "name": "encoder.features.12.conv.2",
+      "weight_rmse": 0.000401808918631065,
+      "weight_max_error": 0.0012800877283173293,
+      "bias_max_error": 4.679854859701571e-05
+    },
+    {
+      "index": 36,
+      "name": "encoder.features.13.conv.0.0",
+      "weight_rmse": 0.00011485914377224731,
+      "weight_max_error": 0.0006906085126981987,
+      "bias_max_error": 3.289995233124454e-05
+    },
+    {
+      "index": 37,
+      "name": "encoder.features.13.conv.1.0",
+      "weight_rmse": 0.006166814106436722,
+      "weight_max_error": 0.11236432218176162,
+      "bias_max_error": 0.0027911865184464535
+    },
+    {
+      "index": 38,
+      "name": "encoder.features.13.conv.2",
+      "weight_rmse": 0.0005744831706605735,
+      "weight_max_error": 0.0019516951631842637,
+      "bias_max_error": 7.383093090973514e-05
+    },
+    {
+      "index": 39,
+      "name": "encoder.features.14.conv.0.0",
+      "weight_rmse": 0.00013160921729828153,
+      "weight_max_error": 0.0007912633339251102,
+      "bias_max_error": 6.648659133788593e-05
+    },
+    {
+      "index": 40,
+      "name": "encoder.features.14.conv.1.0",
+      "weight_rmse": 0.009026252915979163,
+      "weight_max_error": 0.10910006395475236,
+      "bias_max_error": 0.003794077894571035
+    },
+    {
+      "index": 41,
+      "name": "encoder.features.14.conv.2",
+      "weight_rmse": 0.0002527940700334285,
+      "weight_max_error": 0.0010415856088474978,
+      "bias_max_error": 3.921137510033701e-05
+    },
+    {
+      "index": 42,
+      "name": "encoder.features.15.conv.0.0",
+      "weight_rmse": 0.00012510950965961183,
+      "weight_max_error": 0.00097956215801436,
+      "bias_max_error": 2.4071851729375038e-05
+    },
+    {
+      "index": 43,
+      "name": "encoder.features.15.conv.1.0",
+      "weight_rmse": 0.009017854788544437,
+      "weight_max_error": 0.12719059929134335,
+      "bias_max_error": 0.0033781525368724585
+    },
+    {
+      "index": 44,
+      "name": "encoder.features.15.conv.2",
+      "weight_rmse": 0.0002395521218968901,
+      "weight_max_error": 0.0010184564693706266,
+      "bias_max_error": 4.546113681333508e-05
+    },
+    {
+      "index": 45,
+      "name": "encoder.features.16.conv.0.0",
+      "weight_rmse": 0.0001140773030450588,
+      "weight_max_error": 0.0007213039074357129,
+      "bias_max_error": 1.838901185832742e-05
+    },
+    {
+      "index": 46,
+      "name": "encoder.features.16.conv.1.0",
+      "weight_rmse": 0.010682792361627022,
+      "weight_max_error": 0.1273301041971031,
+      "bias_max_error": 0.00225809115067932
+    },
+    {
+      "index": 47,
+      "name": "encoder.features.16.conv.2",
+      "weight_rmse": 0.00047560809774109173,
+      "weight_max_error": 0.0024802857408608055,
+      "bias_max_error": 7.800677046021498e-05
+    },
+    {
+      "index": 48,
+      "name": "encoder.features.17.conv.0.0",
+      "weight_rmse": 8.822517399738821e-05,
+      "weight_max_error": 0.00047328355392133037,
+      "bias_max_error": 5.5557186201725395e-05
+    },
+    {
+      "index": 49,
+      "name": "encoder.features.17.conv.1.0",
+      "weight_rmse": 0.014357590802902321,
+      "weight_max_error": 0.22324993103507929,
+      "bias_max_error": 0.0053930891056085395
+    },
+    {
+      "index": 50,
+      "name": "encoder.features.17.conv.2",
+      "weight_rmse": 8.406305035770702e-05,
+      "weight_max_error": 0.00063510984365689,
+      "bias_max_error": 1.997296435707341e-05
+    },
+    {
+      "index": 51,
+      "name": "encoder.features.18.0",
+      "weight_rmse": 0.0002599590798933168,
+      "weight_max_error": 0.0029470191931161294,
+      "bias_max_error": 0.00021089623534925606
+    },
+    {
+      "index": 52,
+      "name": "decoder.blocks.0.conv1.0",
+      "weight_rmse": 2.0063150442337913e-05,
+      "weight_max_error": 0.00025925369874581564,
+      "bias_max_error": 1.7381603140798063e-05
+    },
+    {
+      "index": 53,
+      "name": "decoder.blocks.0.conv2.0",
+      "weight_rmse": 2.759803096062638e-05,
+      "weight_max_error": 0.0003441017575737998,
+      "bias_max_error": 2.4666252977062486e-05
+    },
+    {
+      "index": 54,
+      "name": "decoder.blocks.1.conv1.0",
+      "weight_rmse": 8.773682980821952e-05,
+      "weight_max_error": 0.0008175014169872041,
+      "bias_max_error": 7.029180463569151e-05
+    },
+    {
+      "index": 55,
+      "name": "decoder.blocks.1.conv2.0",
+      "weight_rmse": 5.6438062550934034e-05,
+      "weight_max_error": 0.00044526590225030076,
+      "bias_max_error": 0.00011307336031990411
+    },
+    {
+      "index": 56,
+      "name": "decoder.blocks.2.conv1.0",
+      "weight_rmse": 0.000156536555460448,
+      "weight_max_error": 0.0008001294955024569,
+      "bias_max_error": 0.00015536471851995692
+    },
+    {
+      "index": 57,
+      "name": "decoder.blocks.2.conv2.0",
+      "weight_rmse": 0.00018493887996019924,
+      "weight_max_error": 0.0009185172852099396,
+      "bias_max_error": 0.0001728427477124539
+    },
+    {
+      "index": 58,
+      "name": "decoder.blocks.3.conv1.0",
+      "weight_rmse": 0.0001684281761374893,
+      "weight_max_error": 0.0009991346205782698,
+      "bias_max_error": 0.00014535341219801268
+    },
+    {
+      "index": 59,
+      "name": "decoder.blocks.3.conv2.0",
+      "weight_rmse": 0.0001787870744331807,
+      "weight_max_error": 0.0005726467114029882,
+      "bias_max_error": 0.00011395376271280955
+    },
+    {
+      "index": 60,
+      "name": "decoder.blocks.4.conv1.0",
+      "weight_rmse": 0.00015954936426038795,
+      "weight_max_error": 0.0005254563875496387,
+      "bias_max_error": 0.00011522574450695267
+    },
+    {
+      "index": 61,
+      "name": "decoder.blocks.4.conv2.0",
+      "weight_rmse": 0.0002881907160652273,
+      "weight_max_error": 0.0006294553204784226,
+      "bias_max_error": 0.00014386476863836872
+    },
+    {
+      "index": 62,
+      "name": "segmentation_head.0",
+      "weight_rmse": 0.0010117669021054458,
+      "weight_max_error": 0.0025063073775899725,
+      "bias_max_error": 0.000517393547779077
+    }
+  ]
+}

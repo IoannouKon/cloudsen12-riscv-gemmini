@@ -1,0 +1,10 @@
+{
+  "status": "q31_retraining_failed",
+  "patches_tested": 25,
+  "q31_retrained_pixel_accuracy": 0.65284301757812,
+  "original_q31_c_pixel_accuracy": 0.781705322265625,
+  "original_python_int8_pixel_accuracy": 0.8604864501953124,
+  "q31_retrained_approved": false,
+  "pure_c_int8_approved": false,
+  "action": "Reject Q31 retrained package and preserve original approved INT8 package."
+}

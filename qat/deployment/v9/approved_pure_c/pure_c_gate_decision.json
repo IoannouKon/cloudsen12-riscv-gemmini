@@ -1,0 +1,7 @@
+{
+  "pure_c_export_approved": true,
+  "weighted_agreement": 0.9547686767578125,
+  "threshold": 0.95,
+  "patches_tested": 25,
+  "next_step": "Generate pure-C INT8 runtime."
+}

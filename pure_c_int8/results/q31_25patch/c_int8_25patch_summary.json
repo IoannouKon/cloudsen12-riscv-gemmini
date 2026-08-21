@@ -1,0 +1,15 @@
+{
+  "patches_executed": 25,
+  "output_pixels_per_patch": 65536,
+  "mean_seconds": 1.8712,
+  "median_seconds": 1.87,
+  "minimum_seconds": 1.8,
+  "maximum_seconds": 1.98,
+  "throughput_patches_per_second": 0.5344164172723386,
+  "mean_peak_rss_kb": 34926.4,
+  "mean_peak_rss_mib": 34.1078125,
+  "maximum_peak_rss_kb": 35072,
+  "maximum_peak_rss_mib": 34.25,
+  "all_masks_valid_size": true,
+  "correctness_status": "Pending Q31 Python reference comparison"
+}

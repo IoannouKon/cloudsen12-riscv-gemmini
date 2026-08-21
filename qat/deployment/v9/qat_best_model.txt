@@ -1,0 +1,10 @@
+Recommended version: V9
+Agreement vs FP32: 83.0989%
+Mismatch vs FP32: 16.9011%
+Pixel accuracy: 79.5767%
+Mean IoU: 62.0399%
+Clear IoU: 74.0282%
+Thick-cloud IoU: 74.5725%
+Thin-cloud IoU: 36.0151%
+Cloud-shadow IoU: 63.5438%
+Checkpoint: qat\checkpoints\qat_int8_v9_best.pth

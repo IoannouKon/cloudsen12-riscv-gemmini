@@ -1,0 +1,1 @@
+Last parity approach: use the approved Python reference's floating-point inter-tensor scale alignment while retaining INT8 weights, INT8 activations, INT32 bias/accumulation and Q31 convolution output requantization.

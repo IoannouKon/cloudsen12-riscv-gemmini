@@ -1,0 +1,9 @@
+{
+  "patch": "qat/data/test/patch_00000.npz",
+  "mask_pixels": 65536,
+  "pixel_accuracy": 0.8473968505859375,
+  "mismatched_pixels": 10001,
+  "runtime_seconds": 3.02,
+  "peak_rss_kb": 34852,
+  "continue_25patch_test": true
+}

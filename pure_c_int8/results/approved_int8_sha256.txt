@@ -1,0 +1,2 @@
+fa32a62628355cc04735b2ba6dc66e1b2f776d8b2f6f46ef45aaa6ae7857e81c  build/cloudsen12_v9_int8_approved
+cb73d365f3e44e67a98c0ea123f0a7564d53632e8b0fabf3b6ee775a5d6f1ad3  pure_c_int8/results/approved_int8_summary.json

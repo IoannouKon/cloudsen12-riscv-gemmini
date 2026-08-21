@@ -1,0 +1,18 @@
+{
+  "patches_tested": 25,
+  "total_pixels": 1638400,
+  "strict_q31_pixel_accuracy": 0.77591613769532,
+  "previous_q31_pixel_accuracy": 0.781705322265625,
+  "original_python_int8_accuracy": 0.8604864501953124,
+  "improvement_over_previous_q31": -0.005789184570304973,
+  "gap_to_original_python_int8": 0.08457031249999247,
+  "mean_patch_accuracy": 0.77591613769532,
+  "median_patch_accuracy": 0.772933959961,
+  "minimum_patch_accuracy": 0.318725585938,
+  "maximum_patch_accuracy": 1.0,
+  "mean_seconds": 1.9696,
+  "median_seconds": 1.98,
+  "maximum_peak_rss_mib": 34.3671875,
+  "improved": false,
+  "accuracy_gate_80_percent": false
+}

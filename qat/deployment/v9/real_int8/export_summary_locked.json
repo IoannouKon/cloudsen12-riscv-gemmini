@@ -1,0 +1,10 @@
+{
+  "source_checkpoint": "qat\\deployment\\v9\\qat_int8_v9_best_locked.pth",
+  "convolution_layers": 63,
+  "calibration_patches": 200,
+  "weight_type": "int8",
+  "activation_type": "int8",
+  "bias_type": "int32",
+  "accumulator_type": "int32",
+  "manifest": "qat\\deployment\\v9\\real_int8\\model_int8_manifest.json"
+}

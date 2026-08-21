@@ -1,0 +1,205 @@
+Class weights: [0.57589655057238, 0.9006642633334325, 1.2329679510749834, 1.2904712350192047]
+Loading original FP32 teacher...
+Creating QAT student from original weights...
+QAT convolutions: 63
+Loaded Version 2 checkpoint: qat\checkpoints\qat_int8_v4_best.pth
+Frozen BatchNorm layers: 62
+Evaluating QAT student before training...
+  validation batch 5/25
+  validation batch 10/25
+  validation batch 15/25
+  validation batch 20/25
+  validation batch 25/25
+{
+  "pixel_accuracy": 0.7950269317626953,
+  "mismatch_vs_fp32_teacher": 0.1722858428955078,
+  "mean_iou": 0.6187324335605261,
+  "clear_iou": 0.7382333993874781,
+  "thick_cloud_iou": 0.7454386557077042,
+  "thin_cloud_iou": 0.36112041622029784,
+  "cloud_shadow_iou": 0.6301372629266244
+}
+epoch=1/6 batch=10/125 loss=0.339922 gpu=0.216 GiB
+epoch=1/6 batch=20/125 loss=0.537214 gpu=0.217 GiB
+epoch=1/6 batch=30/125 loss=0.816389 gpu=0.217 GiB
+epoch=1/6 batch=40/125 loss=0.461956 gpu=0.216 GiB
+epoch=1/6 batch=50/125 loss=0.591096 gpu=0.218 GiB
+epoch=1/6 batch=60/125 loss=1.340974 gpu=0.216 GiB
+epoch=1/6 batch=70/125 loss=0.567355 gpu=0.217 GiB
+epoch=1/6 batch=80/125 loss=0.671312 gpu=0.217 GiB
+epoch=1/6 batch=90/125 loss=0.710549 gpu=0.218 GiB
+epoch=1/6 batch=100/125 loss=0.617912 gpu=0.216 GiB
+epoch=1/6 batch=110/125 loss=0.458415 gpu=0.217 GiB
+epoch=1/6 batch=120/125 loss=0.376702 gpu=0.217 GiB
+  validation batch 5/25
+  validation batch 10/25
+  validation batch 15/25
+  validation batch 20/25
+  validation batch 25/25
+Epoch result:
+{
+  "pixel_accuracy": 0.7934089660644531,
+  "mismatch_vs_fp32_teacher": 0.17255744934082032,
+  "mean_iou": 0.6158835890941505,
+  "clear_iou": 0.7374023438030151,
+  "thick_cloud_iou": 0.7458357484646374,
+  "thin_cloud_iou": 0.35888439132115296,
+  "cloud_shadow_iou": 0.6214118727877967,
+  "epoch": 1,
+  "training_loss": 0.7531762206554413,
+  "training_seconds": 25.858227000106126
+}
+Saved best checkpoint: qat/checkpoints/qat_int8_v7_best.pth
+epoch=2/6 batch=10/125 loss=1.222489 gpu=0.191 GiB
+epoch=2/6 batch=20/125 loss=2.720677 gpu=0.191 GiB
+epoch=2/6 batch=30/125 loss=0.620517 gpu=0.191 GiB
+epoch=2/6 batch=40/125 loss=0.327779 gpu=0.190 GiB
+epoch=2/6 batch=50/125 loss=0.928536 gpu=0.191 GiB
+epoch=2/6 batch=60/125 loss=0.696521 gpu=0.191 GiB
+epoch=2/6 batch=70/125 loss=0.827995 gpu=0.190 GiB
+epoch=2/6 batch=80/125 loss=1.526281 gpu=0.191 GiB
+epoch=2/6 batch=90/125 loss=1.078364 gpu=0.191 GiB
+epoch=2/6 batch=100/125 loss=0.468999 gpu=0.190 GiB
+epoch=2/6 batch=110/125 loss=0.457560 gpu=0.191 GiB
+epoch=2/6 batch=120/125 loss=0.516097 gpu=0.191 GiB
+  validation batch 5/25
+  validation batch 10/25
+  validation batch 15/25
+  validation batch 20/25
+  validation batch 25/25
+Epoch result:
+{
+  "pixel_accuracy": 0.7929238128662109,
+  "mismatch_vs_fp32_teacher": 0.17676536560058595,
+  "mean_iou": 0.6116055788484512,
+  "clear_iou": 0.7398002765154763,
+  "thick_cloud_iou": 0.7378270920499372,
+  "thin_cloud_iou": 0.3606086153659298,
+  "cloud_shadow_iou": 0.6081863314624616,
+  "epoch": 2,
+  "training_loss": 0.7958174402713776,
+  "training_seconds": 24.548192400019616
+}
+epoch=3/6 batch=10/125 loss=0.309813 gpu=0.191 GiB
+epoch=3/6 batch=20/125 loss=0.408783 gpu=0.190 GiB
+epoch=3/6 batch=30/125 loss=0.409753 gpu=0.191 GiB
+epoch=3/6 batch=40/125 loss=0.428390 gpu=0.191 GiB
+epoch=3/6 batch=50/125 loss=0.552286 gpu=0.190 GiB
+epoch=3/6 batch=60/125 loss=1.607048 gpu=0.191 GiB
+epoch=3/6 batch=70/125 loss=1.150795 gpu=0.191 GiB
+epoch=3/6 batch=80/125 loss=0.628630 gpu=0.190 GiB
+epoch=3/6 batch=90/125 loss=1.451278 gpu=0.191 GiB
+epoch=3/6 batch=100/125 loss=0.332674 gpu=0.191 GiB
+epoch=3/6 batch=110/125 loss=0.481509 gpu=0.190 GiB
+epoch=3/6 batch=120/125 loss=0.471893 gpu=0.191 GiB
+  validation batch 5/25
+  validation batch 10/25
+  validation batch 15/25
+  validation batch 20/25
+  validation batch 25/25
+Epoch result:
+{
+  "pixel_accuracy": 0.7914637756347657,
+  "mismatch_vs_fp32_teacher": 0.17945175170898436,
+  "mean_iou": 0.6078532499479417,
+  "clear_iou": 0.7402152901499703,
+  "thick_cloud_iou": 0.7299566962344476,
+  "thin_cloud_iou": 0.3632041587507995,
+  "cloud_shadow_iou": 0.5980368546565493,
+  "epoch": 3,
+  "training_loss": 0.7864622888565064,
+  "training_seconds": 24.557470500003546
+}
+epoch=4/6 batch=10/125 loss=1.200534 gpu=0.191 GiB
+epoch=4/6 batch=20/125 loss=0.424747 gpu=0.191 GiB
+epoch=4/6 batch=30/125 loss=0.539553 gpu=0.190 GiB
+epoch=4/6 batch=40/125 loss=0.636283 gpu=0.191 GiB
+epoch=4/6 batch=50/125 loss=0.594167 gpu=0.191 GiB
+epoch=4/6 batch=60/125 loss=1.357130 gpu=0.190 GiB
+epoch=4/6 batch=70/125 loss=0.984974 gpu=0.191 GiB
+epoch=4/6 batch=80/125 loss=0.432049 gpu=0.191 GiB
+epoch=4/6 batch=90/125 loss=0.398439 gpu=0.190 GiB
+epoch=4/6 batch=100/125 loss=0.570494 gpu=0.191 GiB
+epoch=4/6 batch=110/125 loss=0.592980 gpu=0.191 GiB
+epoch=4/6 batch=120/125 loss=0.271967 gpu=0.190 GiB
+  validation batch 5/25
+  validation batch 10/25
+  validation batch 15/25
+  validation batch 20/25
+  validation batch 25/25
+Epoch result:
+{
+  "pixel_accuracy": 0.7911936950683593,
+  "mismatch_vs_fp32_teacher": 0.17469146728515625,
+  "mean_iou": 0.6097746248391073,
+  "clear_iou": 0.7373725764313157,
+  "thick_cloud_iou": 0.7340947067955041,
+  "thin_cloud_iou": 0.3634600481443687,
+  "cloud_shadow_iou": 0.6041711679852406,
+  "epoch": 4,
+  "training_loss": 0.8173947484493256,
+  "training_seconds": 24.284276799764484
+}
+epoch=5/6 batch=10/125 loss=0.627165 gpu=0.190 GiB
+epoch=5/6 batch=20/125 loss=0.316621 gpu=0.191 GiB
+epoch=5/6 batch=30/125 loss=0.301231 gpu=0.191 GiB
+epoch=5/6 batch=40/125 loss=0.374619 gpu=0.190 GiB
+epoch=5/6 batch=50/125 loss=0.358789 gpu=0.191 GiB
+epoch=5/6 batch=60/125 loss=0.526011 gpu=0.191 GiB
+epoch=5/6 batch=70/125 loss=0.412343 gpu=0.190 GiB
+epoch=5/6 batch=80/125 loss=0.444159 gpu=0.191 GiB
+epoch=5/6 batch=90/125 loss=0.470681 gpu=0.191 GiB
+epoch=5/6 batch=100/125 loss=0.479729 gpu=0.190 GiB
+epoch=5/6 batch=110/125 loss=0.354393 gpu=0.191 GiB
+epoch=5/6 batch=120/125 loss=0.324547 gpu=0.191 GiB
+  validation batch 5/25
+  validation batch 10/25
+  validation batch 15/25
+  validation batch 20/25
+  validation batch 25/25
+Epoch result:
+{
+  "pixel_accuracy": 0.7965395355224609,
+  "mismatch_vs_fp32_teacher": 0.169381103515625,
+  "mean_iou": 0.6198446713302708,
+  "clear_iou": 0.7407571665764283,
+  "thick_cloud_iou": 0.7414343814984072,
+  "thin_cloud_iou": 0.36890398917118433,
+  "cloud_shadow_iou": 0.6282831480750632,
+  "epoch": 5,
+  "training_loss": 0.7615788264274597,
+  "training_seconds": 24.83295139996335
+}
+Saved best checkpoint: qat/checkpoints/qat_int8_v7_best.pth
+epoch=6/6 batch=10/125 loss=0.286429 gpu=0.191 GiB
+epoch=6/6 batch=20/125 loss=0.503961 gpu=0.190 GiB
+epoch=6/6 batch=30/125 loss=1.039465 gpu=0.191 GiB
+epoch=6/6 batch=40/125 loss=1.265837 gpu=0.191 GiB
+epoch=6/6 batch=50/125 loss=0.415959 gpu=0.190 GiB
+epoch=6/6 batch=60/125 loss=0.299472 gpu=0.191 GiB
+epoch=6/6 batch=70/125 loss=0.387786 gpu=0.191 GiB
+epoch=6/6 batch=80/125 loss=0.550257 gpu=0.190 GiB
+epoch=6/6 batch=90/125 loss=0.698025 gpu=0.191 GiB
+epoch=6/6 batch=100/125 loss=0.516166 gpu=0.191 GiB
+epoch=6/6 batch=110/125 loss=0.940923 gpu=0.190 GiB
+epoch=6/6 batch=120/125 loss=0.974941 gpu=0.191 GiB
+  validation batch 5/25
+  validation batch 10/25
+  validation batch 15/25
+  validation batch 20/25
+  validation batch 25/25
+Epoch result:
+{
+  "pixel_accuracy": 0.7993625640869141,
+  "mismatch_vs_fp32_teacher": 0.17550605773925781,
+  "mean_iou": 0.6184668661533667,
+  "clear_iou": 0.7492751485637054,
+  "thick_cloud_iou": 0.7410793414275999,
+  "thin_cloud_iou": 0.3615945825892952,
+  "cloud_shadow_iou": 0.6219183920328663,
+  "epoch": 6,
+  "training_loss": 0.7378324551582336,
+  "training_seconds": 24.605915499851108
+}
+Saved: qat/results/qat_int8_v7_training.json
+QAT training complete.

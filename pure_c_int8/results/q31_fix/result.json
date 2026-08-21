@@ -1,0 +1,8 @@
+{
+  "mask_pixels": 65536,
+  "mask_bytes": 65536,
+  "int64_accumulator_fix_applied": true,
+  "agreement_vs_old_float_alignment_reference": 0.8685455322265625,
+  "mismatched_pixels_vs_old_reference": 8615,
+  "note": "Old Python mask used float inter-tensor alignment, so less than 100% here is expected. This run tests the INT64 accumulator correction."
+}

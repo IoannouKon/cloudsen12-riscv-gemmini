@@ -1,0 +1,13 @@
+{
+  "pixel_accuracy": 0.8055475616455078,
+  "mismatch_vs_fp32_teacher": 0.18937286376953125,
+  "mean_iou": 0.5284998457762511,
+  "clear_iou": 0.7922400259923494,
+  "thick_cloud_iou": 0.6950240301670279,
+  "thin_cloud_iou": 0.25363162454843785,
+  "cloud_shadow_iou": 0.3731037023971891,
+  "agreement_vs_fp32_teacher": 0.8106271362304688,
+  "test_patches": 200,
+  "fake_int8_conv_layers": 63,
+  "checkpoint": "qat\\deployment\\v9\\qat_int8_v9_best_locked.pth"
+}

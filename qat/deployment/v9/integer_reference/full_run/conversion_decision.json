@@ -1,0 +1,14 @@
+﻿{
+  "status": "integer_runtime_executes_but_conversion_not_accepted",
+  "real_int8_vs_fake_v9_agreement": 0.682464599609375,
+  "real_int8_vs_fp32_agreement": 0.6378326416015625,
+  "fake_v9_vs_fp32_agreement": 0.9153594970703125,
+  "pure_c_export_approved": false,
+  "reason": "Real integer output does not reproduce the fake-QAT model closely enough.",
+  "likely_causes": [
+    "BatchNorm was folded after training although fake quantization occurred before BatchNorm during training.",
+    "Dynamic fake-quantization scales were replaced by static calibration scales.",
+    "Residual Add and Concat tensors require explicit jointly calibrated output scales."
+  ],
+  "next_step": "Build and fine-tune a folded, fixed-scale, deployment-equivalent QAT graph."
+}

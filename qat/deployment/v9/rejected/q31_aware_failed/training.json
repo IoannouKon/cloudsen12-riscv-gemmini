@@ -1,0 +1,11 @@
+{
+  "best": {
+    "pixel_accuracy": 0.7804734039306641,
+    "agreement_vs_fp32": 0.8304896545410156,
+    "epoch": 4,
+    "loss": 34696.009765625,
+    "seconds": 27.009491682052612
+  },
+  "package": "C:\\Users\\User\\cloudsen12_pure_c\\qat\\deployment\\v9\\q31_aware\\approved_pure_c_q31",
+  "finalized_from_existing_checkpoint": true
+}

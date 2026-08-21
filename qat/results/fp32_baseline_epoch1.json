@@ -1,0 +1,26 @@
+{
+  "pretrained": {
+    "loss": 0.3271982878446579,
+    "pixel_accuracy": 0.8708051300048828,
+    "mean_iou": 0.7220148514065168,
+    "clear_iou": 0.8333623429706452,
+    "thick_cloud_iou": 0.8196478037762267,
+    "thin_cloud_iou": 0.5017108034831098,
+    "cloud_shadow_iou": 0.7333384553960857,
+    "seconds": 4.180329700000584
+  },
+  "training_epoch_1": {
+    "loss": 0.6240092418193817,
+    "seconds": 14.13009599968791
+  },
+  "finetuned_epoch_1": {
+    "loss": 0.38872201919555666,
+    "pixel_accuracy": 0.8473344421386719,
+    "mean_iou": 0.6926252957088037,
+    "clear_iou": 0.8018011919883872,
+    "thick_cloud_iou": 0.8078714674782967,
+    "thin_cloud_iou": 0.4338434654952803,
+    "cloud_shadow_iou": 0.7269850578732509,
+    "seconds": 2.0469315997324884
+  }
+}
